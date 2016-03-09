@@ -6,7 +6,7 @@ For now, I'll place notes in README.org files with each project.
 Please note that I'm creating most of these application as "Single View Applications" then adding views (e.g. UITableView) in code. It's
 a personal preference to not use Storyboards.
 
-|[[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView/screenshot-small.png]]|[[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView/README.org][Basic UITableViewController Subclass]]|
+|[[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView][Basic UITableViewController Subclass]]|
 
 * Misc Notes
 
