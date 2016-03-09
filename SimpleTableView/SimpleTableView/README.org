@@ -1,0 +1,37 @@
+#+STARTUP: showall
+#+TITLE: Basic UITableViewController Subclass
+#+AUTHOR: http://h4labs.com
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/resources/css/myorg.css" />
+
+[[screenshot.png]]
+
+A simple subclass of UITableViewController added to the main view using AutoLayout.
+
+Since we aren't using storyboards to design our TableViewCells, we register the standard UITableViewCell in our subclasses viewDidLoad().
+
+#+BEGIN_SRC swift
+override func viewDidLoad() {
+
+   self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:CellIdentifier)
+
+}
+#+END_SRC
+
+Also, note that use the Visual Formatting Language and use the topLayoutGuide when adding our table to the view.
+
+#+BEGIN_SRC swift
+let viewDictionary:[String:AnyObject] = [
+   "tableView": tableViewController.tableView,
+   "topLayoutGuide": topLayoutGuide,
+
+]
+tableViewController.tableView.translatesAutoresizingMaskIntoConstraints = false
+
+self.view.addSubview(tableViewController.tableView)
+
+let metrics:[String:AnyObject] = [:]
+
+let h0Constraint = "H:|-[tableView]-|"
+let v0Constraint = "V:[topLayoutGuide]-[tableView]-|"
+
+#+END_SRC

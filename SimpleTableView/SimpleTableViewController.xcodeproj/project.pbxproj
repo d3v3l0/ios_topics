@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E1005B01C9066C800ACB1F5 /* README.org in Resources */ = {isa = PBXBuildFile; fileRef = 3E1005AF1C9066C800ACB1F5 /* README.org */; };
 		3E79144C1C8F378F007B3328 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E79144B1C8F378F007B3328 /* AppDelegate.swift */; };
 		3E79144E1C8F378F007B3328 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E79144D1C8F378F007B3328 /* ViewController.swift */; };
 		3E7914511C8F378F007B3328 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E79144F1C8F378F007B3328 /* Main.storyboard */; };
 		3E7914531C8F378F007B3328 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E7914521C8F378F007B3328 /* Assets.xcassets */; };
 		3E7914561C8F378F007B3328 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E7914541C8F378F007B3328 /* LaunchScreen.storyboard */; };
+		3E79145E1C8F3D11007B3328 /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E79145D1C8F3D11007B3328 /* SimpleTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3E7914481C8F378F007B3328 /* SimpleTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E1005AF1C9066C800ACB1F5 /* README.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.org; sourceTree = "<group>"; };
+		3E7914481C8F378F007B3328 /* SimpleTableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E79144B1C8F378F007B3328 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E79144D1C8F378F007B3328 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3E7914501C8F378F007B3328 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E7914521C8F378F007B3328 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E7914551C8F378F007B3328 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E7914571C8F378F007B3328 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E79145D1C8F3D11007B3328 /* SimpleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +50,7 @@
 		3E7914491C8F378F007B3328 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3E7914481C8F378F007B3328 /* SimpleTableView.app */,
+				3E7914481C8F378F007B3328 /* SimpleTableViewController.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,7 +58,9 @@
 		3E79144A1C8F378F007B3328 /* SimpleTableView */ = {
 			isa = PBXGroup;
 			children = (
+				3E1005AF1C9066C800ACB1F5 /* README.org */,
 				3E79144B1C8F378F007B3328 /* AppDelegate.swift */,
+				3E79145D1C8F3D11007B3328 /* SimpleTableViewController.swift */,
 				3E79144D1C8F378F007B3328 /* ViewController.swift */,
 				3E79144F1C8F378F007B3328 /* Main.storyboard */,
 				3E7914521C8F378F007B3328 /* Assets.xcassets */,
@@ -67,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3E7914471C8F378F007B3328 /* SimpleTableView */ = {
+		3E7914471C8F378F007B3328 /* SimpleTableViewController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3E79145A1C8F378F007B3328 /* Build configuration list for PBXNativeTarget "SimpleTableView" */;
+			buildConfigurationList = 3E79145A1C8F378F007B3328 /* Build configuration list for PBXNativeTarget "SimpleTableViewController" */;
 			buildPhases = (
 				3E7914441C8F378F007B3328 /* Sources */,
 				3E7914451C8F378F007B3328 /* Frameworks */,
@@ -79,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = SimpleTableView;
+			name = SimpleTableViewController;
 			productName = SimpleTableView;
-			productReference = 3E7914481C8F378F007B3328 /* SimpleTableView.app */;
+			productReference = 3E7914481C8F378F007B3328 /* SimpleTableViewController.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3E7914431C8F378F007B3328 /* Build configuration list for PBXProject "SimpleTableView" */;
+			buildConfigurationList = 3E7914431C8F378F007B3328 /* Build configuration list for PBXProject "SimpleTableViewController" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -112,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3E7914471C8F378F007B3328 /* SimpleTableView */,
+				3E7914471C8F378F007B3328 /* SimpleTableViewController */,
 			);
 		};
 /* End PBXProject section */
@@ -124,6 +130,7 @@
 			files = (
 				3E7914561C8F378F007B3328 /* LaunchScreen.storyboard in Resources */,
 				3E7914531C8F378F007B3328 /* Assets.xcassets in Resources */,
+				3E1005B01C9066C800ACB1F5 /* README.org in Resources */,
 				3E7914511C8F378F007B3328 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E79144E1C8F378F007B3328 /* ViewController.swift in Sources */,
+				3E79145E1C8F3D11007B3328 /* SimpleTableViewController.swift in Sources */,
 				3E79144C1C8F378F007B3328 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,7 +260,7 @@
 				INFOPLIST_FILE = SimpleTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.h4labs.SimpleTableView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SimpleTableViewController;
 			};
 			name = Debug;
 		};
@@ -263,14 +271,14 @@
 				INFOPLIST_FILE = SimpleTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.h4labs.SimpleTableView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SimpleTableViewController;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3E7914431C8F378F007B3328 /* Build configuration list for PBXProject "SimpleTableView" */ = {
+		3E7914431C8F378F007B3328 /* Build configuration list for PBXProject "SimpleTableViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E7914581C8F378F007B3328 /* Debug */,
@@ -279,13 +287,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3E79145A1C8F378F007B3328 /* Build configuration list for PBXNativeTarget "SimpleTableView" */ = {
+		3E79145A1C8F378F007B3328 /* Build configuration list for PBXNativeTarget "SimpleTableViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E79145B1C8F378F007B3328 /* Debug */,
 				3E79145C1C8F378F007B3328 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
