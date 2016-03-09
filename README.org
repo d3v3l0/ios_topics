@@ -5,3 +5,10 @@ For now, I'll place notes in README.org files with each project.
 
 Please note that I'm creating most of these application as "Single View Applications" then adding views (e.g. UITableView) in code. It's
 a personal preference to not use Storyboards.
+
+* Misc Notes
+
+** ImageMagick 
++ Fix Mac OS Installation error
+ - http://stackoverflow.com/questions/22715738/imagemagick-error
++ convert ./screenshot.png -resize 50% screenshot-small.png; # Smaller screenshot
