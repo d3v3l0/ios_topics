@@ -11,9 +11,9 @@ a personal preference to not use Storyboards.
 * Misc Notes
 
 ** ImageMagick 
-+ Fix Mac OS Installation error
++ Fix Mac OS installation error
  - http://stackoverflow.com/questions/22715738/imagemagick-error
 #+BEGIN_EXAMPLE
 convert ./screenshot.png -resize 50% screenshot-small.png; # Smaller screenshot
-convert ./screenshot.png -resize 30% screenshot-toc.png; # Table of Contents screenshot
+convert ./screenshot.png -resize 20% screenshot-toc.png; # Table of Contents screenshot
 #+END_EXAMPLE
