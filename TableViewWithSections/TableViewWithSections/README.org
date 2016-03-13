@@ -44,7 +44,7 @@ var sectionIndex:[String] = ["a", "b", "c", "d", "e", "f", "g", "m"]
 ** Important Functions
 
 #+BEGIN_SRC swift
-// Constructs indexDictionary:[String:[String]] and sectionIndex:[String], which are returned as a tuple
+// Constructs sectionIndex:[String] and indexDictionary:[String:[String]], which are returned as a tuple
 func generateIndex(wordList:[String]) -> ([String], [String:[String]])
 #+END_SRC
 
