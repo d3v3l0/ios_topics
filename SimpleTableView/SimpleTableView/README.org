@@ -79,9 +79,7 @@ Next for a given section, we need to know how many rows are in the section.  We 
 
 override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-
-
-return rowData.count
+    return rowData.count
 
 }
 #+END_SRC
@@ -96,17 +94,15 @@ override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath:
 
 
 
-let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath)
+    let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath)
 
 
 
-// Configure the cell...
+    // Configure the cell...
 
-cell.textLabel?.text = rowData[indexPath.row]
+    cell.textLabel?.text = rowData[indexPath.row]
 
-
-
-return cell
+    return cell
 }
 
 #+END_SRC
@@ -117,7 +113,7 @@ Optional Header Title Function
 
 override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 
-return "Header"
+    return "Header"
 
 }
 #+END_SRC
