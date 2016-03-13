@@ -3,9 +3,10 @@
 #+AUTHOR: http://h4labs.com
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/resources/css/myorg.css" />
 
+Menu: [[file:../../README.org][Home]]
+
 [[screenshot-small.png]]
 
-Menu: [[file:../../README.org][Home]]
 
 * Overview
 
