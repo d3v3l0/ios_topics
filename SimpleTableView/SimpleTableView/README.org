@@ -23,7 +23,7 @@ func numberOfSectionsInTableView(tableView: UITableView) -> Int
 func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
 #+END_SRC
 
-*** Addition Functions
+*** Additional Functions
 #+BEGIN_SRC swift
 // Register the UITableViewCell class to be used by our UITableView
 self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:CellIdentifier)
