@@ -14,6 +14,7 @@ Please note that I'm creating most of these application as "Single View Applicat
 a personal preference to not use Storyboards.
 
 |[[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView][Basic UITableViewController Subclass]]|
+|[[https://github.com/melling/ios_topics/blob/master/TableViewWithSections/TableViewWithSections/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/TableViewWithSections/TableViewWithSections][UITableViewController Subclass with Sections]]|
 
 * Misc Notes
 
