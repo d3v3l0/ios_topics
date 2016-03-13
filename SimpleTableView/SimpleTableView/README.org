@@ -58,7 +58,6 @@ let metrics:[String:AnyObject] = [:]
 
 let h0Constraint = "H:|-[tableView]-|"
 let v0Constraint = "V:[topLayoutGuide]-[tableView]-|"
-
 #+END_SRC
 
 This function tell how many sections are in the table.  In our case, it's only 1.
@@ -75,7 +74,6 @@ override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 Next for a given section, we need to know how many rows are in the section.  We only have one section so we simply use the count of the array.
 
 #+BEGIN_SRC swift
-
 override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
     return rowData.count
@@ -86,9 +84,6 @@ override func tableView(tableView: UITableView, numberOfRowsInSection section: I
 Getting a UITableViewCell
 
 #+BEGIN_SRC swift
-
-
-
 override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
     let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath)
@@ -99,13 +94,11 @@ override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath:
 
     return cell
 }
-
 #+END_SRC
 
 Optional Header Title Function
 
 #+BEGIN_SRC swift
-
 override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 
     return "Header"
