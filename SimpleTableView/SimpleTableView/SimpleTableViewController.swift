@@ -17,20 +17,17 @@ class  SimpleTableViewController: UITableViewController {
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:CellIdentifier)
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // Return the number of sections.
-        return 1
-    }
-    
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Header"
-    }
-    
 }
 
 // Data source delegate
 
 extension SimpleTableViewController {
+
+    // We can skip overriding this function and it will default to 1
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // Return the number of sections.
+        return 1
+    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -48,9 +45,10 @@ extension SimpleTableViewController {
         return cell
 
     }
-//    override func cellForRowAtIndexPath(indexPath: NSIndexPath) -> UITableViewCell? {
-//        
-//        
-//    }
-    
+
+    //: Optional Header title
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Header"
+    }
+
 }
