@@ -66,9 +66,8 @@ This function tell how many sections are in the table.  In our case, it's only 1
 #+BEGIN_SRC swift
 override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 
-// Return the number of sections.
-
-return 1
+    // Return the number of sections.
+    return 1
 
 }
 #+END_SRC
@@ -92,11 +91,7 @@ Getting a UITableViewCell
 
 override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-
-
     let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath)
-
-
 
     // Configure the cell...
 
