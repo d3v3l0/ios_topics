@@ -5,6 +5,8 @@
 
 [[screenshot-small.png]]
 
+Menu: [[file:../../README.org][Home]]
+
 * Overview
 
 A simple subclass of UITableViewController added to the main view using AutoLayout.
