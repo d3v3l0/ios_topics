@@ -14,7 +14,10 @@ This example simply adds one additional function to the TableViewWithSections ex
 #+BEGIN_SRC swift
 // Simply return the entire array: ["a", "b", "c", "d", "e", "f", "g", "m"]
 override func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
-r
+
+    return sectionIndex
+}
+
 #+END_SRC
 
 ** Important Functions
