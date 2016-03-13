@@ -34,7 +34,6 @@ import UIKit
 
 class  SimpleTableViewController: UITableViewController {
     
-    var rowData:[String] = []
     var sectionIndex:[String] = []
     var indexDictionary:[String:[String]] = [:]
     
@@ -68,30 +67,29 @@ class  SimpleTableViewController: UITableViewController {
                 indexDictionary[firstLetter] = letterWordList
             }
             
-            print(firstLetter)
+            //            print(firstLetter)
         }
-        print(indexDictionary)
+        //        print(indexDictionary)
         
         let keyArray = Array(indexDictionary.keys).sort() // sort
         
-        print(keyArray)
+        //        print(keyArray)
         
         for (key, _) in indexDictionary {
             indexDictionary[key] = indexDictionary[key]?.sort()
             //print("\(key), \(value)")
         }
-        print("Results")
-        print(indexDictionary)
+        //        print("Results")
+        //        print(indexDictionary)
         // sort each array in the dictionary
         return (keyArray, indexDictionary)
     }
-
+    
     override func viewDidLoad() {
         
         (sectionIndex, indexDictionary) = generateIndex(words)
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:CellIdentifier)
     }
-    
     
 }
 
@@ -135,14 +133,18 @@ extension SimpleTableViewController {
     }
 
 }
-
+/**
+  Manage TableView Index
+ */
 extension SimpleTableViewController {
 
 //    func tableView(tableView: UITableView, sectionForSectionIndexTitle title: String, atIndex index: Int) -> Int {
+//
 //        
 //    }
 
-//    override func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
-//        return sectionIndex
-//    }
+    // Simply return the entire array: ["a", "b", "c", "d", "e", "f", "g", "m"]
+    override func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
+        return sectionIndex
+    }
 }
