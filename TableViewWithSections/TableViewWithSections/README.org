@@ -44,6 +44,7 @@ var sectionIndex:[String] = ["a", "b", "c", "d", "e", "f", "g", "m"]
 ** Important Functions
 
 #+BEGIN_SRC swift
+// Constructs indexDictionary:[String:[String]] and sectionIndex:[String], which are returned as a tuple
 func generateIndex(wordList:[String]) -> ([String], [String:[String]])
 #+END_SRC
 
@@ -57,7 +58,7 @@ func generateIndex(wordList:[String]) -> ([String], [String:[String]])
 The header title method now returns an uppercase sectionIndex letter instead of the hardcoded word "Header":
 
 #+BEGIN_SRC swift
-/    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 
     return sectionIndex[section].uppercaseString
 }
@@ -66,7 +67,7 @@ The header title method now returns an uppercase sectionIndex letter instead of 
 The number is sections is now greater than 1 and the number of rows in each section is the Array count of the indexDictionary:
 
 #+BEGIN_SRC swift
-/    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 // Return the number of sections.
 return sectionIndex.count
 }
