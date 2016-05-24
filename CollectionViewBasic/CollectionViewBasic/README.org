@@ -9,10 +9,17 @@ Menu: [[http://www.h4labs.com/dev/ios/swift.html][h4labs Swift]] | [[file:../../
 
 * Overview
 
+Must create with a FlowLayout if we create UICollectionView programatically
 
 #+BEGIN_SRC swift
 
-}
+let flowLayout=UICollectionViewFlowLayout()
+flowLayout.itemSize = CGSizeMake(100, 100)
+flowLayout.minimumInteritemSpacing = 2
+flowLayout.minimumLineSpacing = 5
+flowLayout.scrollDirection = .Vertical
+
+collectionViewController = BasicCollectionViewController(collectionViewLayout: flowLayout)
 
 #+END_SRC
 
