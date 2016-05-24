@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         flowLayout.minimumLineSpacing = 5
         flowLayout.scrollDirection = .Vertical
 
-        // Must create with a FlowLayout if we create UICollectionView programatically
+        // Must create with a FlowLayout if we create UICollectionViewController programatically
         
         collectionViewController = BasicCollectionViewController(collectionViewLayout: flowLayout)
         
