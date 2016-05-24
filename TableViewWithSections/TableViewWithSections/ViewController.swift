@@ -3,7 +3,6 @@
 //  TableViewWithSections
 //
 //  Created by Michael Mellinger on 3/13/16.
-//  Copyright © 2016 h4labs. All rights reserved.
 //
 
 import UIKit

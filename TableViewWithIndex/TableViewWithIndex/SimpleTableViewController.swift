@@ -3,7 +3,6 @@
 //  SimpleTableViewController
 //
 //  Created by Michael Mellinger on 3/8/16.
-//  Copyright © 2016 h4labs. All rights reserved.
 //
 
 /*
