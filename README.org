@@ -15,7 +15,8 @@ a personal preference to not use Storyboards.
 
 |[[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView][Basic UITableViewController Subclass]]|
 |[[https://github.com/melling/ios_topics/blob/master/TableViewWithSections/TableViewWithSections/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/TableViewWithSections/TableViewWithSections][UITableViewController Subclass with Sections]]|
-|[[https://github.com/melling/ios_topics/blob/master/TableViewWithIndex/TableViewWithIndex/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/TableViewWithIndex/TableViewWithIndex][UITableViewController Subclass with Sections and an Index]]| [[https://github.com/melling/ios_topics/blob/master/CollectViewBasic/CollectViewBasic/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/CollectViewBasic/CollectViewBasic][UICollectionViewController Subclass]]|
+|[[https://github.com/melling/ios_topics/blob/master/TableViewWithIndex/TableViewWithIndex/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/TableViewWithIndex/TableViewWithIndex][UITableViewController Subclass with Sections and an Index]]| 
+|[[https://github.com/melling/ios_topics/blob/master/CollectViewBasic/CollectViewBasic/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/CollectViewBasic/CollectViewBasic][UICollectionViewController Subclass]]|
 
 * Misc Notes
 
