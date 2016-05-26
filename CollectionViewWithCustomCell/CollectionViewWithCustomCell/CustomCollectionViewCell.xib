@@ -13,12 +13,18 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u8R-v6-eQ2">
-                        <rect key="frame" x="0.0" y="0.0" width="210" height="200"/>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u8R-v6-eQ2">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <constraints>
+                <constraint firstItem="u8R-v6-eQ2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KXH-f0-AFm"/>
+                <constraint firstAttribute="bottom" secondItem="u8R-v6-eQ2" secondAttribute="bottom" id="QY4-wC-s4m"/>
+                <constraint firstItem="u8R-v6-eQ2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="WDh-Wp-gtx"/>
+                <constraint firstAttribute="trailing" secondItem="u8R-v6-eQ2" secondAttribute="trailing" id="WgI-B2-7xD" userLabel="trailing = Image View.trailing"/>
+            </constraints>
             <size key="customSize" width="200" height="200"/>
             <connections>
                 <outlet property="imageView" destination="u8R-v6-eQ2" id="0GD-Ro-e5S"/>

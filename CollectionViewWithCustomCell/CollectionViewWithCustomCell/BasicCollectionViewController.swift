@@ -61,7 +61,10 @@ class BasicCollectionViewController: UICollectionViewController {
         let aColor = indexPath.row % 2 == 0 ? UIColor.orangeColor() : UIColor.greenColor()
         cell.backgroundColor = aColor
         if let image = UIImage(named: "fr_icon") {
+            cell.imageView.contentMode = .ScaleAspectFit  // Can set in Interface Builder
+//            cell.imageView.contentMode = .Center
             cell.imageView.image = image
+
         }
         return cell
     }
