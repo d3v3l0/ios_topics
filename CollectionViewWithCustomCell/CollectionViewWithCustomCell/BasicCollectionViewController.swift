@@ -18,9 +18,11 @@ class BasicCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
-        
+        self.collectionView!.registerNib(UINib(nibName:"CustomCollectionViewCell",
+            bundle:NSBundle.mainBundle()),
+                                        forCellWithReuseIdentifier:reuseIdentifier)
         
     }
 
@@ -53,12 +55,14 @@ class BasicCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+        let cell:CustomCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! CustomCollectionViewCell
     
         // Configure the cell
         let aColor = indexPath.row % 2 == 0 ? UIColor.orangeColor() : UIColor.greenColor()
         cell.backgroundColor = aColor
-        
+        if let image = UIImage(named: "fr_icon") {
+            cell.imageView.image = image
+        }
         return cell
     }
 

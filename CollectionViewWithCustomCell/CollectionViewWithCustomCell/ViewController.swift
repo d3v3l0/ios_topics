@@ -38,7 +38,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor.purpleColor()
+        
         let flowLayout=UICollectionViewFlowLayout()
         flowLayout.itemSize = CGSizeMake(100, 100)
         flowLayout.minimumInteritemSpacing = 2
