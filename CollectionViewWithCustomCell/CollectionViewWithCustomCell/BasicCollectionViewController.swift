@@ -58,9 +58,18 @@ class BasicCollectionViewController: UICollectionViewController {
         let cell:CustomCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! CustomCollectionViewCell
     
         // Configure the cell
-        let aColor = indexPath.row % 2 == 0 ? UIColor.orangeColor() : UIColor.greenColor()
+        let aColor:UIColor
+        let iconName:String
+            
+        if indexPath.row % 2 == 0 {
+            aColor = UIColor.orangeColor()
+            iconName = "fr_icon"
+        } else {
+            aColor = UIColor.greenColor()
+            iconName = "it_icon"
+        }
         cell.backgroundColor = aColor
-        if let image = UIImage(named: "fr_icon") {
+        if let image = UIImage(named: iconName) {
             cell.imageView.contentMode = .ScaleAspectFit  // Can set in Interface Builder
 //            cell.imageView.contentMode = .Center
             cell.imageView.image = image
