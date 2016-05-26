@@ -17,6 +17,7 @@
 		3E68113A1CF7871A00B1B4A8 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E6811381CF7871A00B1B4A8 /* CustomCollectionViewCell.xib */; };
 		3E68113C1CF791BA00B1B4A8 /* fr_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E68113B1CF791BA00B1B4A8 /* fr_icon.png */; };
 		3E68113E1CF7A51400B1B4A8 /* it_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E68113D1CF7A51400B1B4A8 /* it_icon.png */; };
+		3E6811401CF7A5FF00B1B4A8 /* README.org in Resources */ = {isa = PBXBuildFile; fileRef = 3E68113F1CF7A5FF00B1B4A8 /* README.org */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3E6811381CF7871A00B1B4A8 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 		3E68113B1CF791BA00B1B4A8 /* fr_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fr_icon.png; sourceTree = "<group>"; };
 		3E68113D1CF7A51400B1B4A8 /* it_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = it_icon.png; sourceTree = "<group>"; };
+		3E68113F1CF7A5FF00B1B4A8 /* README.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.org; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		3E6811221CF7632B00B1B4A8 /* CollectionViewWithCustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				3E68113F1CF7A5FF00B1B4A8 /* README.org */,
 				3E68113D1CF7A51400B1B4A8 /* it_icon.png */,
 				3E68113B1CF791BA00B1B4A8 /* fr_icon.png */,
 				3E6811351CF7641400B1B4A8 /* BasicCollectionViewController.swift */,
@@ -142,6 +145,7 @@
 				3E68112B1CF7632B00B1B4A8 /* Assets.xcassets in Resources */,
 				3E6811291CF7632B00B1B4A8 /* Main.storyboard in Resources */,
 				3E68113A1CF7871A00B1B4A8 /* CustomCollectionViewCell.xib in Resources */,
+				3E6811401CF7A5FF00B1B4A8 /* README.org in Resources */,
 				3E68113C1CF791BA00B1B4A8 /* fr_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
