@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         centeredButton.setTitle("Am I centered?", forState: .Normal)
         centeredButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
         centeredButton.translatesAutoresizingMaskIntoConstraints = false
-        centeredButton.addTarget(self, action: "pressed:", forControlEvents: .TouchUpInside)
+        centeredButton.addTarget(self, action: #selector(ViewController.pressed(_:)), forControlEvents: .TouchUpInside)
         
         self.view.addSubview(centeredButton)
         

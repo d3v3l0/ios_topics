@@ -12,6 +12,7 @@
 		3E0D4EB4199DB1E0004A83EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E0D4EB2199DB1E0004A83EF /* Main.storyboard */; };
 		3E0D4EB6199DB1E0004A83EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E0D4EB5199DB1E0004A83EF /* Images.xcassets */; };
 		3E0D4EC2199DB1E0004A83EF /* CenteredAutoLayoutButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D4EC1199DB1E0004A83EF /* CenteredAutoLayoutButtonTests.swift */; };
+		3E6811A01CF7F76400B1B4A8 /* README.org in Resources */ = {isa = PBXBuildFile; fileRef = 3E68119F1CF7F76400B1B4A8 /* README.org */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		3E0D4EBB199DB1E0004A83EF /* CenteredAutoLayoutButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CenteredAutoLayoutButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E0D4EC0199DB1E0004A83EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E0D4EC1199DB1E0004A83EF /* CenteredAutoLayoutButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredAutoLayoutButtonTests.swift; sourceTree = "<group>"; };
+		3E68119F1CF7F76400B1B4A8 /* README.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.org; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		3E0D4EAB199DB1E0004A83EF /* CenteredAutoLayoutButton */ = {
 			isa = PBXGroup;
 			children = (
+				3E68119F1CF7F76400B1B4A8 /* README.org */,
 				3E0D4EAE199DB1E0004A83EF /* AppDelegate.swift */,
 				3E0D4EB0199DB1E0004A83EF /* ViewController.swift */,
 				3E0D4EB2199DB1E0004A83EF /* Main.storyboard */,
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E0D4EB4199DB1E0004A83EF /* Main.storyboard in Resources */,
+				3E6811A01CF7F76400B1B4A8 /* README.org in Resources */,
 				3E0D4EB6199DB1E0004A83EF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
