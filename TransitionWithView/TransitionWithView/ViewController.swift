@@ -92,7 +92,7 @@ class ViewController: UIViewController {
         
         centerViewXY(self.view, child: container)
         
-        NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "curlUp", userInfo: nil, repeats: false)
+        NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(ViewController.curlUp), userInfo: nil, repeats: false)
         
         
     }
