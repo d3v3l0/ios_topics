@@ -1,5 +1,5 @@
 #+STARTUP: showall
-#+TITLE: UITableView with Custom UITableViewCell
+#+TITLE: TapGesture
 #+AUTHOR: http://h4labs.com
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/resources/css/myorg.css" />
 
@@ -9,6 +9,7 @@ Menu: [[http://www.h4labs.com/dev/ios/swift.html][h4labs Swift]] | [[file:../../
 
 * Overview
 
+Change the view color when it's tapped
 
 #+BEGIN_SRC swift
 
