@@ -14,7 +14,11 @@ class  SimpleTableViewController: UITableViewController {
     let CellIdentifier = "Cell"
     
     override func viewDidLoad() {
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:CellIdentifier)
+
+        self.tableView.rowHeight = 80
+        
+        self.tableView.registerNib(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: CellIdentifier)
+
     }
     
 }
@@ -37,11 +41,16 @@ extension SimpleTableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath)
+        let cell:CustomTableViewCell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath) as! CustomTableViewCell
         
         // Configure the cell...
-        cell.textLabel?.text = rowData[indexPath.row]
+        cell.label1?.text = rowData[indexPath.row]
+        cell.label2?.text = "\(indexPath.row + 1)"
+        let imageName:String = "fr_icon"
         
+        if let image = UIImage(named: imageName) {
+            cell.imageView1.image = image
+        }
         return cell
 
     }
