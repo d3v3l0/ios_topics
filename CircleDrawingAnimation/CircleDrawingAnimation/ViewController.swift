@@ -3,7 +3,6 @@
 //  CircleDrawingAnimation
 //
 //  Created by Michael Mellinger on 5/26/16.
-//  Copyright © 2016 Michael Mellinger. All rights reserved.
 //
 
 import UIKit
