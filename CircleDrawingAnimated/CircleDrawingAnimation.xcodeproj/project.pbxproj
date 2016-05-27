@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3E68116A1CF7F22100B1B4A8 /* CircleDrawingAnimated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircleDrawingAnimated.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E68116A1CF7F22100B1B4A8 /* CircleDrawingAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircleDrawingAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E68116D1CF7F22100B1B4A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E68116F1CF7F22100B1B4A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3E6811721CF7F22100B1B4A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,7 +38,7 @@
 		3E6811611CF7F22100B1B4A8 = {
 			isa = PBXGroup;
 			children = (
-				3E68116C1CF7F22100B1B4A8 /* CircleDrawingAnimated */,
+				3E68116C1CF7F22100B1B4A8 /* CircleDrawingAnimation */,
 				3E68116B1CF7F22100B1B4A8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,12 +46,12 @@
 		3E68116B1CF7F22100B1B4A8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3E68116A1CF7F22100B1B4A8 /* CircleDrawingAnimated.app */,
+				3E68116A1CF7F22100B1B4A8 /* CircleDrawingAnimation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3E68116C1CF7F22100B1B4A8 /* CircleDrawingAnimated */ = {
+		3E68116C1CF7F22100B1B4A8 /* CircleDrawingAnimation */ = {
 			isa = PBXGroup;
 			children = (
 				3E68116D1CF7F22100B1B4A8 /* AppDelegate.swift */,
@@ -61,15 +61,16 @@
 				3E6811761CF7F22100B1B4A8 /* LaunchScreen.storyboard */,
 				3E6811791CF7F22100B1B4A8 /* Info.plist */,
 			);
+			name = CircleDrawingAnimation;
 			path = CircleDrawingAnimated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3E6811691CF7F22100B1B4A8 /* CircleDrawingAnimated */ = {
+		3E6811691CF7F22100B1B4A8 /* CircleDrawingAnimation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3E68117C1CF7F22100B1B4A8 /* Build configuration list for PBXNativeTarget "CircleDrawingAnimated" */;
+			buildConfigurationList = 3E68117C1CF7F22100B1B4A8 /* Build configuration list for PBXNativeTarget "CircleDrawingAnimation" */;
 			buildPhases = (
 				3E6811661CF7F22100B1B4A8 /* Sources */,
 				3E6811671CF7F22100B1B4A8 /* Frameworks */,
@@ -79,9 +80,9 @@
 			);
 			dependencies = (
 			);
-			name = CircleDrawingAnimated;
+			name = CircleDrawingAnimation;
 			productName = CircleDrawingAnimated;
-			productReference = 3E68116A1CF7F22100B1B4A8 /* CircleDrawingAnimated.app */;
+			productReference = 3E68116A1CF7F22100B1B4A8 /* CircleDrawingAnimation.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +100,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3E6811651CF7F22100B1B4A8 /* Build configuration list for PBXProject "CircleDrawingAnimated" */;
+			buildConfigurationList = 3E6811651CF7F22100B1B4A8 /* Build configuration list for PBXProject "CircleDrawingAnimation" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -112,7 +113,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3E6811691CF7F22100B1B4A8 /* CircleDrawingAnimated */,
+				3E6811691CF7F22100B1B4A8 /* CircleDrawingAnimation */,
 			);
 		};
 /* End PBXProject section */
@@ -254,7 +255,7 @@
 				INFOPLIST_FILE = CircleDrawingAnimated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = h4labs.CircleDrawingAnimated;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CircleDrawingAnimation;
 			};
 			name = Debug;
 		};
@@ -265,14 +266,14 @@
 				INFOPLIST_FILE = CircleDrawingAnimated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = h4labs.CircleDrawingAnimated;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CircleDrawingAnimation;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3E6811651CF7F22100B1B4A8 /* Build configuration list for PBXProject "CircleDrawingAnimated" */ = {
+		3E6811651CF7F22100B1B4A8 /* Build configuration list for PBXProject "CircleDrawingAnimation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E68117A1CF7F22100B1B4A8 /* Debug */,
@@ -281,13 +282,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3E68117C1CF7F22100B1B4A8 /* Build configuration list for PBXNativeTarget "CircleDrawingAnimated" */ = {
+		3E68117C1CF7F22100B1B4A8 /* Build configuration list for PBXNativeTarget "CircleDrawingAnimation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E68117D1CF7F22100B1B4A8 /* Debug */,
 				3E68117E1CF7F22100B1B4A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
