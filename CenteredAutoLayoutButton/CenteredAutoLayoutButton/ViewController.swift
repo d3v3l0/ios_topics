@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     
     var centeredButton: UIButton!
 
-    
     func addButton() {
         centeredButton = UIButton()
         centeredButton.setTitle("Am I centered?", forState: .Normal)
