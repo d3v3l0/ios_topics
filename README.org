@@ -14,6 +14,7 @@ Please note that I'm creating most of these application as "Single View Applicat
 a personal preference to not use Storyboards.
 
 |[[https://github.com/melling/ios_topics/blob/master/CenteredAutoLayoutButton/CenteredAutoLayoutButton/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/CenteredAutoLayoutButton/CenteredAutoLayoutButton][AutoLayout Centered Button]]|
+|[[https://github.com/melling/ios_topics/blob/master/ButtonsInStackView/ButtonsInStackView/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/ButtonsInStackView/ButtonsInStackView][Various UIButtons in a UIStackView]]|
 |[[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView][Basic UITableViewController Subclass]]|
 |[[https://github.com/melling/ios_topics/blob/master/TableViewWithCustomCell/TableViewWithCustomCell/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/TableViewWithCustomCell/TableViewWithCustomCell][Basic UITableViewController with Custom UITableViewCell]]|
 |[[https://github.com/melling/ios_topics/blob/master/TableViewWithSections/TableViewWithSections/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/TableViewWithSections/TableViewWithSections][UITableViewController Subclass with Sections]]|
