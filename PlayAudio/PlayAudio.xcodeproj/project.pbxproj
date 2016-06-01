@@ -13,6 +13,7 @@
 		3E7090AA1CFF6D8A0095778E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E7090A91CFF6D8A0095778E /* Assets.xcassets */; };
 		3E7090AD1CFF6D8A0095778E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E7090AB1CFF6D8A0095778E /* LaunchScreen.storyboard */; };
 		3E7090B51CFF6D950095778E /* README.org in Resources */ = {isa = PBXBuildFile; fileRef = 3E7090B41CFF6D950095778E /* README.org */; };
+		3E7090B71CFF8DC10095778E /* robot02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E7090B61CFF8DC10095778E /* robot02.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3E7090AC1CFF6D8A0095778E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E7090AE1CFF6D8A0095778E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E7090B41CFF6D950095778E /* README.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.org; sourceTree = "<group>"; };
+		3E7090B61CFF8DC10095778E /* robot02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = robot02.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				3E7090B41CFF6D950095778E /* README.org */,
 				3E7090A21CFF6D8A0095778E /* AppDelegate.swift */,
+				3E7090B61CFF8DC10095778E /* robot02.mp3 */,
 				3E7090A41CFF6D8A0095778E /* ViewController.swift */,
 				3E7090A61CFF6D8A0095778E /* Main.storyboard */,
 				3E7090A91CFF6D8A0095778E /* Assets.xcassets */,
@@ -128,6 +131,7 @@
 				3E7090AD1CFF6D8A0095778E /* LaunchScreen.storyboard in Resources */,
 				3E7090AA1CFF6D8A0095778E /* Assets.xcassets in Resources */,
 				3E7090B51CFF6D950095778E /* README.org in Resources */,
+				3E7090B71CFF8DC10095778E /* robot02.mp3 in Resources */,
 				3E7090A81CFF6D8A0095778E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

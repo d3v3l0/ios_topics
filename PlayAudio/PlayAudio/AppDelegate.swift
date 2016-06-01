@@ -2,9 +2,6 @@
 //  AppDelegate.swift
 //  PlayAudio
 //
-//  Created by Michael Mellinger on 6/1/16.
-//  Copyright © 2016 h4labs. All rights reserved.
-//
 
 import UIKit
 
