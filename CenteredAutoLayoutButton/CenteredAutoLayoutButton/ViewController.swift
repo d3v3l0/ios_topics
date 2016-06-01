@@ -33,16 +33,25 @@ class ViewController: UIViewController {
     }
     
     func pressed(sender: UIButton!) {
-        let alertView = UIAlertView();
-        alertView.addButtonWithTitle("Ok");
-        alertView.title = "My Title";
-        alertView.message = "Congratulations";
-        alertView.show();
+
+        let title = "Awesome"
+        let message = "You did it"
+        let alert = UIAlertController(title: title,
+                                      message:message,
+                                      preferredStyle: .Alert)
+        let action = UIAlertAction(title: "Take Action 1?", style: .Default, handler:nil)
+        alert.addAction(action)
+        
+        let action2 = UIAlertAction(title: "Take Action 2?", style: .Default, handler:nil)
+        alert.addAction(action2)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
         addButton()
     }
 
