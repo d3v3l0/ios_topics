@@ -22,13 +22,8 @@ class ViewController: UIViewController {
         
         self.view.addSubview(centeredButton)
         
-        let viewDictionary:Dictionary = ["centeredButton": centeredButton]
-        
-        let horizontal:[NSLayoutConstraint]! = NSLayoutConstraint.constraintsWithVisualFormat("H:|-50-[centeredButton]-50-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: viewDictionary)
-        
-        let vertical:[NSLayoutConstraint]! = NSLayoutConstraint.constraintsWithVisualFormat("V:|-100-[centeredButton]-100-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: viewDictionary)
-        self.view.addConstraints(horizontal)
-        self.view.addConstraints(vertical)
+        centeredButton.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor).active = true
+        centeredButton.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor).active = true
         
     }
     
