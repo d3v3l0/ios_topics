@@ -39,7 +39,7 @@ class BasicCollectionViewController: UIViewController, UICollectionViewDataSourc
         let metrics:[String:AnyObject] = [:]
 
         ["H:|-0-[collectionView]-0-|",
-         "V:|-[collectionView]-|"].forEach {
+         "V:|[topLayoutGuide]-[collectionView]-|"].forEach {
             
             let constraint = NSLayoutConstraint.constraintsWithVisualFormat($0, options: [], metrics: metrics, views: viewDictionary)
             
