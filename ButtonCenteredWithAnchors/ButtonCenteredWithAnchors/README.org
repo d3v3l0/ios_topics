@@ -1,5 +1,5 @@
 #+STARTUP: showall
-#+TITLE: Line Drawing Animation
+#+TITLE: UIButton Centered with iOS9 Anchors
 #+AUTHOR: http://h4labs.com
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/resources/css/myorg.css" />
 
