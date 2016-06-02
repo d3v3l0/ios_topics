@@ -20,8 +20,8 @@ class ViewController: UIViewController {
         
         customView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor).active = true
         customView.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor).active = true
-        customView.widthAnchor.constraintEqualToConstant(200).active = true
-        customView.heightAnchor.constraintEqualToConstant(200).active = true
+        customView.widthAnchor.constraintEqualToConstant(300).active = true
+        customView.heightAnchor.constraintEqualToConstant(300).active = true
         
 //        customView.backgroundColor = .purpleColor()
     }

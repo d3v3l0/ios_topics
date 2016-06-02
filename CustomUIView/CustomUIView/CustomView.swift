@@ -63,12 +63,9 @@ class CustomView: UIView {
         return degrees * CGFloat(M_PI)/180
     }
     
-    func addArc(){
+    func addArc(radius:CGFloat, center:CGPoint){
         
         let layer = CAShapeLayer()
-        
-        let radius:CGFloat = 50
-        let center = CGPointMake(100, 130)
         
         let startAngle:CGFloat = 0
         let endAngle:CGFloat = 180
@@ -90,14 +87,17 @@ class CustomView: UIView {
 
     override func drawRect(rect: CGRect) {
         let width = self.frame.width
+        let eyeRadius = width * 40/200
         // Drawing code
-//        addRect(164, y: 164, width: 160, height: 160)
         addCircle(0, y:0, radius:width, color: UIColor.grayColor())
-        addCircle(50, y:30, radius:40, color: UIColor.blackColor())
+        addCircle(width*0.25, y:width*0.15, radius:eyeRadius, color: UIColor.blackColor())
 
-        addCircle(120, y:30, radius:40, color: UIColor.blackColor())
-        addTriangle(width/2-20, y: width/2-20, width: 40, height: 40)
-        addArc()
+        addCircle(width*0.6, y:width*0.15, radius:eyeRadius, color: UIColor.blackColor())
+        addTriangle(width/2 - eyeRadius/2, y: width/2 - eyeRadius/2, width: eyeRadius, height: eyeRadius)
+        let mouthRadius:CGFloat = width/4
+        let mounthCenter = CGPointMake(width/2, width*0.65)
+
+        addArc(mouthRadius, center: mounthCenter)
         
     }
     
