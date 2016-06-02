@@ -3,7 +3,6 @@
 //  ButtonCenteredWithAnchors
 //
 //  Created by Michael Mellinger on 6/2/16.
-//  Copyright © 2016 h4labs. All rights reserved.
 //
 
 import UIKit

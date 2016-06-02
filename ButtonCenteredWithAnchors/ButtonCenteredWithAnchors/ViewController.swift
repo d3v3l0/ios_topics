@@ -3,17 +3,16 @@
 //  CenteredAutoLayoutButton
 //
 //  Created by Michael Mellinger on 8/14/14.
-//  Copyright (c) 2014 h4labs. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
     
-    var centeredButton: UIButton!
+    var centeredButton = UIButton()
     
     func addButton() {
-        centeredButton = UIButton()
+        
         centeredButton.setTitle("Am I centered?", forState: .Normal)
         centeredButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
         centeredButton.translatesAutoresizingMaskIntoConstraints = false
