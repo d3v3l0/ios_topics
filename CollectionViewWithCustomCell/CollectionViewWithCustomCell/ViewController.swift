@@ -29,22 +29,22 @@ class ViewController: UIViewController {
         
         [h0Constraint, v0Constraint].forEach {
             
-            let constraint = NSLayoutConstraint.constraintsWithVisualFormat($0, options: [], metrics: metrics, views: viewDictionary)
+            let constraint = NSLayoutConstraint.constraints(withVisualFormat: $0, options: [], metrics: metrics, views: viewDictionary)
             
-            NSLayoutConstraint.activateConstraints(constraint)
+            NSLayoutConstraint.activate(constraint)
         }
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.purpleColor()
+        self.view.backgroundColor = UIColor.purple
         
         let flowLayout=UICollectionViewFlowLayout()
-        flowLayout.itemSize = CGSizeMake(100, 100)
+        flowLayout.itemSize = CGSize(width: 100, height: 100)
         flowLayout.minimumInteritemSpacing = 2
         flowLayout.minimumLineSpacing = 5
-        flowLayout.scrollDirection = .Vertical
+        flowLayout.scrollDirection = .vertical
 
         // Must create with a FlowLayout if we create UICollectionViewController programatically
         

@@ -20,8 +20,8 @@ class BasicCollectionViewController: UICollectionViewController {
         // Register cell classes
 //        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
-        self.collectionView!.registerNib(UINib(nibName:"CustomCollectionViewCell",
-            bundle:NSBundle.mainBundle()),
+        self.collectionView!.register(UINib(nibName:"CustomCollectionViewCell",
+            bundle:Bundle.main),
                                         forCellWithReuseIdentifier:reuseIdentifier)
         
     }
@@ -43,34 +43,34 @@ class BasicCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
 
         return 1
     }
 
 
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
         return 40
     }
 
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell:CustomCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! CustomCollectionViewCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell:CustomCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CustomCollectionViewCell
     
         // Configure the cell
         let aColor:UIColor
         let iconName:String
             
-        if indexPath.row % 2 == 0 {
-            aColor = UIColor.orangeColor()
+        if (indexPath as NSIndexPath).row % 2 == 0 {
+            aColor = UIColor.orange
             iconName = "fr_icon"
         } else {
-            aColor = UIColor.greenColor()
+            aColor = UIColor.green
             iconName = "it_icon"
         }
         cell.backgroundColor = aColor
         if let image = UIImage(named: iconName) {
-            cell.imageView.contentMode = .ScaleAspectFit  // Can set in Interface Builder
+            cell.imageView.contentMode = .scaleAspectFit  // Can set in Interface Builder
 //            cell.imageView.contentMode = .Center
             cell.imageView.image = image
 
