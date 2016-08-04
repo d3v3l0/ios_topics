@@ -17,7 +17,7 @@ class  SimpleTableViewController: UITableViewController {
 
         self.tableView.rowHeight = 80
         
-        self.tableView.registerNib(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: CellIdentifier)
+        self.tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: CellIdentifier)
 
     }
     
@@ -28,24 +28,24 @@ class  SimpleTableViewController: UITableViewController {
 extension SimpleTableViewController {
 
     // We can skip overriding this function and it will default to 1
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // Return the number of sections.
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return rowData.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell:CustomTableViewCell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath) as! CustomTableViewCell
+        let cell:CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as! CustomTableViewCell
         
         // Configure the cell...
-        cell.label1?.text = rowData[indexPath.row]
-        cell.label2?.text = "\(indexPath.row + 1)"
+        cell.label1?.text = rowData[(indexPath as NSIndexPath).row]
+        cell.label2?.text = "\((indexPath as NSIndexPath).row + 1)"
         let imageName:String = "fr_icon"
         
         if let image = UIImage(named: imageName) {
@@ -56,7 +56,7 @@ extension SimpleTableViewController {
     }
 
     //: Optional Header title
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Header"
     }
 
