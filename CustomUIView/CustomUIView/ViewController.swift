@@ -18,12 +18,12 @@ class ViewController: UIViewController {
         
         self.view.addSubview(customView)
         
-        customView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor).active = true
-        customView.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor).active = true
+        customView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        customView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
 
         let width:CGFloat = 300 // Change me
-        customView.widthAnchor.constraintEqualToConstant(width).active = true
-        customView.heightAnchor.constraintEqualToConstant(width).active = true
+        customView.widthAnchor.constraint(equalToConstant: width).isActive = true
+        customView.heightAnchor.constraint(equalToConstant: width).isActive = true
         
 //        customView.backgroundColor = .purpleColor()
     }
