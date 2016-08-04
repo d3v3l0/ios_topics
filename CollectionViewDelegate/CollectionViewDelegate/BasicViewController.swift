@@ -19,13 +19,13 @@ class BasicCollectionViewController: UIViewController, UICollectionViewDataSourc
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.grayColor()
+        self.view.backgroundColor = UIColor.gray
 
         let flowLayout=UICollectionViewFlowLayout()
         flowLayout.minimumInteritemSpacing = 2
         flowLayout.minimumLineSpacing = 2
         
-        collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: flowLayout)
+        collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout)
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -41,14 +41,14 @@ class BasicCollectionViewController: UIViewController, UICollectionViewDataSourc
         ["H:|-0-[collectionView]-0-|",
          "V:|[topLayoutGuide]-[collectionView]-|"].forEach {
             
-            let constraint = NSLayoutConstraint.constraintsWithVisualFormat($0, options: [], metrics: metrics, views: viewDictionary)
+            let constraint = NSLayoutConstraint.constraints(withVisualFormat: $0, options: [], metrics: metrics, views: viewDictionary)
             
-            NSLayoutConstraint.activateConstraints(constraint)
+            NSLayoutConstraint.activate(constraint)
     }
     
-        collectionView.backgroundColor = UIColor.grayColor()
+        collectionView.backgroundColor = UIColor.gray
         // Register cell classes
-        self.collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
     }
 
@@ -63,13 +63,13 @@ class BasicCollectionViewController: UIViewController, UICollectionViewDataSourc
 
 extension BasicCollectionViewController {
     
-     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+     @objc(numberOfSectionsInCollectionView:) func numberOfSections(in collectionView: UICollectionView) -> Int {
         
         return 1
     }
     
     
-     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return 10
     }
@@ -79,11 +79,11 @@ extension BasicCollectionViewController {
 
 extension BasicCollectionViewController {
 
-     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+     @objc(collectionView:cellForItemAtIndexPath:) func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         
         // Configure the cell
-        let aColor = indexPath.row % 2 == 0 ? UIColor.orangeColor() : UIColor.greenColor()
+        let aColor = (indexPath as NSIndexPath).row % 2 == 0 ? UIColor.orange : UIColor.green
         cell.backgroundColor = aColor
         
         return cell
