@@ -13,31 +13,31 @@ class ViewController: UIViewController {
     
     func addButton() {
         
-        centeredButton.setTitle("Am I centered?", forState: .Normal)
-        centeredButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
+        centeredButton.setTitle("Am I centered?", for: UIControlState())
+        centeredButton.setTitleColor(UIColor.blue, for: UIControlState())
         centeredButton.translatesAutoresizingMaskIntoConstraints = false
-        centeredButton.addTarget(self, action: #selector(ViewController.pressed(_:)), forControlEvents: .TouchUpInside)
+        centeredButton.addTarget(self, action: #selector(ViewController.pressed(_:)), for: .touchUpInside)
         
         self.view.addSubview(centeredButton)
         
-        centeredButton.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor).active = true
-        centeredButton.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor, constant: -40).active = true
+        centeredButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        centeredButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -40).isActive = true
     }
     
-    func pressed(sender: UIButton!) {
+    func pressed(_ sender: UIButton!) {
         
         let title = "Awesome"
         let message = "You did it"
         let alert = UIAlertController(title: title,
                                       message:message,
-                                      preferredStyle: .Alert)
-        let action = UIAlertAction(title: "Take Action 1?", style: .Default, handler:nil)
+                                      preferredStyle: .alert)
+        let action = UIAlertAction(title: "Take Action 1?", style: .default, handler:nil)
         alert.addAction(action)
         
-        let action2 = UIAlertAction(title: "Take Action 2?", style: .Default, handler:nil)
+        let action2 = UIAlertAction(title: "Take Action 2?", style: .default, handler:nil)
         alert.addAction(action2)
         
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
         
     }
     
