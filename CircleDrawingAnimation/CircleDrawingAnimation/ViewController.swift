@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    func toRadians(degrees:CGFloat) -> CGFloat {
+    func toRadians(_ degrees:CGFloat) -> CGFloat {
         return degrees * CGFloat(M_PI)/180
     }
     
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         let layer = CAShapeLayer()
         
         let radius:CGFloat = 50
-        let center = CGPointMake(100, 350)
+        let center = CGPoint(x: 100, y: 350)
         
         let startAngle:CGFloat = toRadians(0)
         let endAngle:CGFloat = toRadians(360)
@@ -29,10 +29,10 @@ class ViewController: UIViewController {
                                   radius: radius,
                                   startAngle: startAngle,
                                   endAngle: endAngle,
-                                  clockwise: clockwise).CGPath
+                                  clockwise: clockwise).cgPath
         
-        layer.fillColor = UIColor.clearColor().CGColor
-        layer.strokeColor = UIColor.redColor().CGColor
+        layer.fillColor = UIColor.clear.cgColor
+        layer.strokeColor = UIColor.red.cgColor
         layer.lineWidth = 1
         
         view.layer.addSublayer(layer)
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         
         drawAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         
-        layer.addAnimation(drawAnimation, forKey: "drawCircleAnimation")
+        layer.add(drawAnimation, forKey: "drawCircleAnimation")
     }
 
     
