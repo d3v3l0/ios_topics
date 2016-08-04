@@ -15,36 +15,36 @@ class ViewController: UIViewController {
     
     func addButton() {
 
-        centeredButton.setTitle("Play", forState: .Normal)
-        centeredButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
+        centeredButton.setTitle("Play", for: UIControlState())
+        centeredButton.setTitleColor(UIColor.blue, for: UIControlState())
         centeredButton.translatesAutoresizingMaskIntoConstraints = false
-        centeredButton.addTarget(self, action: #selector(ViewController.playAudio(_:)), forControlEvents: .TouchUpInside)
+        centeredButton.addTarget(self, action: #selector(ViewController.playAudio(_:)), for: .touchUpInside)
         
         self.view.addSubview(centeredButton)
         
-        centeredButton.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor).active = true
-        centeredButton.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor).active = true
+        centeredButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        centeredButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
     }
     
-    func playAudio(sender: UIButton!) {
+    func playAudio(_ sender: UIButton!) {
         playWordAudio("robot02")
     }
     
-    func playWordAudio(aWord:String) {
+    func playWordAudio(_ aWord:String) {
         
         /*
          Audio files came from here:
          http://www.metanetsoftware.com/blog/2016/tools-for-gamemaking-music-loops
          */
-        let audioUrl = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(aWord, ofType: "mp3")!)
+        let audioUrl = URL(fileURLWithPath: Bundle.main.path(forResource: aWord, ofType: "mp3")!)
         
         
-        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, withOptions: [])
+        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: [])
         try! AVAudioSession.sharedInstance().setActive(true)
         
         do {
-            try self.audioPlayer = AVAudioPlayer(contentsOfURL:audioUrl)
+            try self.audioPlayer = AVAudioPlayer(contentsOf:audioUrl)
             
             self.audioPlayer.prepareToPlay()
             self.audioPlayer.play()
