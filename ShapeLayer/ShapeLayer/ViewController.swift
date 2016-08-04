@@ -9,48 +9,48 @@ import UIKit
 
 class ViewController: UIViewController {
  
-    func toRadians(degrees:CGFloat) -> CGFloat {
+    func toRadians(_ degrees:CGFloat) -> CGFloat {
         return degrees * CGFloat(M_PI)/180
     }
 
-    func addLine(x0: CGFloat, y0: CGFloat, x1: CGFloat, y1: CGFloat) {
+    func addLine(_ x0: CGFloat, y0: CGFloat, x1: CGFloat, y1: CGFloat) {
         
         let layer = CAShapeLayer()
         
-        let startPoint = CGPointMake(x0, y0)
-        let endPoint = CGPointMake(x1, y1)
+        let startPoint = CGPoint(x: x0, y: y0)
+        let endPoint = CGPoint(x: x1, y: y1)
         
         let path = UIBezierPath()
-        path.moveToPoint(startPoint)
-        path.addLineToPoint(endPoint)
+        path.move(to: startPoint)
+        path.addLine(to: endPoint)
         
-        layer.path = path.CGPath
+        layer.path = path.cgPath
         //        layer.fillColor = UIColor.blueColor().CGColor
-        layer.strokeColor = UIColor.redColor().CGColor
+        layer.strokeColor = UIColor.red.cgColor
         layer.lineWidth = 2
         view.layer.addSublayer(layer)
     }
     
 
     // Set cornerRadius=1 to make normal rectangle
-    func addRect(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
+    func addRect(_ x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
         let layer = CAShapeLayer()
-        layer.path = UIBezierPath(roundedRect: CGRect(x: 164, y: 164, width: 160, height: 160), cornerRadius: 1).CGPath
-        layer.fillColor = UIColor.blueColor().CGColor
-        layer.strokeColor = UIColor.blackColor().CGColor
+        layer.path = UIBezierPath(roundedRect: CGRect(x: 164, y: 164, width: 160, height: 160), cornerRadius: 1).cgPath
+        layer.fillColor = UIColor.blue.cgColor
+        layer.strokeColor = UIColor.black.cgColor
         layer.lineWidth = 2
 
         view.layer.addSublayer(layer)
 
     }
     
-    func addRoundedRect(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
+    func addRoundedRect(_ x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
         let layer = CAShapeLayer()
         
         let cornerRadius:CGFloat = 10
         
-        layer.path = UIBezierPath(roundedRect: CGRect(x: 64, y: 64, width: 160, height: 160), cornerRadius: cornerRadius).CGPath
-        layer.fillColor = UIColor.redColor().CGColor
+        layer.path = UIBezierPath(roundedRect: CGRect(x: 64, y: 64, width: 160, height: 160), cornerRadius: cornerRadius).cgPath
+        layer.fillColor = UIColor.red.cgColor
         view.layer.addSublayer(layer)
     }
     
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
         let layer = CAShapeLayer()
         
         let radius:CGFloat = 50
-        let center = CGPointMake(100, 500)
+        let center = CGPoint(x: 100, y: 500)
         
         let startAngle:CGFloat = 1
         let endAngle:CGFloat = 360
@@ -72,10 +72,10 @@ class ViewController: UIViewController {
                                   radius: radius,
                                   startAngle: toRadians(startAngle),
                                   endAngle:toRadians(endAngle),
-                                  clockwise: clockwise).CGPath
+                                  clockwise: clockwise).cgPath
         
-        layer.fillColor = UIColor.blueColor().CGColor
-        layer.strokeColor = UIColor.redColor().CGColor
+        layer.fillColor = UIColor.blue.cgColor
+        layer.strokeColor = UIColor.red.cgColor
         layer.lineWidth = 2
         view.layer.addSublayer(layer)
         
@@ -83,43 +83,43 @@ class ViewController: UIViewController {
 
 
 
-    func addCircle(x: CGFloat, y: CGFloat, radius: CGFloat){
+    func addCircle(_ x: CGFloat, y: CGFloat, radius: CGFloat){
         
         let layer = CAShapeLayer()
         
-        let path = UIBezierPath(ovalInRect: CGRectMake(x, y, radius, radius))
-        layer.fillColor = UIColor.orangeColor().CGColor
+        let path = UIBezierPath(ovalIn: CGRect(x: x, y: y, width: radius, height: radius))
+        layer.fillColor = UIColor.orange.cgColor
 
-        layer.path = path.CGPath
+        layer.path = path.cgPath
 
         view.layer.addSublayer(layer)
     }
 
-    func addEllipse(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
+    func addEllipse(_ x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
         
         let layer = CAShapeLayer()
         
-        let path = UIBezierPath(ovalInRect: CGRectMake(x, y, height, width))
+        let path = UIBezierPath(ovalIn: CGRect(x: x, y: y, width: height, height: width))
         
-        layer.path = path.CGPath
+        layer.path = path.cgPath
         
         view.layer.addSublayer(layer)
     }
 
-    func addTriangle(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat){
+    func addTriangle(_ x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat){
         
-        let center = CGPointMake(width/2 + x, y)
-        let bottomLeft = CGPointMake(x, height + y)
-        let bottomRight = CGPointMake(width + x, height + y)
+        let center = CGPoint(x: width/2 + x, y: y)
+        let bottomLeft = CGPoint(x: x, y: height + y)
+        let bottomRight = CGPoint(x: width + x, y: height + y)
         
         let layer = CAShapeLayer()
         
         let path = UIBezierPath()
-        path.moveToPoint(center)
-        path.addLineToPoint(bottomLeft)
-        path.addLineToPoint(bottomRight)
-        path.closePath()
-        layer.path = path.CGPath
+        path.move(to: center)
+        path.addLine(to: bottomLeft)
+        path.addLine(to: bottomRight)
+        path.close()
+        layer.path = path.cgPath
         view.layer.addSublayer(layer)
     }
     
