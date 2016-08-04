@@ -22,35 +22,35 @@ class ViewController: UIViewController {
     var cardFront:UIView!
     var cardBack:UIView!
     
-    func centerViewXY(parent: UIView, child: UIView) {
+    func centerViewXY(_ parent: UIView, child: UIView) {
         
-        let constX = NSLayoutConstraint(item: child, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: parent, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0)
+        let constX = NSLayoutConstraint(item: child, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: parent, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0)
         parent.addConstraint(constX)
         
-        let constY = NSLayoutConstraint(item: child, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: parent, attribute: NSLayoutAttribute.CenterY, multiplier: 1, constant: 0)
+        let constY = NSLayoutConstraint(item: child, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: parent, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0)
         parent.addConstraint(constY)
         
     }
     
-    func addStandardConstraints(view:UIView, constraint:String, viewDictionary:Dictionary<String,UIView!>, metrics:Dictionary<String, Int>) {
+    func addStandardConstraints(_ view:UIView, constraint:String, viewDictionary:Dictionary<String,AnyObject>, metrics:Dictionary<String, Int>) {
         
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(constraint, options: [], metrics: metrics, views: viewDictionary))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: constraint, options: [], metrics: metrics, views: viewDictionary))
         
     }
     
     func curlUp() {
-        let transitionOptions = UIViewAnimationOptions.TransitionCurlUp
+        let transitionOptions = UIViewAnimationOptions.transitionCurlUp
         
-        UIView.transitionFromView(cardFront,
-            toView: cardBack,
+        UIView.transition(from: cardFront,
+            to: cardBack,
             duration: 5.0,
             options: transitionOptions,
             completion: { _ in
                 
-                let transitionOptions = UIViewAnimationOptions.TransitionCurlDown
+                let transitionOptions = UIViewAnimationOptions.transitionCurlDown
                 
-                UIView.transitionFromView(self.cardBack,
-                    toView: self.cardFront,
+                UIView.transition(from: self.cardBack,
+                    to: self.cardFront,
                     duration: 5.0,
                     options: transitionOptions,
                     completion: { _ in
@@ -67,7 +67,7 @@ class ViewController: UIViewController {
         
         let label = UILabel()
 
-        label.textColor = UIColor.blackColor()
+        label.textColor = UIColor.black
         label.translatesAutoresizingMaskIntoConstraints = false
         cardBack.addSubview(label)
         
@@ -90,23 +90,23 @@ class ViewController: UIViewController {
         
         container = UIView()
         container.translatesAutoresizingMaskIntoConstraints = false
-        container.backgroundColor = UIColor.blackColor()
+        container.backgroundColor = UIColor.black
         self.view.addSubview(container)
         
-        cardBack = UIView(frame: CGRectMake(0, 0, CGFloat(width), CGFloat(height)))
+        cardBack = UIView(frame: CGRect(x: 0, y: 0, width: CGFloat(width), height: CGFloat(height)))
         // WARNING: Accidently leave this set and you'll be in for a little hurt when you add the uilabel with autolayout
 //        cardBack.setTranslatesAutoresizingMaskIntoConstraints(false)
-        cardBack.backgroundColor = UIColor.redColor()
+        cardBack.backgroundColor = UIColor.red
         container.addSubview(cardBack)
         cardBack.layer.borderWidth = 2
-        cardBack.layer.borderColor = UIColor.blackColor().CGColor
+        cardBack.layer.borderColor = UIColor.black.cgColor
         
-        cardFront = UIView(frame: CGRectMake(0, 0, CGFloat(width), CGFloat(height)))
+        cardFront = UIView(frame: CGRect(x: 0, y: 0, width: CGFloat(width), height: CGFloat(height)))
 //        cardFront.setTranslatesAutoresizingMaskIntoConstraints(false)
-        cardFront.backgroundColor = UIColor.greenColor()
+        cardFront.backgroundColor = UIColor.green
         container.addSubview(cardFront)
         cardFront.layer.borderWidth = 2
-        cardFront.layer.borderColor = UIColor.blackColor().CGColor
+        cardFront.layer.borderColor = UIColor.black.cgColor
         
         
         let viewDictionary:Dictionary<String,UIView> = ["container": container]
@@ -123,7 +123,7 @@ class ViewController: UIViewController {
         
         addLabelToCardBack()
         
-        NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(ViewController.curlUp), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(ViewController.curlUp), userInfo: nil, repeats: false)
         
         
     }
@@ -131,7 +131,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.view.backgroundColor = UIColor.purpleColor()
+        self.view.backgroundColor = UIColor.purple
         buildView()
     }
     
