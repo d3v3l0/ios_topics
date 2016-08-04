@@ -47,7 +47,7 @@ class  SimpleTableViewController: UITableViewController {
                  "goat",
                  "milk"]
     
-    func generateIndex(wordList:[String]) -> ([String], [String:[String]]) {
+    func generateIndex(_ wordList:[String]) -> ([String], [String:[String]]) {
         
         var indexDictionary:[String:[String]] = [:]
         
@@ -70,12 +70,12 @@ class  SimpleTableViewController: UITableViewController {
         }
 //        print(indexDictionary)
         
-        let keyArray = Array(indexDictionary.keys).sort() // sort
+        let keyArray = Array(indexDictionary.keys).sorted() // sort
         
 //        print(keyArray)
         
         for (key, _) in indexDictionary {
-            indexDictionary[key] = indexDictionary[key]?.sort()
+            indexDictionary[key] = indexDictionary[key]?.sorted()
             //print("\(key), \(value)")
         }
 //        print("Results")
@@ -87,7 +87,7 @@ class  SimpleTableViewController: UITableViewController {
     override func viewDidLoad() {
         
         (sectionIndex, indexDictionary) = generateIndex(words)
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:CellIdentifier)
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier:CellIdentifier)
     }
     
     
@@ -97,27 +97,27 @@ class  SimpleTableViewController: UITableViewController {
 
 extension SimpleTableViewController {
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // Return the number of sections.
         return sectionIndex.count
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let letter = sectionIndex[section]
         let anArray = indexDictionary[letter]
         return anArray!.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let text:String
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath)
         
-        let letter = sectionIndex[indexPath.section]
+        let letter = sectionIndex[(indexPath as NSIndexPath).section]
         if let anArray = indexDictionary[letter] {
-            text = anArray[indexPath.row]
+            text = anArray[(indexPath as NSIndexPath).row]
         } else {
             text = ""
         }
@@ -128,8 +128,8 @@ extension SimpleTableViewController {
         return cell
     }
 
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionIndex[section].uppercaseString
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionIndex[section].uppercased()
     }
 
 }
