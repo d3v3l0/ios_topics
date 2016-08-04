@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     let label = UILabel()
     
 
-    func buttonAction(button: UIButton) {
+    func buttonAction(_ button: UIButton) {
         
         let tag = button.tag
         label.text = "\(tag)"
@@ -25,26 +25,26 @@ class ViewController: UIViewController {
     func customizeButtons() {
         
         // Button 1
-        button1.setTitle("cornerRadius = 10", forState: .Normal)
-        button1.backgroundColor = UIColor.blueColor()
+        button1.setTitle("cornerRadius = 10", for: UIControlState())
+        button1.backgroundColor = UIColor.blue
         button1.layer.cornerRadius = 10
-        button1.setTitleColor(UIColor.orangeColor(), forState: .Normal)
-        button1.addTarget(self, action: #selector(buttonAction), forControlEvents: .TouchUpInside)
+        button1.setTitleColor(UIColor.orange, for: UIControlState())
+        button1.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         
         // Button 2
-        button2.setTitle("Border", forState: .Normal)
-        button2.backgroundColor = UIColor.grayColor()
+        button2.setTitle("Border", for: UIControlState())
+        button2.backgroundColor = UIColor.gray
         button2.layer.borderWidth = 3
-        button2.layer.borderColor = UIColor.blackColor().CGColor
-        button2.addTarget(self, action: #selector(buttonAction), forControlEvents: .TouchUpInside)
+        button2.layer.borderColor = UIColor.black.cgColor
+        button2.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         
         
         // Button 3
         
         
-        button3.backgroundColor = UIColor.grayColor()
-        button3.setTitle("Custom Font", forState: .Normal)
-        button3.addTarget(self, action: #selector(buttonAction), forControlEvents: .TouchUpInside)
+        button3.backgroundColor = UIColor.gray
+        button3.setTitle("Custom Font", for: UIControlState())
+        button3.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         let fontSize:CGFloat = 20
         let aFontName = "American Typewriter"
         
@@ -54,12 +54,12 @@ class ViewController: UIViewController {
         }
 
         // Button 4
-        button4.backgroundColor = UIColor.grayColor()
-        button4.setTitle("Image", forState: .Normal)
-        button4.addTarget(self, action: #selector(buttonAction), forControlEvents: .TouchUpInside)
+        button4.backgroundColor = UIColor.gray
+        button4.setTitle("Image", for: UIControlState())
+        button4.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         let imageName = "star"
         if let image = UIImage(named: imageName) {
-            button4.setImage(image, forState: .Normal)
+            button4.setImage(image, for: UIControlState())
         }
     }
     
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
         
         label.translatesAutoresizingMaskIntoConstraints = false
         
-        label.font = UIFont.systemFontOfSize(fontSize)
+        label.font = UIFont.systemFont(ofSize: fontSize)
         label.text = "0"
         view.addSubview(label)
         
@@ -93,8 +93,8 @@ class ViewController: UIViewController {
         let stackView = UIStackView(arrangedSubviews: allButtons)
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
-        stackView.axis = .Vertical
-        stackView.alignment = .Fill
+        stackView.axis = .vertical
+        stackView.alignment = .fill
         stackView.spacing = 10 // Space between buttons
         view.addSubview(stackView)
 
@@ -102,13 +102,13 @@ class ViewController: UIViewController {
         
         // Center verticall, iOS9 style
 //        stackView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor).active = true
-        stackView.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor).active = true
-        stackView.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor, constant: 20).active = true
-        stackView.trailingAnchor.constraintEqualToAnchor(margins.trailingAnchor, constant: -20).active = true
+        stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 20).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -20).isActive = true
         
         // Label
-        label.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor).active = true
-        label.topAnchor.constraintEqualToAnchor(topLayoutGuide.bottomAnchor,                                                    constant: 50.0).active = true
+        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        label.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor,                                                    constant: 50.0).isActive = true
         
     }
 
