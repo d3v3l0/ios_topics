@@ -14,37 +14,37 @@ class ViewController: UIViewController {
 
     func addButton() {
         centeredButton = UIButton()
-        centeredButton.setTitle("Am I centered?", forState: .Normal)
-        centeredButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
+        centeredButton.setTitle("Am I centered?", for: UIControlState())
+        centeredButton.setTitleColor(UIColor.blue, for: UIControlState())
         centeredButton.translatesAutoresizingMaskIntoConstraints = false
-        centeredButton.addTarget(self, action: #selector(ViewController.pressed(_:)), forControlEvents: .TouchUpInside)
+        centeredButton.addTarget(self, action: #selector(ViewController.pressed(_:)), for: .touchUpInside)
         
         self.view.addSubview(centeredButton)
         
-        let viewDictionary:Dictionary = ["centeredButton": centeredButton]
+        let viewDictionary:[String:AnyObject] = ["centeredButton": centeredButton]
         
-        let horizontal:[NSLayoutConstraint]! = NSLayoutConstraint.constraintsWithVisualFormat("H:|-50-[centeredButton]-50-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: viewDictionary)
+        let horizontal:[NSLayoutConstraint]! = NSLayoutConstraint.constraints(withVisualFormat: "H:|-50-[centeredButton]-50-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: viewDictionary)
         
-        let vertical:[NSLayoutConstraint]! = NSLayoutConstraint.constraintsWithVisualFormat("V:|-100-[centeredButton]-100-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: viewDictionary)
+        let vertical:[NSLayoutConstraint]! = NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[centeredButton]-100-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: viewDictionary)
         self.view.addConstraints(horizontal)
         self.view.addConstraints(vertical)
         
     }
     
-    func pressed(sender: UIButton!) {
+    func pressed(_ sender: UIButton!) {
 
         let title = "Awesome"
         let message = "You did it"
         let alert = UIAlertController(title: title,
                                       message:message,
-                                      preferredStyle: .Alert)
-        let action = UIAlertAction(title: "Take Action 1?", style: .Default, handler:nil)
+                                      preferredStyle: .alert)
+        let action = UIAlertAction(title: "Take Action 1?", style: .default, handler:nil)
         alert.addAction(action)
         
-        let action2 = UIAlertAction(title: "Take Action 2?", style: .Default, handler:nil)
+        let action2 = UIAlertAction(title: "Take Action 2?", style: .default, handler:nil)
         alert.addAction(action2)
         
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
 
     }
     
