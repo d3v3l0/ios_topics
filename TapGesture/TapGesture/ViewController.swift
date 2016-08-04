@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         let width = 100
     
         view1.translatesAutoresizingMaskIntoConstraints = false
-        view1.backgroundColor = UIColor.cyanColor()
+        view1.backgroundColor = UIColor.cyan
         self.view.addSubview(view1)
         
         let viewDictionary:Dictionary<String,UIView> = ["view1": view1]
@@ -30,26 +30,26 @@ class ViewController: UIViewController {
       
         [h0Constraint, v0Constraint].forEach {
             
-            let constraint = NSLayoutConstraint.constraintsWithVisualFormat($0, options: [], metrics: metrics, views: viewDictionary)
+            let constraint = NSLayoutConstraint.constraints(withVisualFormat: $0, options: [], metrics: metrics, views: viewDictionary)
             
-            NSLayoutConstraint.activateConstraints(constraint)
+            NSLayoutConstraint.activate(constraint)
         }
         
         // Center, iOS9 style
-        view1.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor).active = true
-        view1.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor).active = true
+        view1.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        view1.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
 
         
     }
     
-    func handleSingleTap(recognizer:UITapGestureRecognizer) {
+    func handleSingleTap(_ recognizer:UITapGestureRecognizer) {
         
         let aColor = view1.backgroundColor
         
-        if aColor == UIColor.cyanColor() {
-            view1.backgroundColor = UIColor.grayColor()
+        if aColor == UIColor.cyan {
+            view1.backgroundColor = UIColor.gray
         } else {
-            view1.backgroundColor = UIColor.cyanColor()
+            view1.backgroundColor = UIColor.cyan
         }
     }
     
