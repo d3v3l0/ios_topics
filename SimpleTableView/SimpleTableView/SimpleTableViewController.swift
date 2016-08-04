@@ -14,7 +14,7 @@ class  SimpleTableViewController: UITableViewController {
     let CellIdentifier = "Cell"
     
     override func viewDidLoad() {
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:CellIdentifier)
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier:CellIdentifier)
     }
     
 }
@@ -24,30 +24,30 @@ class  SimpleTableViewController: UITableViewController {
 extension SimpleTableViewController {
 
     // We can skip overriding this function and it will default to 1
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // Return the number of sections.
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return rowData.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath)
         
         // Configure the cell...
-        cell.textLabel?.text = rowData[indexPath.row]
+        cell.textLabel?.text = rowData[(indexPath as NSIndexPath).row]
         
         return cell
 
     }
 
     //: Optional Header title
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Header"
     }
 
