@@ -9,19 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    func addLine(x0: CGFloat, y0: CGFloat, x1: CGFloat, y1: CGFloat) {
+    func addLine(_ x0: CGFloat, y0: CGFloat, x1: CGFloat, y1: CGFloat) {
         
         let layer = CAShapeLayer()
         
-        let startPoint = CGPointMake(x0, y0)
-        let endPoint = CGPointMake(x1, y1)
+        let startPoint = CGPoint(x: x0, y: y0)
+        let endPoint = CGPoint(x: x1, y: y1)
         
         let path = UIBezierPath()
-        path.moveToPoint(startPoint)
-        path.addLineToPoint(endPoint)
+        path.move(to: startPoint)
+        path.addLine(to: endPoint)
         
-        layer.path = path.CGPath
-        layer.strokeColor = UIColor.redColor().CGColor
+        layer.path = path.cgPath
+        layer.strokeColor = UIColor.red.cgColor
         layer.lineWidth = 2
         view.layer.addSublayer(layer)
         
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         
         drawAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         
-        layer.addAnimation(drawAnimation, forKey: "drawLineAnimation")
+        layer.add(drawAnimation, forKey: "drawLineAnimation")
         
     }
 
