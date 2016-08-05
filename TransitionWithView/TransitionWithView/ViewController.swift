@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         
     }
     
-    func addStandardConstraints(_ view:UIView, constraint:String, viewDictionary:Dictionary<String,UIView?>, metrics:Dictionary<String, Int>) {
+    func addStandardConstraints(_ view:UIView, constraint:String, viewDictionary:Dictionary<String,AnyObject>, metrics:Dictionary<String, Int>) {
         
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: constraint, options: [], metrics: metrics, views: viewDictionary))
         
