@@ -33,22 +33,19 @@ class ViewController: UIViewController {
         buttonStackView.spacing = 10
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.backgroundColor = UIColor.purple
+    func buildView() {
         
         addButtons()
         
         [largeBox, smallBox, mainStackView, buttonStackView].forEach({
             $0.translatesAutoresizingMaskIntoConstraints = false
         })
-
+        
         // Add everything to stackview then constrain
         mainStackView.addArrangedSubview(largeBox)
         mainStackView.addArrangedSubview(smallBox)
         mainStackView.addArrangedSubview(buttonStackView)
-
+        
         largeBox.backgroundColor = UIColor.red
         largeBox.layer.borderWidth = 5
         let width = min(self.view.bounds.width, self.view.bounds.height) - 40
@@ -56,37 +53,42 @@ class ViewController: UIViewController {
         largeBox.widthAnchor.constraint(equalToConstant: width).isActive = true
         
         largeBox.heightAnchor.constraint(equalToConstant: width).isActive = true
-
-//        largeBox.heightAnchor.constraint(equalTo: mainStackView.heightAnchor,                                                    multiplier: 0.6).isActive = true
-
-//        largeBox.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        
+        //        largeBox.heightAnchor.constraint(equalTo: mainStackView.heightAnchor,                                                    multiplier: 0.6).isActive = true
+        
+        //        largeBox.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
         smallBox.backgroundColor = UIColor.blue
         smallBox.widthAnchor.constraint(equalToConstant: width).isActive = true
-//        smallBox.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        smallBox.heightAnchor.constraint(equalTo: mainStackView.heightAnchor,                                                    multiplier: 0.2).isActive = true
-     
+        //        smallBox.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        smallBox.heightAnchor.constraint(equalTo: mainStackView.heightAnchor,                                                    multiplier: 0.1).isActive = true
+        
         
         mainStackView.axis = .vertical
-        mainStackView.spacing = 8
+        mainStackView.spacing = 10
         mainStackView.alignment = .center
-//        mainStackView.distribution = .equalSpacing
-        mainStackView.backgroundColor = UIColor.orange
+        mainStackView.backgroundColor = UIColor.black
         
         
-
         self.view.addSubview(mainStackView)
         
         let margins = self.view.layoutMarginsGuide
         
-//        mainStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//        mainStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        //        mainStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        //        mainStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         mainStackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
         mainStackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
         mainStackView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
         mainStackView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
-        
 
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = UIColor.purple
+
+        buildView()
     }
 
     override func didReceiveMemoryWarning() {
