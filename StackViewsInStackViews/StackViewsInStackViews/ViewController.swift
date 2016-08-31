@@ -51,13 +51,18 @@ class ViewController: UIViewController {
 
         largeBox.backgroundColor = UIColor.red
         largeBox.layer.borderWidth = 5
-        largeBox.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
-        largeBox.heightAnchor.constraint(equalTo: mainStackView.heightAnchor,                                                    multiplier: 0.5).isActive = true
+        let width = min(self.view.bounds.width, self.view.bounds.height) - 40
+        
+        largeBox.widthAnchor.constraint(equalToConstant: width).isActive = true
+        
+        largeBox.heightAnchor.constraint(equalToConstant: width).isActive = true
+
+//        largeBox.heightAnchor.constraint(equalTo: mainStackView.heightAnchor,                                                    multiplier: 0.6).isActive = true
 
 //        largeBox.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
         smallBox.backgroundColor = UIColor.blue
-        smallBox.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
+        smallBox.widthAnchor.constraint(equalToConstant: width).isActive = true
 //        smallBox.heightAnchor.constraint(equalToConstant: 50).isActive = true
         smallBox.heightAnchor.constraint(equalTo: mainStackView.heightAnchor,                                                    multiplier: 0.2).isActive = true
      
