@@ -15,6 +15,11 @@ class ViewController: UIViewController {
     let largeBox = UIView()
     let smallBox = UIView()
     
+    func isPortrait() -> Bool {
+        
+        return self.view.bounds.width < self.view.bounds.height
+    }  
+
     func addButtons()  {
         //: Left Button
         let leftButton = UIButton()
@@ -31,6 +36,18 @@ class ViewController: UIViewController {
         buttonStackView.backgroundColor = UIColor.lightGray
         buttonStackView.axis = .horizontal
         buttonStackView.spacing = 10
+    }
+
+    /*
+ 
+     https://forums.developer.apple.com/thread/12937
+ */
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        let isPortraitMode = isPortrait()
+        
+        print("\n\nisPortrait=\(isPortraitMode)\n\n")
+        super.viewWillTransition(to: size, with: coordinator)
+
     }
     
     func buildView() {

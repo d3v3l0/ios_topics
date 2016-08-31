@@ -100,7 +100,7 @@ class ViewController: UIViewController {
 
         let margins = view.layoutMarginsGuide
         
-        // Center verticall, iOS9 style
+        // Center vertically, iOS9 style
 //        stackView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor).active = true
         stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         stackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 20).isActive = true
