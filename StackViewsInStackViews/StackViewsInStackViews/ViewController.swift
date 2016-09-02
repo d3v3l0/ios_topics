@@ -89,10 +89,10 @@ class ViewController: UIViewController {
         
         self.view.addSubview(mainStackView)
         
-        let margins = self.view.layoutMarginsGuide
-        
+       
         //        mainStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         //        mainStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        let margins = self.view.layoutMarginsGuide
         mainStackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
         mainStackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
         mainStackView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
