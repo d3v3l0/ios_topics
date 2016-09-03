@@ -46,7 +46,5 @@ convert ./screenshot.png -resize 20% screenshot-toc.png; # Table of Contents scr
 
 * In Progress
 
-|[[AppRotation://github.com/melling/ios_topics/blob/master/AppRotation/AppRotation/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/AppRotation
-AppRotation/AppRotation][Handle Device Rotation]]|
-|[[AppRotation://github.com/melling/ios_topics/blob/master/PanGesture/PanGesture/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/AppRotation
-PanGesture/PanGesture][PanGesture]]|
+|[[AppRotation://github.com/melling/ios_topics/blob/master/AppRotation/AppRotation/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/AppRotation/AppRotation][Handle Device Rotation]]|
+|[[AppRotation://github.com/melling/ios_topics/blob/master/PanGesture/PanGesture/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/PanGesture/PanGesture][PanGesture]]|
