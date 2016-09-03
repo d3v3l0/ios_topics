@@ -1,11 +1,11 @@
 #+STARTUP: showall
-#+TITLE: iOS Topics in Swift
+#+TITLE: iOS Topics in Swift 3
 #+AUTHOR: http://h4labs.com
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/resources/css/myorg.css" />
 
 Menu: [[http://www.h4labs.com/dev/ios/swift.html][h4labs Swift]]
 
-Miscellaneous iOS programs that implement minimal examples for various random topics.
+Miscellaneous iOS Swift 3 programs that implement minimal examples for various random topics.
 
 I will blog about each examples as time permits under this section of my website: http://www.h4labs.com/dev/ios/swift_cookbook.html
 For now, I'll place notes in README.org files with each project.
