@@ -3,7 +3,6 @@
 //  AppRotation
 //
 //  Created by Michael Mellinger on 9/3/16.
-//  Copyright © 2016 h4labs. All rights reserved.
 //
 
 import UIKit
