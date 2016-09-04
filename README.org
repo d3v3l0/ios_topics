@@ -45,16 +45,16 @@ convert ./screenshot.png -resize 50% screenshot-small.png; # Smaller screenshot
 convert ./screenshot.png -resize 20% screenshot-toc.png; # Table of Contents screenshot
 #+END_EXAMPLE
 
-* In Progress
+* Ideas and In-Progress
 
 |[[AppRotation://github.com/melling/ios_topics/blob/master/AppRotation/AppRotation/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/AppRotation/AppRotation][Handle Device Rotation]]|
 |[[AppRotation://github.com/melling/ios_topics/blob/master/PanGesture/PanGesture/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/PanGesture/PanGesture][Pan Gesture]]|
 ||PDF Creation|
 ||Save Image to Photos|
 ||Dispatch Async|
-|||
-|||
-|||
+||Core Data|
+||sqlite|
+||Read plist|
 |||
 |||
 |||
