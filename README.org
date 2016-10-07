@@ -16,7 +16,8 @@ a personal preference to not use Storyboards.
 |[[https://github.com/melling/ios_topics/blob/master/CenteredAutoLayoutButton/CenteredAutoLayoutButton/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/CenteredAutoLayoutButton/CenteredAutoLayoutButton][AutoLayout Centered Button]]|
 |[[https://github.com/melling/ios_topics/blob/master/ButtonCenteredWithAnchors/ButtonCenteredWithAnchors/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/ButtonCenteredWithAnchors/ButtonCenteredWithAnchors][AutoLayout Centered Button using iOS9 Anchors]]|
 
-[[https://github.com/melling/ios_topics/blob/master/TwoButtonsInStackView/TwoButtonsInStackView/screenshot-toc.png][https://github.com/melling/ios_topics/blob/master/TwoButtonsInStackView/TwoButtonsInStackView][AutoLayout Two Button in StackView]]
+[[https://github.com/melling/ios_topics/blob/master/TwoButtonsInStackView/TwoButtonsInStackView/screenshot-toc.png]]
+[[https://github.com/melling/ios_topics/blob/master/TwoButtonsInStackView/TwoButtonsInStackView][AutoLayout Two Button in StackView]]
 + Buttons are equal size with 25 points between them
 + StackView is centered horizontally
 + StackView 10 points above bottom anchor
