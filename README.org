@@ -35,11 +35,23 @@ a personal preference to not use Storyboards.
 
 [[https://github.com/melling/ios_topics/blob/master/AlertControllers/AlertControllers/screenshot-toc.png]]
 
-|[[https://github.com/melling/ios_topics/blob/master/SimpleUIViewSubclass/SimpleUIViewSubclass/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/SimpleUIViewSubclass/SimpleUIViewSubclass][Simple UIView Subclass]]|
-|[[https://github.com/melling/ios_topics/blob/master/GradientView/GradientView/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/GradientView/GradientView][Gradient Layer]]|
-|[[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView][Basic UITableViewController Subclass]]|
-|[[https://github.com/melling/ios_topics/blob/master/TableViewWithCustomCell/TableViewWithCustomCell/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/TableViewWithCustomCell/TableViewWithCustomCell][Basic UITableViewController with Custom UITableViewCell]]|
-|[[https://github.com/melling/ios_topics/blob/master/TableViewWithSections/TableViewWithSections/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/TableViewWithSections/TableViewWithSections][UITableViewController Subclass with Sections]]|
+* [[https://github.com/melling/ios_topics/blob/master/SimpleUIViewSubclass/SimpleUIViewSubclass][Simple UIView Subclass]]
+[[https://github.com/melling/ios_topics/blob/master/SimpleUIViewSubclass/SimpleUIViewSubclass/screenshot-toc.png]]
+
+* [[https://github.com/melling/ios_topics/blob/master/GradientView/GradientView][Gradient Layer]]
+[[https://github.com/melling/ios_topics/blob/master/GradientView/GradientView/screenshot-toc.png]]
+
+* [[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView][Basic UITableViewController Subclass]]
+
+[[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView/screenshot-toc.png]]
+
+* [[https://github.com/melling/ios_topics/blob/master/TableViewWithCustomCell/TableViewWithCustomCell][Basic UITableViewController with Custom UITableViewCell]]
+
+[[https://github.com/melling/ios_topics/blob/master/TableViewWithCustomCell/TableViewWithCustomCell/screenshot-toc.png]]
+
+* [[https://github.com/melling/ios_topics/blob/master/TableViewWithSections/TableViewWithSections][UITableViewController Subclass with Sections]]
+[[https://github.com/melling/ios_topics/blob/master/TableViewWithSections/TableViewWithSections/screenshot-toc.png]]
+
 |[[https://github.com/melling/ios_topics/blob/master/TableViewWithIndex/TableViewWithIndex/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/TableViewWithIndex/TableViewWithIndex][UITableViewController Subclass with Sections and an Index]]|
 |[[https://github.com/melling/ios_topics/blob/master/CollectionViewBasic/CollectionViewBasic/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/CollectionViewBasic/CollectionViewBasic][UICollectionViewController Subclass]]|
 |[[https://github.com/melling/ios_topics/blob/master/CollectionViewDelegate/CollectionViewDelegate/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/CollectionViewDelegate/CollectionViewDelegate][UICollectionViewController Delegate]]|
