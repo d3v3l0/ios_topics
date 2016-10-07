@@ -9,7 +9,7 @@
  Buttons are equal size
  StackView is centered horizontally
  StackView 10 points above bottom anchor
- 
+ Add some extra padding to button width and height
  */
 import UIKit
 
@@ -34,6 +34,9 @@ class ViewController: UIViewController {
         
         leftBtn.layer.borderWidth = 1
         rightBtn.layer.borderWidth = 1
+
+        // Add some extra padding
+        rightBtn.contentEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5)
         
         buttonStackView.addArrangedSubview(leftBtn)
         buttonStackView.addArrangedSubview(rightBtn)
@@ -42,6 +45,7 @@ class ViewController: UIViewController {
         //: Button Layout
         // Simply change multiplier to make button wider
         leftBtn.widthAnchor.constraint(equalTo: rightBtn.widthAnchor, multiplier: 1).isActive = true
+        leftBtn.heightAnchor.constraint(equalTo: rightBtn.heightAnchor, multiplier: 1).isActive = true
         
         //: Stackview Layout
         let margins = view.layoutMarginsGuide
