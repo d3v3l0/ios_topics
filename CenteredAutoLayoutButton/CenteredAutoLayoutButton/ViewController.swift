@@ -3,20 +3,20 @@
 //  CenteredAutoLayoutButton
 //
 //  Created by Michael Mellinger on 8/14/14.
-//  Copyright (c) 2014 h4labs. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
     
-    var centeredButton: UIButton!
+    var centeredButton: UIButton = UIButton()
 
     func addButton() {
-        centeredButton = UIButton()
-        centeredButton.setTitle("Am I centered?", for: UIControlState())
-        centeredButton.setTitleColor(UIColor.blue, for: UIControlState())
+        
         centeredButton.translatesAutoresizingMaskIntoConstraints = false
+
+        centeredButton.setTitle("Am I centered?", for: UIControlState())
+        centeredButton.setTitleColor(UIColor.white, for: UIControlState())
         centeredButton.addTarget(self, action: #selector(ViewController.pressed(_:)), for: .touchUpInside)
         
         self.view.addSubview(centeredButton)
@@ -51,6 +51,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.backgroundColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0) // Apple blue
         addButton()
     }
 
