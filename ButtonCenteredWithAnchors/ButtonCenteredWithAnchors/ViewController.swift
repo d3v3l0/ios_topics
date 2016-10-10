@@ -13,15 +13,17 @@ class ViewController: UIViewController {
     
     func addButton() {
         
-        centeredButton.setTitle("Am I centered?", for: UIControlState())
-        centeredButton.setTitleColor(UIColor.blue, for: UIControlState())
         centeredButton.translatesAutoresizingMaskIntoConstraints = false
+        centeredButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
+        
+        centeredButton.setTitle("Am I centered?", for: UIControlState())
+        centeredButton.setTitleColor(UIColor.black, for: UIControlState())
         centeredButton.addTarget(self, action: #selector(ViewController.pressed(_:)), for: .touchUpInside)
         
         self.view.addSubview(centeredButton)
         
         centeredButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        centeredButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -40).isActive = true
+        centeredButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0).isActive = true
     }
     
     func pressed(_ sender: UIButton!) {
@@ -43,7 +45,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0) // Apple blue
         addButton()
     }
     
