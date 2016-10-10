@@ -3,7 +3,6 @@
 //  SimpleTableView
 //
 //  Created by Michael Mellinger on 3/8/16.
-//  Copyright © 2016 h4labs. All rights reserved.
 //
 
 import UIKit
@@ -39,6 +38,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor(red: 90/255.0, green: 200.0/255.0, blue: 250.0/255, alpha: 1.0) // Apple Videos
+
         addTableView()
     }
 

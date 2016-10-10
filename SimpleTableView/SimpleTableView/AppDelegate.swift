@@ -3,7 +3,6 @@
 //  SimpleTableView
 //
 //  Created by Michael Mellinger on 3/8/16.
-//  Copyright © 2016 h4labs. All rights reserved.
 //
 
 import UIKit
@@ -14,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }
