@@ -38,6 +38,7 @@ class ViewController: UIViewController {
         leftBtn.layer.borderWidth = 1
         rightBtn.layer.borderWidth = 1
 
+        leftBtn.layer.cornerRadius = 15
         // Add some extra padding
         rightBtn.contentEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5)
         
@@ -60,7 +61,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0) // Apple blue
+        self.view.backgroundColor = UIColor(red: 1.0, green: 45.0/255.0, blue: 85.0/255, alpha: 1.0) // Apple News
 
 
         buildView()
