@@ -17,6 +17,7 @@ class  SimpleTableViewController: UITableViewController {
 
         tableView.backgroundColor = UIColor(red: 90/255.0, green: 200.0/255.0, blue: 250.0/255, alpha: 1.0) // Apple Videos
         
+        tableView.rowHeight = 80
         tableView.tableFooterView = UIView() // Remove "empty" table centers in footer
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier:CellIdentifier)
     }

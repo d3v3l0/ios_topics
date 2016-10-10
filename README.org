@@ -47,6 +47,11 @@ a personal preference to not use Storyboards.
 
 ** [[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView][Basic UITableViewController Subclass]]
 
++ Subclass UITableViewController
++ Custom Header Height
++ Set Header Cell Color
++ Fixed Row Height: tableView.rowHeight = 80
+
 [[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView/screenshot-toc.png]]
 
 ** [[https://github.com/melling/ios_topics/blob/master/TableViewWithCustomCell/TableViewWithCustomCell][Basic UITableViewController with Custom UITableViewCell]]
@@ -131,7 +136,7 @@ a personal preference to not use Storyboards.
 + Fix Mac OS installation error
  - http://stackoverflow.com/questions/22715738/imagemagick-error
 #+BEGIN_EXAMPLE
-convert ./screenshot.png -resize 50% screenshot-small.png; # Smaller screenshot
+convert ./screenshot.png -resize 25% screenshot-small.png; # Smaller screenshot
 convert ./screenshot.png -resize 20% screenshot-toc.png; # Table of Contents screenshot
 #+END_EXAMPLE
 
