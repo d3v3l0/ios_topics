@@ -26,9 +26,11 @@ class ViewController: UIViewController {
         
         // Button 1
         button1.setTitle("cornerRadius = 10", for: UIControlState())
+        button1.titleLabel?.font = UIFont.systemFont(ofSize: 24)
         button1.backgroundColor = UIColor.blue
         button1.layer.cornerRadius = 10
-        button1.setTitleColor(UIColor.orange, for: UIControlState())
+        
+        button1.setTitleColor(UIColor.white, for: UIControlState())
         button1.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         
         // Button 2
@@ -74,9 +76,8 @@ class ViewController: UIViewController {
         view.addSubview(label)
         
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    
+    func buildView() {
         let allButtons = [button1, button2, button3, button4]
         
         var i = 1
@@ -86,22 +87,22 @@ class ViewController: UIViewController {
             i += 1
             self.view.addSubview($0)
         }
-
+        
         customizeButtons()
         createLabel()
-     
+        
         let stackView = UIStackView(arrangedSubviews: allButtons)
         stackView.translatesAutoresizingMaskIntoConstraints = false
-
+        
         stackView.axis = .vertical
         stackView.alignment = .fill
         stackView.spacing = 10 // Space between buttons
         view.addSubview(stackView)
-
+        
         let margins = view.layoutMarginsGuide
         
         // Center vertically, iOS9 style
-//        stackView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor).active = true
+        //        stackView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor).active = true
         stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         stackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 20).isActive = true
         stackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -20).isActive = true
@@ -110,6 +111,15 @@ class ViewController: UIViewController {
         label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         label.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor,                                                    constant: 50.0).isActive = true
         
+
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.view.backgroundColor = UIColor(red: 1.0, green: 149.0/255.0, blue: 0, alpha: 1.0) // Apple iBook
+
+        buildView()
     }
 
     override func didReceiveMemoryWarning() {
