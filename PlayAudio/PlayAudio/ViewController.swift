@@ -15,9 +15,11 @@ class ViewController: UIViewController {
     
     func addButton() {
 
-        centeredButton.setTitle("Play", for: UIControlState())
-        centeredButton.setTitleColor(UIColor.blue, for: UIControlState())
         centeredButton.translatesAutoresizingMaskIntoConstraints = false
+        centeredButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
+
+        centeredButton.setTitle("Play", for: UIControlState())
+        centeredButton.setTitleColor(UIColor.black, for: UIControlState())
         centeredButton.addTarget(self, action: #selector(ViewController.playAudio(_:)), for: .touchUpInside)
         
         self.view.addSubview(centeredButton)
@@ -28,16 +30,16 @@ class ViewController: UIViewController {
     }
     
     func playAudio(_ sender: UIButton!) {
-        playWordAudio("robot02")
+        playWordAudio(fileName: "robot02")
     }
     
-    func playWordAudio(_ aWord:String) {
+    func playWordAudio(fileName:String) {
         
         /*
          Audio files came from here:
          http://www.metanetsoftware.com/blog/2016/tools-for-gamemaking-music-loops
          */
-        let audioUrl = URL(fileURLWithPath: Bundle.main.path(forResource: aWord, ofType: "mp3")!)
+        let audioUrl = URL(fileURLWithPath: Bundle.main.path(forResource: fileName, ofType: "mp3")!)
         
         
         try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: [])
@@ -51,15 +53,12 @@ class ViewController: UIViewController {
         } catch {
             print("ERROR: Play sound: \(error)")
         }
-        //        } else {
-        //            print("Sound file not found: \(aWord)")
-        //        }
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.view.backgroundColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0) // Apple blue
         addButton()
     }
     
