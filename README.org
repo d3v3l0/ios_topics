@@ -132,6 +132,8 @@ a personal preference to not use Storyboards.
 
 [[https://github.com/melling/ios_topics/blob/master/CountDownTimer/CountDownTimer/screenshot-toc.png]]
 
++ timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+
 
 * Misc Notes
 
