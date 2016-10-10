@@ -9,19 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    func toRadians(_ degrees:CGFloat) -> CGFloat {
+    func toRadians(degrees:CGFloat) -> CGFloat {
         return degrees * CGFloat(M_PI)/180
     }
     
-    func addAnimatedCircleWithArc(){
+    func addAnimatedCircleWithArc() {
         
         let layer = CAShapeLayer()
         
         let radius:CGFloat = 50
         let center = CGPoint(x: 100, y: 350)
         
-        let startAngle:CGFloat = toRadians(0)
-        let endAngle:CGFloat = toRadians(360)
+        let startAngle:CGFloat = toRadians(degrees: 0)
+        let endAngle:CGFloat = toRadians(degrees: 360)
         
         let clockwise = true
         
@@ -53,6 +53,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(red: 76/2550.0, green: 217.0/255.0, blue:100.0/255, alpha: 1.0) // Apple Messages
 
         addAnimatedCircleWithArc()
 
