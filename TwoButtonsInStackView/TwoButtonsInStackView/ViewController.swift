@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     let buttonStackView = UIStackView()
     
     func buildView() {
-        [buttonStackView, leftBtn, rightBtn].forEach({$0.translatesAutoresizingMaskIntoConstraints = false})
+        [buttonStackView, leftBtn, rightBtn].forEach {$0.translatesAutoresizingMaskIntoConstraints = false}
 
         //: StackView
         buttonStackView.axis = .horizontal
@@ -31,6 +31,9 @@ class ViewController: UIViewController {
         //: Buttons
         leftBtn.setTitle("Left", for: .normal)
         rightBtn.setTitle("Right", for: .normal)
+        
+        leftBtn.titleLabel?.font = UIFont.systemFont(ofSize: 36)
+        rightBtn.titleLabel?.font = UIFont.systemFont(ofSize: 36)
         
         leftBtn.layer.borderWidth = 1
         rightBtn.layer.borderWidth = 1
@@ -57,8 +60,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0) // Apple blue
 
-        self.view.backgroundColor = UIColor.lightGray
 
         buildView()
 
