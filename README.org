@@ -38,9 +38,11 @@ a personal preference to not use Storyboards.
 [[https://github.com/melling/ios_topics/blob/master/AlertControllers/AlertControllers/screenshot-toc.png]]
 
 ** [[https://github.com/melling/ios_topics/blob/master/SimpleUIViewSubclass/SimpleUIViewSubclass][Simple UIView Subclass]]
+
 [[https://github.com/melling/ios_topics/blob/master/SimpleUIViewSubclass/SimpleUIViewSubclass/screenshot-toc.png]]
 
 ** [[https://github.com/melling/ios_topics/blob/master/GradientView/GradientView][Gradient Layer]]
+
 [[https://github.com/melling/ios_topics/blob/master/GradientView/GradientView/screenshot-toc.png]]
 
 ** [[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView][Basic UITableViewController Subclass]]
@@ -65,11 +67,9 @@ a personal preference to not use Storyboards.
 [[https://github.com/melling/ios_topics/blob/master/CollectionViewBasic/CollectionViewBasic/screenshot-toc.png]]
 
 
-
 ** [[https://github.com/melling/ios_topics/blob/master/CollectionViewDelegate/CollectionViewDelegate][UICollectionViewController Delegate]]
 
 [[https://github.com/melling/ios_topics/blob/master/CollectionViewDelegate/CollectionViewDelegate/screenshot-toc.png]]
-
 
 
 ** [[https://github.com/melling/ios_topics/blob/master/CollectionViewWithCustomCell/CollectionViewWithCustomCell][UICollectionView with Custom Cell]]
@@ -77,10 +77,12 @@ a personal preference to not use Storyboards.
 [[https://github.com/melling/ios_topics/blob/master/CollectionViewWithCustomCell/CollectionViewWithCustomCell/screenshot-toc.png]]
 
 
-** [[https://github.com/melling/ios_topics/blob/master/ShapeLayer/ShapeLayer][CAShapeLayer with Basic Shapes]]|
+** [[https://github.com/melling/ios_topics/blob/master/ShapeLayer/ShapeLayer][CAShapeLayer with Basic Shapes]]
 
 [[https://github.com/melling/ios_topics/blob/master/ShapeLayer/ShapeLayer/screenshot-toc.png]]
 
++ CAShapeLayer() added to a UIViewController
++ Use UIBezierPath to draw shapes
 
 ** [[https://github.com/melling/ios_topics/blob/master/LineDrawingAnimation/LineDrawingAnimation][Animate the Drawing of a Bezier Line]]
 
