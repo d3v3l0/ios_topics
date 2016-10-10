@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    func addLine(_ x0: CGFloat, y0: CGFloat, x1: CGFloat, y1: CGFloat) {
+    func addLine(x0: CGFloat, y0: CGFloat, x1: CGFloat, y1: CGFloat) {
         
         let layer = CAShapeLayer()
         
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         
         layer.path = path.cgPath
         layer.strokeColor = UIColor.red.cgColor
-        layer.lineWidth = 2
+        layer.lineWidth = 5
         view.layer.addSublayer(layer)
         
         
@@ -42,8 +42,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0) // Apple Safari
 
-        addLine(20, y0: 20, x1: 250, y1: 500)
+        addLine(x0: 20, y0: 20, x1: 250, y1: 500)
 
     }
 
