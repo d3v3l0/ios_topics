@@ -7,9 +7,10 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
 
 class BasicCollectionViewController: UICollectionViewController {
+    
+    private let reuseIdentifier = "Cell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,24 +21,8 @@ class BasicCollectionViewController: UICollectionViewController {
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
-        
-        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     // MARK: UICollectionViewDataSource
 
