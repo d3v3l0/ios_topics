@@ -44,6 +44,7 @@ class ViewController: UIViewController {
         flowLayout.minimumInteritemSpacing = 2
         flowLayout.minimumLineSpacing = 5
         flowLayout.scrollDirection = .vertical
+        flowLayout.sectionInset = UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 30);
 
         // Must create with a FlowLayout if we create UICollectionViewController programatically
         
