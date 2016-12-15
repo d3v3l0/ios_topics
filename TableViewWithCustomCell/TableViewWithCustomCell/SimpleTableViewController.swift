@@ -29,7 +29,6 @@ extension SimpleTableViewController {
 
     // We can skip overriding this function and it will default to 1
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // Return the number of sections.
         return 1
     }
     
@@ -44,8 +43,8 @@ extension SimpleTableViewController {
         let cell:CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as! CustomTableViewCell
         
         // Configure the cell...
-        cell.label1?.text = rowData[(indexPath as NSIndexPath).row]
-        cell.label2?.text = "\((indexPath as NSIndexPath).row + 1)"
+        cell.label1?.text = rowData[indexPath.row]
+        cell.label2?.text = "\(indexPath.row + 1)"
         let imageName:String = "fr_icon"
         
         if let image = UIImage(named: imageName) {

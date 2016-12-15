@@ -57,8 +57,6 @@ class  SimpleTableViewController: UITableViewController {
             let firstLetter = "\(word[startIndex])" // Character to String
             
             if let _ = indexDictionary[firstLetter] {
-                //var letterWordList:[String] = indexDictionary[firstLetter]!
-                //letterWordList.append(word)
                 indexDictionary[firstLetter]?.append(word)
                 
             } else {
@@ -72,14 +70,10 @@ class  SimpleTableViewController: UITableViewController {
         
         let keyArray = Array(indexDictionary.keys).sorted() // sort
         
-//        print(keyArray)
-        
         for (key, _) in indexDictionary {
             indexDictionary[key] = indexDictionary[key]?.sorted()
             //print("\(key), \(value)")
         }
-//        print("Results")
-//        print(indexDictionary)
         // sort each array in the dictionary
         return (keyArray, indexDictionary)
     }
@@ -98,7 +92,6 @@ class  SimpleTableViewController: UITableViewController {
 extension SimpleTableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // Return the number of sections.
         return sectionIndex.count
     }
     
@@ -115,9 +108,9 @@ extension SimpleTableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath)
         
-        let letter = sectionIndex[(indexPath as NSIndexPath).section]
+        let letter = sectionIndex[indexPath.section]
         if let anArray = indexDictionary[letter] {
-            text = anArray[(indexPath as NSIndexPath).row]
+            text = anArray[indexPath.row]
         } else {
             text = ""
         }
@@ -133,4 +126,3 @@ extension SimpleTableViewController {
     }
 
 }
-
