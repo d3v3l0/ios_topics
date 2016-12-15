@@ -30,7 +30,6 @@ extension SimpleTableViewController {
 
     // We can skip overriding this function and it will default to 1
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // Return the number of sections.
         return 1
     }
     
@@ -45,7 +44,7 @@ extension SimpleTableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath)
         cell.backgroundColor = UIColor(red: 90/255.0, green: 120.0/255.0, blue: 250.0/255, alpha: 1.0)
         // Configure the cell...
-        cell.textLabel?.text = rowData[(indexPath as NSIndexPath).row]
+        cell.textLabel?.text = rowData[indexPath.row]
         
         return cell
 
