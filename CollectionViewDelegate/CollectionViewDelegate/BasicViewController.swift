@@ -21,7 +21,7 @@ class BasicCollectionViewController: UIViewController {
         flowLayout.minimumInteritemSpacing = 2
         flowLayout.minimumLineSpacing = 2
         flowLayout.sectionInset = UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 30)
-//        flowLayout.scrollDirection = .vertical
+//        flowLayout.scrollDirection = .horizontal // Default: .vertical
         collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout)
         
         collectionView.dataSource = self
