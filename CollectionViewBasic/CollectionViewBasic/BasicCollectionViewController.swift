@@ -26,7 +26,7 @@ class BasicCollectionViewController: UICollectionViewController {
     }
 
 
-    // MARK: UICollectionViewDataSource
+    // MARK: - UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
 
@@ -36,20 +36,21 @@ class BasicCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return 10
+        return 20
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
         // Configure the cell
-        let aColor = (indexPath as NSIndexPath).row % 2 == 0 ? UIColor.orange : UIColor.green
+        let aColor = indexPath.row % 2 == 0 ? UIColor.orange : UIColor.green
         cell.backgroundColor = aColor
         
         return cell
     }
 
-    // MARK: UICollectionViewDelegate
+    // MARK: - UICollectionViewDelegate
 
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
