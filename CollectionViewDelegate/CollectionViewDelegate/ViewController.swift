@@ -16,7 +16,6 @@ class ViewController: UIViewController {
         let viewDictionary:[String:AnyObject] = [
             "collectionView": collectionViewController.view,
             "topLayoutGuide": topLayoutGuide,
-            
             ]
         collectionViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
@@ -24,21 +23,18 @@ class ViewController: UIViewController {
         
         let metrics:[String:AnyObject] = [:]
         
-        let h0Constraint = "H:|-1-[collectionView]-1-|"
-        let v0Constraint = "V:[topLayoutGuide]-[collectionView]-|"
-        
-        [h0Constraint, v0Constraint].forEach {
+        ["H:|-1-[collectionView]-1-|",
+         "V:[topLayoutGuide]-[collectionView]-|"].forEach {
             
             let constraint = NSLayoutConstraint.constraints(withVisualFormat: $0, options: [], metrics: metrics, views: viewDictionary)
             
             NSLayoutConstraint.activate(constraint)
         }
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.purple
+//        self.view.backgroundColor = UIColor.purple
 //        let flowLayout=UICollectionViewFlowLayout()
 //        flowLayout.itemSize = CGSizeMake(100, 100)
 //        flowLayout.minimumInteritemSpacing = 2
@@ -52,12 +48,5 @@ class ViewController: UIViewController {
         addCollectionView()
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
