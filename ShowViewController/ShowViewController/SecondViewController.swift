@@ -17,8 +17,7 @@ class SecondViewController: UIViewController {
     */
     func previousController(_ sender:UIButton) {
 
-//        self.navigationController?.popViewController(animated: true)
-        self.dismiss(animated: true, completion: {})
+        _ = self.navigationController?.popViewController(animated: true)
     }
     
     func buildView() {

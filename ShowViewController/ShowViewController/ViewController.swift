@@ -14,13 +14,13 @@ class ViewController: UIViewController {
     /*
  https://developer.apple.com/reference/uikit/uiviewcontroller/1621377-show
      
-     Modal presentation: https://developer.apple.com/reference/uikit/uiviewcontroller/1621380-present
    */
     func nextController(_ sender:UIButton) {
         let secondViewController = SecondViewController()
-        self.show(secondViewController, sender: self)
-//        self.present(secondViewController, animated: true, completion: {})
-//        self.navigationController?.pushViewController(secondViewController, animated: true)
+        
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+
+//        self.show(secondViewController, sender: self)
     }
     
     func buildView() {
@@ -38,10 +38,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let x = self.navigationController
-        self.navigationController?.navigationBar.isHidden = false
         self.view.backgroundColor = .purple
-        
+        self.title = "Programatic ViewController Push"
         buildView()
     }
 
