@@ -12,6 +12,7 @@
 		3E36600D1E044F76002A4269 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E36600C1E044F76002A4269 /* Assets.xcassets */; };
 		3E3660101E044F76002A4269 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E36600E1E044F76002A4269 /* LaunchScreen.storyboard */; };
 		3E3660181E0452C3002A4269 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3660171E0452C3002A4269 /* SecondViewController.swift */; };
+		3E36601A1E047BFA002A4269 /* README.org in Resources */ = {isa = PBXBuildFile; fileRef = 3E3660191E047BFA002A4269 /* README.org */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3E36600F1E044F76002A4269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E3660111E044F76002A4269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E3660171E0452C3002A4269 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		3E3660191E047BFA002A4269 /* README.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.org; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		3E3660041E044F76002A4269 /* NoNibAllCodeSwift */ = {
 			isa = PBXGroup;
 			children = (
+				3E3660191E047BFA002A4269 /* README.org */,
 				3E3660051E044F76002A4269 /* AppDelegate.swift */,
 				3E3660071E044F76002A4269 /* ViewController.swift */,
 				3E3660171E0452C3002A4269 /* SecondViewController.swift */,
@@ -124,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E3660101E044F76002A4269 /* LaunchScreen.storyboard in Resources */,
+				3E36601A1E047BFA002A4269 /* README.org in Resources */,
 				3E36600D1E044F76002A4269 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +295,7 @@
 				3E3660161E044F76002A4269 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
