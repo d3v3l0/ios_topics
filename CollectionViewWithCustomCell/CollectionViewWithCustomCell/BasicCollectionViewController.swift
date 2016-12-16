@@ -27,7 +27,7 @@ class BasicCollectionViewController: UICollectionViewController {
         
     }
 
-    // MARK: UICollectionViewDataSource
+    // MARK: - UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
 
@@ -49,10 +49,10 @@ class BasicCollectionViewController: UICollectionViewController {
         let iconName:String
             
         if indexPath.row % 2 == 0 {
-            aColor = UIColor.orange
+            aColor = .orange
             iconName = "fr_icon"
         } else {
-            aColor = UIColor.green
+            aColor = .green
             iconName = "it_icon"
         }
         cell.backgroundColor = aColor
