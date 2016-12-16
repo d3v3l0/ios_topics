@@ -132,6 +132,26 @@ centeredButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0
 
 [[https://github.com/melling/ios_topics/blob/master/StackViewsInStackViews/StackViewsInStackViews/screenshot-toc.png]]
 
+** [[https://github.com/melling/ios_topics/blob/master/ShowViewController/ShowViewController][No Nib Project - All Code]]
+
+[[https://github.com/melling/ios_topics/blob/master/ShowViewController/ShowViewController/screenshot-toc.png]]
+
+#+BEGIN_SRC swift
+func nextController(_ sender:UIButton) {
+    let secondViewController = SecondViewController()
+
+    self.navigationController?.pushViewController(secondViewController, animated: true)
+}
+#+END_SRC
+
+#+BEGIN_SRC swift
+func previousController(_ sender:UIButton) {
+
+    _ = self.navigationController?.popViewController(animated: true)
+}
+#+END_SRC
+
+
 ** [[https://github.com/melling/ios_topics/blob/master/NoNibAllCodeSwift/NoNibAllCodeSwift][No Nib Project - All Code]]
 
 [[https://github.com/melling/ios_topics/blob/master/NoNibAllCodeSwift/NoNibAllCodeSwift/screenshot-toc.png]]
