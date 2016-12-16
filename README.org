@@ -132,6 +132,25 @@ centeredButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0
 
 [[https://github.com/melling/ios_topics/blob/master/StackViewsInStackViews/StackViewsInStackViews/screenshot-toc.png]]
 
+** [[https://github.com/melling/ios_topics/blob/master/NoNibAllCode/NoNibAllCode][A StackView in a StackView]]
+
+[[https://github.com/melling/ios_topics/blob/master/NoNibAllCode/NoNibAllCode/screenshot-toc.png]]
+
+#+BEGIN_SRC swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    
+    self.window = UIWindow(frame: UIScreen.main.bounds)
+    let navController = UINavigationController()
+    self.window?.rootViewController = navController
+    let topLevelController = ViewController()
+    navController.addChildViewController(topLevelController)
+    
+    self.window?.makeKeyAndVisible()
+    
+    return true
+}
+#+END_SRC
+
 ** [[https://github.com/melling/ios_topics/blob/master/CountDownTimer/CountDownTimer][Countdown Timer]]
 
 [[https://github.com/melling/ios_topics/blob/master/CountDownTimer/CountDownTimer/screenshot-toc.png]]
