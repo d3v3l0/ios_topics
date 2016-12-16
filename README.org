@@ -132,7 +132,7 @@ centeredButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0
 
 [[https://github.com/melling/ios_topics/blob/master/StackViewsInStackViews/StackViewsInStackViews/screenshot-toc.png]]
 
-** [[https://github.com/melling/ios_topics/blob/master/NoNibAllCode/NoNibAllCode][A StackView in a StackView]]
+** [[https://github.com/melling/ios_topics/blob/master/NoNibAllCode/NoNibAllCode][No Nib Project - All Code]]
 
 [[https://github.com/melling/ios_topics/blob/master/NoNibAllCode/NoNibAllCode/screenshot-toc.png]]
 
