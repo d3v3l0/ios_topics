@@ -32,7 +32,6 @@ func scaleIt(sender:UIButton) {
 ** Scale
 #+BEGIN_SRC swift
 func rotateIt() {
-//
     UIView.animate(withDuration: 2,
         delay: 0,
         options: .curveEaseInOut,
