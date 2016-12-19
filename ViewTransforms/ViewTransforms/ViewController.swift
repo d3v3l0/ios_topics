@@ -29,9 +29,6 @@ class ViewController: UIViewController {
         
         label.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         
-        //        label.backgroundColor = .white
-        //        label.contentEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5)
-        
         label.text = "foo"
         
         //
@@ -41,7 +38,7 @@ class ViewController: UIViewController {
         aBtn.setTitle("Transform", for: .normal)
         aBtn.layer.borderWidth = 1
         
-        aBtn.contentEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5)
+        aBtn.contentEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         
         aBtn.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 100).isActive = true
         aBtn.addTarget(self, action: #selector(scaleIt(sender:)), for: .touchUpInside)
