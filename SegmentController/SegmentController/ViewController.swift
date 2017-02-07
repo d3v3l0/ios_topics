@@ -39,8 +39,8 @@ class ViewController: UIViewController {
         
         segmentedControl.tintColor = .blue
         segmentedControl.insertSegment(withTitle: "Spanish", at: 0, animated: true)
-        segmentedControl.insertSegment(withTitle: "English", at: 1, animated: true)
         segmentedControl.insertSegment(withTitle: "French", at: 1, animated: true)
+        segmentedControl.insertSegment(withTitle: "English", at: 2, animated: true)
         
         segmentedControl.addTarget(self, action: #selector(segmentValueDidChange(_:)), for: .valueChanged)
     }
