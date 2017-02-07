@@ -69,10 +69,6 @@ centeredButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0
 
 [[https://github.com/melling/ios_topics/blob/master/TableViewWithIndex/TableViewWithIndex/screenshot-toc.png]]
 
-** [[https://github.com/melling/ios_topics/blob/master/SegmentController/SegmentController][SegmentController]]
-
-[[https://github.com/melling/ios_topics/blob/master/SegmentController/SegmentController/screenshot-toc.png]]
-
 
 ** [[https://github.com/melling/ios_topics/blob/master/CollectionViewBasic/CollectionViewBasic][UICollectionViewController Subclass]]
 
@@ -88,7 +84,7 @@ centeredButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0
 
 [[https://github.com/melling/ios_topics/blob/master/CollectionViewWithCustomCell/CollectionViewWithCustomCell/screenshot-toc.png]]
 
-** [[https://github.com/melling/ios_topics/blob/master/SegmentController/SegmentController][UICollectionViewController Subclass]]
+** [[https://github.com/melling/ios_topics/blob/master/SegmentController/SegmentController][UISegmentView]]
 
 [[https://github.com/melling/ios_topics/blob/master/SegmentController/SegmentController/screenshot-toc.png]]
 
