@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         
         segmentedControl.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         segmentedControl.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: -100).isActive = true
-        segmentedControl.widthAnchor.constraint(equalToConstant: 150)
+//        segmentedControl.widthAnchor.constraint(equalToConstant: 150)
         
         //
         let margins = self.view.layoutMarginsGuide
