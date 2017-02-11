@@ -42,6 +42,8 @@ class ViewController: UIViewController {
         segmentedControl.insertSegment(withTitle: "French", at: 1, animated: true)
         segmentedControl.insertSegment(withTitle: "English", at: 2, animated: true)
         
+        segmentedControl.selectedSegmentIndex = 0 // Default selection
+
         segmentedControl.addTarget(self, action: #selector(segmentValueDidChange(_:)), for: .valueChanged)
     }
 
