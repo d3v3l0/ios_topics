@@ -84,6 +84,10 @@ centeredButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0
 
 [[https://github.com/melling/ios_topics/blob/master/CollectionViewWithCustomCell/CollectionViewWithCustomCell/screenshot-toc.png]]
 
+** [[https://github.com/melling/ios_topics/blob/master/SwitchController/SwitchController][UISwitch]]
+
+[[https://github.com/melling/ios_topics/blob/master/SwitchController/SwitchController/screenshot-toc.png]]
+
 ** [[https://github.com/melling/ios_topics/blob/master/SegmentController/SegmentController][UISegmentedControl]]
 
 [[https://github.com/melling/ios_topics/blob/master/SegmentController/SegmentController/screenshot-toc.png]]
