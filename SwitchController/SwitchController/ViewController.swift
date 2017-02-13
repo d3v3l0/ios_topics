@@ -13,13 +13,8 @@ class ViewController: UIViewController {
     let label = UILabel()
     
     func buildView() {
-        aSwitch.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(aSwitch)
         
-        
-        aSwitch.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        aSwitch.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        aSwitch.widthAnchor.constraint(equalToConstant: 150)
+        addSwitch()
         
         //
         let margins = self.view.layoutMarginsGuide
@@ -36,7 +31,17 @@ class ViewController: UIViewController {
 
         self.view.backgroundColor = .lightGray
         buildView()
+    }
+    
+    func addSwitch() {
         
+        aSwitch.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(aSwitch)
+        
+        aSwitch.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        aSwitch.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        aSwitch.widthAnchor.constraint(equalToConstant: 150)
+
         aSwitch.tintColor = .blue
         aSwitch.isOn = true
         label.text = "\(aSwitch.isOn)"
