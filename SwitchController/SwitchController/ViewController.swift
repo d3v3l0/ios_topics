@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         
         addSwitch()
         
-        //
+        // Add Label
         let margins = self.view.layoutMarginsGuide
         
         label.translatesAutoresizingMaskIntoConstraints = false
