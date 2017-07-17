@@ -18,15 +18,18 @@ class ViewController: UIViewController {
         
         centeredButton.setTitle("Am I centered?", for: UIControlState())
         centeredButton.setTitleColor(UIColor.black, for: UIControlState())
-        centeredButton.addTarget(self, action: #selector(ViewController.pressed(_:)), for: .touchUpInside)
+        centeredButton.addTarget(self, action: #selector(pressed(_:)), for: .touchUpInside)
         
         self.view.addSubview(centeredButton)
         
-        centeredButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        centeredButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0).isActive = true
+        NSLayoutConstraint.activate([
+            centeredButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            centeredButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0)
+            ])
+
     }
     
-    func pressed(_ sender: UIButton!) {
+    @objc func pressed(_ sender: UIButton!) {
         
         let title = "Awesome"
         let message = "You did it"
