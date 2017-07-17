@@ -1,11 +1,10 @@
-## UIButton Centered with iOS9 Anchors
-
 Menu: [Home](../../README.md)
+
+## UIButton Centered with iOS9 Anchors
 
 ![Screenshot](screenshot-small.png)
 
 ### Overview
-
 
 
 ### Important Functions
