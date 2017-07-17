@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     let label = UILabel()
     
 
-    func buttonAction(_ button: UIButton) {
+    @objc func buttonAction(_ button: UIButton) {
         
         let tag = button.tag
         label.text = "\(tag)"
@@ -109,7 +109,7 @@ class ViewController: UIViewController {
         
         // Label
         label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        label.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor,                                                    constant: 50.0).isActive = true
+        label.topAnchor.constraint(equalTo: view.topAnchor,                                                    constant: 50.0).isActive = true
         
 
     }

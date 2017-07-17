@@ -18,10 +18,13 @@ class ViewController: UIViewController {
 
         let margins = view.layoutMarginsGuide
 
-        simpleView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 10).isActive = true
-        simpleView.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -10).isActive = true
-        simpleView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
-        simpleView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: -10).isActive = true
+        NSLayoutConstraint.activate([
+            simpleView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 10),
+            simpleView.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -10),
+            simpleView.topAnchor.constraint(equalTo: view.topAnchor),
+            simpleView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
+            ])
+
     }
     
     override func viewDidLoad() {

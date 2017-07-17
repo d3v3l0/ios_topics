@@ -1,18 +1,16 @@
-#+STARTUP: showall
-#+TITLE: UITableViewController with Index
-#+AUTHOR: http://h4labs.com
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/resources/css/myorg.css" />
+Menu: [Home](../../README.md)
 
-Menu: [[http://www.h4labs.com/dev/ios/swift.html][h4labs Swift]] | [[file:../../README.org][Tutorial Home]]
+## UITableViewController with Index
 
-[[screenshot-small.png]]
+![Screenshot](screenshot-small.png)
 
-* Overview
+### Overview
 
 This example builds upon the basic TableViewController subclass.  We build a function generateIndex() to take an array of strings and return an array containing a unique list of first letters and a dictionary that contains a list of words for each first letter.  Here's the input:
 
 
-#+BEGIN_EXAMPLE
+
+```swift
 let words = ["maple", "apple", "ace", "ant",
 "banana", "bird",
 "cat", "corn", "cow",
@@ -21,11 +19,11 @@ let words = ["maple", "apple", "ace", "ant",
 "fowl", "fruit",
 "goat",
 "milk"]
-#+END_EXAMPLE
+```
 
 Here's the output:
 
-#+BEGIN_EXAMPLE
+```swift
 var indexDictionary:[String:[String]] = [
 "a": ["ace", "ant", "apple"],
 "b": ["banana", "bird"],
@@ -39,34 +37,34 @@ var indexDictionary:[String:[String]] = [
 
 var sectionIndex:[String] = ["a", "b", "c", "d", "e", "f", "g", "m"]
 
-#+END_EXAMPLE
+```
 
-** Important Functions
+### Important Functions
 
-#+BEGIN_SRC swift
+```swift
 // Constructs sectionIndex:[String] and indexDictionary:[String:[String]], which are returned as a tuple
 func generateIndex(wordList:[String]) -> ([String], [String:[String]])
-#+END_SRC
+```
 
-*** Additional Functions
-#+BEGIN_SRC swift
+### Additional Functions
+```swift
 //
-#+END_SRC
+```
 
 
-* The Details
+### The Details
 The header title method now returns an uppercase sectionIndex letter instead of the hardcoded word "Header":
 
-#+BEGIN_SRC swift
+```swift
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 
     return sectionIndex[section].uppercaseString
 }
-#+END_SRC
+```
 
 The number is sections is now greater than 1 and the number of rows in each section is the Array count of the indexDictionary:
 
-#+BEGIN_SRC swift
+```swift
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 // Return the number of sections.
 return sectionIndex.count
@@ -78,4 +76,4 @@ override func tableView(tableView: UITableView, numberOfRowsInSection section: I
     let anArray = indexDictionary[letter]
     return anArray!.count
 }
-#+END_SRC
+```

@@ -16,7 +16,6 @@ class ViewController: UIViewController {
         
         let viewDictionary:[String:AnyObject] = [
             "tableView": tableViewController.tableView,
-            "topLayoutGuide": topLayoutGuide,
             
             ]
         tableViewController.tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -26,7 +25,7 @@ class ViewController: UIViewController {
         let metrics:[String:AnyObject] = [:]
         
         let h0Constraint = "H:|-[tableView]-|"
-        let v0Constraint = "V:[topLayoutGuide]-[tableView]-|"
+        let v0Constraint = "V:|-50-[tableView]-|"
         
         [h0Constraint, v0Constraint].forEach {
             

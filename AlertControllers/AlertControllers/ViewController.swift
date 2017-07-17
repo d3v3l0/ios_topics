@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         
     }
     
-    func showGameOverAlert(_ button: UIButton) {
+    @objc func showGameOverAlert(_ button: UIButton) {
 
         let alertController = UIAlertController(title: "Game Over", message: "Play again?", preferredStyle: .alert)
         

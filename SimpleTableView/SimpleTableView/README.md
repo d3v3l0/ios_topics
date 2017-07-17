@@ -1,53 +1,54 @@
-#+STARTUP: showall
-#+TITLE: Basic UITableViewController Subclass
-#+AUTHOR: http://h4labs.com
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/resources/css/myorg.css" />
 
-Menu: [[http://www.h4labs.com/dev/ios/swift.html][h4labs Swift]] | [[file:../../README.org][Tutorial Home]]
+Menu: [Home](../../README.md)
 
-[[screenshot-small.png]]
+## Basic UITableViewController Subclass
+
+![Screenshot](screenshot-small.png)
+
+### Overview
 
 
-* Overview
+### Important Functions
 
 A simple subclass of UITableViewController added to the main view using AutoLayout.
 
-** Important Functions
+### Important Functions
 
-*** Required TableView Delegate Functions
-#+BEGIN_SRC swift
+### Required TableView Delegate Functions
+```swift
 func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
 func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
-#+END_SRC
+```
 
-*** Optional TableView Delegate Functions
-#+BEGIN_SRC swift
+
+### Optional TableView Delegate Functions
+```swift
 func numberOfSectionsInTableView(tableView: UITableView) -> Int
 func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
 #+END_SRC
 
-*** Additional Functions
-#+BEGIN_SRC swift
+### Additional Functions
+```swift
 // Register the UITableViewCell class to be used by our UITableView
 self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:CellIdentifier)
 #+END_SRC
 
 
-* The Details
+#### The Details
 
 Since we aren't using storyboards to design our TableViewCells, we register the standard UITableViewCell in our subclasses viewDidLoad().
 
-#+BEGIN_SRC swift
+```swift
 override func viewDidLoad() {
 
    self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:CellIdentifier)
 
 }
-#+END_SRC
+```
 
 Also, note that we use the Visual Formatting Language.  The table view is placed against the  topLayoutGuide.
 
-#+BEGIN_SRC swift
+```swift
 let viewDictionary:[String:AnyObject] = [
    "tableView": tableViewController.tableView,
    "topLayoutGuide": topLayoutGuide,
@@ -61,32 +62,32 @@ let metrics:[String:AnyObject] = [:]
 
 let h0Constraint = "H:|-[tableView]-|"
 let v0Constraint = "V:[topLayoutGuide]-[tableView]-|"
-#+END_SRC
+```
 
 This function tell how many sections are in the table.  In our case, it's only 1.
 
-#+BEGIN_SRC swift
+```swift
 override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 
     // Return the number of sections.
     return 1
 
 }
-#+END_SRC
+```
 
 Next for a given section, we need to know how many rows are in the section.  We only have one section so we simply use the count of the array.
 
-#+BEGIN_SRC swift
+```swift
 override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
     return rowData.count
 
 }
-#+END_SRC
+```
 
-Getting a UITableViewCell
+#### Getting a UITableViewCell
 
-#+BEGIN_SRC swift
+```swift
 override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
     let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath)
@@ -97,14 +98,14 @@ override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath:
 
     return cell
 }
-#+END_SRC
+```
 
-Optional Header Title Function
+#### Optional Header Title Function
 
-#+BEGIN_SRC swift
+```swift
 override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 
     return "Header"
 
 }
-#+END_SRC
+```
