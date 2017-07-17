@@ -1,9 +1,4 @@
-#+STARTUP: showall
-#+TITLE: iOS Topics in Swift 3
-#+AUTHOR: http://h4labs.com
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/resources/css/myorg.css" />
-
-Menu: [[http://www.h4labs.com/dev/ios/swift.html][h4labs Swift]]
+# iOS Topics in Swift 3
 
 Miscellaneous iOS Swift 3 programs that implement minimal examples for various random topics.
 
@@ -13,126 +8,126 @@ For now, I'll place notes in README.org files with each project.
 Please note that I'm creating most of these application as "Single View Applications" then adding views (e.g. UITableView) in code. It's
 a personal preference to not use Storyboards.
 
-** [[https://github.com/melling/ios_topics/blob/master/CenteredAutoLayoutButton/CenteredAutoLayoutButton][AutoLayout Centered Button]]
-[[https://github.com/melling/ios_topics/blob/master/CenteredAutoLayoutButton/CenteredAutoLayoutButton/screenshot-toc.png]]
+## (AutoLayout Centered Button)[https://github.com/melling/ios_topics/blob/master/CenteredAutoLayoutButton/CenteredAutoLayoutButton]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/CenteredAutoLayoutButton/CenteredAutoLayoutButton/screenshot-toc.png]
 
-** [[https://github.com/melling/ios_topics/blob/master/ButtonCenteredWithAnchors/ButtonCenteredWithAnchors][AutoLayout Centered Button using iOS9 Anchors]]
+## (AutoLayout Centered Button using iOS9 Anchors)[https://github.com/melling/ios_topics/blob/master/ButtonCenteredWithAnchors/ButtonCenteredWithAnchors]
 
-[[https://github.com/melling/ios_topics/blob/master/ButtonCenteredWithAnchors/ButtonCenteredWithAnchors/screenshot-toc.png]]
-#+BEGIN_SRC swift
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/ButtonCenteredWithAnchors/ButtonCenteredWithAnchors/screenshot-toc.png]
+```swift 
 centeredButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
 centeredButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0).isActive = true
-#+END_SRC
+```
 
-** [[https://github.com/melling/ios_topics/blob/master/TwoButtonsInStackView/TwoButtonsInStackView][AutoLayout Two Button in StackView]]
+## (AutoLayout Two Button in StackView)[https://github.com/melling/ios_topics/blob/master/TwoButtonsInStackView/TwoButtonsInStackView]
 
-[[https://github.com/melling/ios_topics/blob/master/TwoButtonsInStackView/TwoButtonsInStackView/screenshot-toc.png]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/TwoButtonsInStackView/TwoButtonsInStackView/screenshot-toc.png]
 
 + Buttons are equal size with 25 points between them
 + StackView is centered horizontally
 + StackView 10 points above bottom anchor
 + Add some extra padding to button width and height
 
-** [[https://github.com/melling/ios_topics/blob/master/ButtonsInStackView/ButtonsInStackView][Various UIButtons in a UIStackView]]
+## (Various UIButtons in a UIStackView)[https://github.com/melling/ios_topics/blob/master/ButtonsInStackView/ButtonsInStackView]
 
-[[https://github.com/melling/ios_topics/blob/master/ButtonsInStackView/ButtonsInStackView/screenshot-toc.png]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/ButtonsInStackView/ButtonsInStackView/screenshot-toc.png]
 
-** [[https://github.com/melling/ios_topics/blob/master/AlertControllers/AlertControllers][UIAlertController Example]]
+## (UIAlertController Example)[https://github.com/melling/ios_topics/blob/master/AlertControllers/AlertControllers]
 
-[[https://github.com/melling/ios_topics/blob/master/AlertControllers/AlertControllers/screenshot-toc.png]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/AlertControllers/AlertControllers/screenshot-toc.png]
 
-** [[https://github.com/melling/ios_topics/blob/master/SimpleUIViewSubclass/SimpleUIViewSubclass][Simple UIView Subclass]]
+## (Simple UIView Subclass)[https://github.com/melling/ios_topics/blob/master/SimpleUIViewSubclass/SimpleUIViewSubclass]
 
-[[https://github.com/melling/ios_topics/blob/master/SimpleUIViewSubclass/SimpleUIViewSubclass/screenshot-toc.png]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/SimpleUIViewSubclass/SimpleUIViewSubclass/screenshot-toc.png]
 
-** [[https://github.com/melling/ios_topics/blob/master/GradientView/GradientView][Gradient Layer]]
+## (Gradient Layer])[https://github.com/melling/ios_topics/blob/master/GradientView/GradientView]
 
-[[https://github.com/melling/ios_topics/blob/master/GradientView/GradientView/screenshot-toc.png]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/GradientView/GradientView/screenshot-toc.png]
 
-** [[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView][Basic UITableViewController Subclass]]
+## (Basic UITableViewController Subclass)[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView]
 
-[[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView/screenshot-toc.png]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/SimpleTableView/SimpleTableView/screenshot-toc.png]
 
 + Subclass UITableViewController
 + Custom Header Height
 + Set Header Cell Color
 + Fixed Row Height: tableView.rowHeight = 80
 
-** [[https://github.com/melling/ios_topics/blob/master/TableViewWithCustomCell/TableViewWithCustomCell][Basic UITableViewController with Custom UITableViewCell]]
+## (Basic UITableViewController with Custom UITableViewCell)[https://github.com/melling/ios_topics/blob/master/TableViewWithCustomCell/TableViewWithCustomCell]
 
-[[https://github.com/melling/ios_topics/blob/master/TableViewWithCustomCell/TableViewWithCustomCell/screenshot-toc.png]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/TableViewWithCustomCell/TableViewWithCustomCell/screenshot-toc.png]
 
-** [[https://github.com/melling/ios_topics/blob/master/TableViewWithSections/TableViewWithSections][UITableViewController Subclass with Sections]]
-[[https://github.com/melling/ios_topics/blob/master/TableViewWithSections/TableViewWithSections/screenshot-toc.png]]
+## (UITableViewController Subclass with Sections)[https://github.com/melling/ios_topics/blob/master/TableViewWithSections/TableViewWithSections]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/TableViewWithSections/TableViewWithSections/screenshot-toc.png]
 
-** [[https://github.com/melling/ios_topics/blob/master/TableViewWithIndex/TableViewWithIndex][UITableViewController Subclass with Sections and an Index]]
+## (UITableViewController Subclass with Sections and an Index)[https://github.com/melling/ios_topics/blob/master/TableViewWithIndex/TableViewWithIndex]
 
-[[https://github.com/melling/ios_topics/blob/master/TableViewWithIndex/TableViewWithIndex/screenshot-toc.png]]
-
-
-** [[https://github.com/melling/ios_topics/blob/master/CollectionViewBasic/CollectionViewBasic][UICollectionViewController Subclass]]
-
-[[https://github.com/melling/ios_topics/blob/master/CollectionViewBasic/CollectionViewBasic/screenshot-toc.png]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/TableViewWithIndex/TableViewWithIndex/screenshot-toc.png]
 
 
-** [[https://github.com/melling/ios_topics/blob/master/CollectionViewDelegate/CollectionViewDelegate][UICollectionViewController Delegate]]
+## (UICollectionViewController Subclass)[https://github.com/melling/ios_topics/blob/master/CollectionViewBasic/CollectionViewBasic]
 
-[[https://github.com/melling/ios_topics/blob/master/CollectionViewDelegate/CollectionViewDelegate/screenshot-toc.png]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/CollectionViewBasic/CollectionViewBasic/screenshot-toc.png]
 
 
-** [[https://github.com/melling/ios_topics/blob/master/CollectionViewWithCustomCell/CollectionViewWithCustomCell][UICollectionView with Custom Cell]]
+## (UICollectionViewController Delegate)[https://github.com/melling/ios_topics/blob/master/CollectionViewDelegate/CollectionViewDelegate]
 
-[[https://github.com/melling/ios_topics/blob/master/CollectionViewWithCustomCell/CollectionViewWithCustomCell/screenshot-toc.png]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/CollectionViewDelegate/CollectionViewDelegate/screenshot-toc.png]
 
-** [[https://github.com/melling/ios_topics/blob/master/SwitchController/SwitchController][UISwitch]]
 
-[[https://github.com/melling/ios_topics/blob/master/SwitchController/SwitchController/screenshot-toc.png]]
+## (UICollectionView with Custom Cell)[https://github.com/melling/ios_topics/blob/master/CollectionViewWithCustomCell/CollectionViewWithCustomCell]
 
-** [[https://github.com/melling/ios_topics/blob/master/SegmentController/SegmentController][UISegmentedControl]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/CollectionViewWithCustomCell/CollectionViewWithCustomCell/screenshot-toc.png]
 
-[[https://github.com/melling/ios_topics/blob/master/SegmentController/SegmentController/screenshot-toc.png]]
+## (UISwitch)[https://github.com/melling/ios_topics/blob/master/SwitchController/SwitchController]
 
-** [[https://github.com/melling/ios_topics/blob/master/ShapeLayer/ShapeLayer][CAShapeLayer with Basic Shapes]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/SwitchController/SwitchController/screenshot-toc.png]
 
-[[https://github.com/melling/ios_topics/blob/master/ShapeLayer/ShapeLayer/screenshot-toc.png]]
+## (UISegmentedControl)[https://github.com/melling/ios_topics/blob/master/SegmentController/SegmentController]
+
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/SegmentController/SegmentController/screenshot-toc.png]
+
+## (CAShapeLayer with Basic Shapes)[https://github.com/melling/ios_topics/blob/master/ShapeLayer/ShapeLayer]
+
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/ShapeLayer/ShapeLayer/screenshot-toc.png]
 
 + CAShapeLayer() added to a UIViewController
 + Use UIBezierPath to draw shapes
 
-** [[https://github.com/melling/ios_topics/blob/master/LineDrawingAnimation/LineDrawingAnimation][Animate the Drawing of a Bezier Line]]
+## (Animate the Drawing of a Bezier Line)[https://github.com/melling/ios_topics/blob/master/LineDrawingAnimation/LineDrawingAnimation]
 
-[[https://github.com/melling/ios_topics/blob/master/LineDrawingAnimation/LineDrawingAnimation/screenshot-toc.png]]
-
-
-** [[https://github.com/melling/ios_topics/blob/master/CircleDrawingAnimation/CircleDrawingAnimation][Animate the Drawing of a Bezier Circle]]
-
-[[https://github.com/melling/ios_topics/blob/master/CircleDrawingAnimation/CircleDrawingAnimation/screenshot-toc.png]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/LineDrawingAnimation/LineDrawingAnimation/screenshot-toc.png]
 
 
-** [[https://github.com/melling/ios_topics/blob/master/TransitionWithView/TransitionWithView][Transition from One View to Another with a Curl Up]]
+## (Animate the Drawing of a Bezier Circle)[https://github.com/melling/ios_topics/blob/master/CircleDrawingAnimation/CircleDrawingAnimation]
 
-[[https://github.com/melling/ios_topics/blob/master/TransitionWithView/TransitionWithView/screenshot-toc.png]]
-
-
-** [[https://github.com/melling/ios_topics/blob/master/TransitionWithViewAndLabels/TransitionWithViewAndLabels][Transition from One View with UILabel to Another with a Curl Up]]
-
-[[https://github.com/melling/ios_topics/blob/master/TransitionWithViewAndLabels/TransitionWithViewAndLabels/screenshot-toc.png]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/CircleDrawingAnimation/CircleDrawingAnimation/screenshot-toc.png]
 
 
-** [[https://github.com/melling/ios_topics/blob/master/TapGesture/TapGesture][Single Tap Gesture on View]]
+## (Transition from One View to Another with a Curl Up)[[https://github.com/melling/ios_topics/blob/master/TransitionWithView/TransitionWithView]
 
-[[https://github.com/melling/ios_topics/blob/master/TapGesture/TapGesture/screenshot-toc.png]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/TransitionWithView/TransitionWithView/screenshot-toc.png]
 
 
-** [[https://github.com/melling/ios_topics/blob/master/PlayAudio/PlayAudio][Simple AVAudioPlayer Example]]
+## (Transition from One View with UILabel to Another with a Curl Up)[https://github.com/melling/ios_topics/blob/master/TransitionWithViewAndLabels/TransitionWithViewAndLabels]
 
-[[https://github.com/melling/ios_topics/blob/master/PlayAudio/PlayAudio/screenshot-toc.png]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/TransitionWithViewAndLabels/TransitionWithViewAndLabels/screenshot-toc.png]
 
-** [[https://github.com/melling/ios_topics/blob/master/ViewTransforms/ViewTransforms][Size, Rotate, and Fade Transforms]]
 
-[[https://github.com/melling/ios_topics/blob/master/ViewTransforms/ViewTransforms/screenshot-toc.png]]
+## (Single Tap Gesture on View)[https://github.com/melling/ios_topics/blob/master/TapGesture/TapGesture]
 
-#+BEGIN_SRC swift
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/TapGesture/TapGesture/screenshot-toc.png]
+
+
+## (Simple AVAudioPlayer Example)[https://github.com/melling/ios_topics/blob/master/PlayAudio/PlayAudio]
+
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/PlayAudio/PlayAudio/screenshot-toc.png]
+
+## (Size, Rotate, and Fade Transforms)[https://github.com/melling/ios_topics/blob/master/ViewTransforms/ViewTransforms]
+
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/ViewTransforms/ViewTransforms/screenshot-toc.png]
+
+```swift 
 func rotateIt() {
     UIView.animate(withDuration: 2,
         delay: 0,
@@ -149,43 +144,43 @@ func rotateIt() {
             self.fadeIt()
         })
     }
-#+END_SRC
+```
 
 
-** [[https://github.com/melling/ios_topics/blob/master/CustomUIView/CustomUIView][Simple UIView Subclass]]
+## (Simple UIView Subclass)[https://github.com/melling/ios_topics/blob/master/CustomUIView/CustomUIView]
 
-[[https://github.com/melling/ios_topics/blob/master/CustomUIView/CustomUIView/screenshot-toc.png]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/CustomUIView/CustomUIView/screenshot-toc.png]
 
 
-** [[https://github.com/melling/ios_topics/blob/master/StackViewsInStackViews/StackViewsInStackViews][A StackView in a StackView]]
+## (A StackView in a StackView)[https://github.com/melling/ios_topics/blob/master/StackViewsInStackViews/StackViewsInStackViews]
 
-[[https://github.com/melling/ios_topics/blob/master/StackViewsInStackViews/StackViewsInStackViews/screenshot-toc.png]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/StackViewsInStackViews/StackViewsInStackViews/screenshot-toc.png]
 
-** [[https://github.com/melling/ios_topics/blob/master/ShowViewController/ShowViewController][Programmatically Show/Push ViewController]]
+## (Programmatically Show/Push ViewController)[https://github.com/melling/ios_topics/blob/master/ShowViewController/ShowViewController]
 
-[[https://github.com/melling/ios_topics/blob/master/ShowViewController/ShowViewController/screenshot-toc.png]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/ShowViewController/ShowViewController/screenshot-toc.png]
 
-#+BEGIN_SRC swift
+```swift 
 func nextController(_ sender:UIButton) {
     let secondViewController = SecondViewController()
 
     self.navigationController?.pushViewController(secondViewController, animated: true)
 }
-#+END_SRC
+```
 
-#+BEGIN_SRC swift
+```swift 
 func previousController(_ sender:UIButton) {
 
     _ = self.navigationController?.popViewController(animated: true)
 }
-#+END_SRC
+```
 
 
-** [[https://github.com/melling/ios_topics/blob/master/NoNibAllCodeSwift/NoNibAllCodeSwift][No Nib Project - All Code]]
+## (No Nib Project - All Code)[https://github.com/melling/ios_topics/blob/master/NoNibAllCodeSwift/NoNibAllCodeSwift]
 
-[[https://github.com/melling/ios_topics/blob/master/NoNibAllCodeSwift/NoNibAllCodeSwift/screenshot-toc.png]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/NoNibAllCodeSwift/NoNibAllCodeSwift/screenshot-toc.png]
 
-#+BEGIN_SRC swift
+```swift 
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
     self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -198,26 +193,26 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     
     return true
 }
-#+END_SRC
+```
 
-** [[https://github.com/melling/ios_topics/blob/master/CountDownTimer/CountDownTimer][Countdown Timer]]
+## (Countdown Timer)[https://github.com/melling/ios_topics/blob/master/CountDownTimer/CountDownTimer]
 
-[[https://github.com/melling/ios_topics/blob/master/CountDownTimer/CountDownTimer/screenshot-toc.png]]
+!(Screenshot)[https://github.com/melling/ios_topics/blob/master/CountDownTimer/CountDownTimer/screenshot-toc.png]
 
 + timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
 
 
 * Misc Notes
 
-** ImageMagick
+## ImageMagick
 + Fix Mac OS installation error
  - http://stackoverflow.com/questions/22715738/imagemagick-error
-#+BEGIN_EXAMPLE
+```
 convert ./screenshot.png -resize 25% screenshot-small.png; # Smaller screenshot
 convert ./screenshot.png -resize 20% screenshot-toc.png; # Table of Contents screenshot
-#+END_EXAMPLE
+```
 
-* Ideas and In-Progress
+#### Ideas and In-Progress
 
 |[[AppRotation://github.com/melling/ios_topics/blob/master/AppRotation/AppRotation/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/AppRotation/AppRotation][Handle Device Rotation]]|
 |[[AppRotation://github.com/melling/ios_topics/blob/master/PanGesture/PanGesture/screenshot-toc.png]]|[[https://github.com/melling/ios_topics/blob/master/PanGesture/PanGesture][Pan Gesture]]|
