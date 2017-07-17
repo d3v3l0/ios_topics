@@ -8,8 +8,6 @@ For now, I'll place notes in README.org files with each project.
 Please note that I'm creating most of these application as "Single View Applications" then adding views (e.g. UITableView) in code. It's
 a personal preference to not use Storyboards.
 
-## [AutoLayout Centered Button](https://github.com/melling/ios_topics/blob/master/CenteredAutoLayoutButton/CenteredAutoLayoutButton)
-![Screenshot](https://github.com/melling/ios_topics/blob/master/CenteredAutoLayoutButton/CenteredAutoLayoutButton/screenshot-toc.png)
 
 ## [AutoLayout Centered Button using iOS9 Anchors](https://github.com/melling/ios_topics/blob/master/ButtonCenteredWithAnchors/ButtonCenteredWithAnchors)
 
@@ -225,3 +223,10 @@ convert ./screenshot.png -resize 20% screenshot-toc.png; # Table of Contents scr
 |||
 |||
 |||
+
+### Old
+
+## [AutoLayout Centered Button](https://github.com/melling/ios_topics/blob/master/CenteredAutoLayoutButton/CenteredAutoLayoutButton)
+![Screenshot](https://github.com/melling/ios_topics/blob/master/CenteredAutoLayoutButton/CenteredAutoLayoutButton/screenshot-toc.png)
+
+
