@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         
     }
     
-    func playAudio(_ sender: UIButton!) {
+    @objc func playAudio(_ sender: UIButton!) {
         playWordAudio(fileName: "robot02")
     }
     

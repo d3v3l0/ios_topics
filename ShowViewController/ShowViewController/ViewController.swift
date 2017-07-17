@@ -15,7 +15,7 @@ class ViewController: UIViewController {
  https://developer.apple.com/reference/uikit/uiviewcontroller/1621377-show
      
    */
-    func nextController(_ sender:UIButton) {
+    @objc func nextController(_ sender:UIButton) {
         let secondViewController = SecondViewController()
         
         self.navigationController?.pushViewController(secondViewController, animated: true)

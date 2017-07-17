@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         
     }
     
-    func curlUp() {
+    @objc func curlUp() {
         let transitionOptions = UIViewAnimationOptions.transitionCurlUp
         
         UIView.transition(from: cardFront,

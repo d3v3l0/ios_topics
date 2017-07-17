@@ -11,19 +11,8 @@
 		3E0D4EB1199DB1E0004A83EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D4EB0199DB1E0004A83EF /* ViewController.swift */; };
 		3E0D4EB4199DB1E0004A83EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E0D4EB2199DB1E0004A83EF /* Main.storyboard */; };
 		3E0D4EB6199DB1E0004A83EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E0D4EB5199DB1E0004A83EF /* Images.xcassets */; };
-		3E0D4EC2199DB1E0004A83EF /* CenteredAutoLayoutButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0D4EC1199DB1E0004A83EF /* CenteredAutoLayoutButtonTests.swift */; };
-		3E6811A01CF7F76400B1B4A8 /* README.org in Resources */ = {isa = PBXBuildFile; fileRef = 3E68119F1CF7F76400B1B4A8 /* README.org */; };
+		3E6811A01CF7F76400B1B4A8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3E68119F1CF7F76400B1B4A8 /* README.md */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		3E0D4EBC199DB1E0004A83EF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3E0D4EA1199DB1E0004A83EF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3E0D4EA8199DB1E0004A83EF;
-			remoteInfo = CenteredAutoLayoutButton;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3E0D4EA9199DB1E0004A83EF /* CenteredAutoLayoutButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CenteredAutoLayoutButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,21 +21,11 @@
 		3E0D4EB0199DB1E0004A83EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3E0D4EB3199DB1E0004A83EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E0D4EB5199DB1E0004A83EF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3E0D4EBB199DB1E0004A83EF /* CenteredAutoLayoutButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CenteredAutoLayoutButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E0D4EC0199DB1E0004A83EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3E0D4EC1199DB1E0004A83EF /* CenteredAutoLayoutButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredAutoLayoutButtonTests.swift; sourceTree = "<group>"; };
-		3E68119F1CF7F76400B1B4A8 /* README.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.org; sourceTree = "<group>"; };
+		3E68119F1CF7F76400B1B4A8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3E0D4EA6199DB1E0004A83EF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3E0D4EB8199DB1E0004A83EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,7 +39,6 @@
 			isa = PBXGroup;
 			children = (
 				3E0D4EAB199DB1E0004A83EF /* CenteredAutoLayoutButton */,
-				3E0D4EBE199DB1E0004A83EF /* CenteredAutoLayoutButtonTests */,
 				3E0D4EAA199DB1E0004A83EF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				3E0D4EA9199DB1E0004A83EF /* CenteredAutoLayoutButton.app */,
-				3E0D4EBB199DB1E0004A83EF /* CenteredAutoLayoutButtonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,7 +54,7 @@
 		3E0D4EAB199DB1E0004A83EF /* CenteredAutoLayoutButton */ = {
 			isa = PBXGroup;
 			children = (
-				3E68119F1CF7F76400B1B4A8 /* README.org */,
+				3E68119F1CF7F76400B1B4A8 /* README.md */,
 				3E0D4EAE199DB1E0004A83EF /* AppDelegate.swift */,
 				3E0D4EB0199DB1E0004A83EF /* ViewController.swift */,
 				3E0D4EB2199DB1E0004A83EF /* Main.storyboard */,
@@ -91,23 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				3E0D4EAD199DB1E0004A83EF /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		3E0D4EBE199DB1E0004A83EF /* CenteredAutoLayoutButtonTests */ = {
-			isa = PBXGroup;
-			children = (
-				3E0D4EC1199DB1E0004A83EF /* CenteredAutoLayoutButtonTests.swift */,
-				3E0D4EBF199DB1E0004A83EF /* Supporting Files */,
-			);
-			path = CenteredAutoLayoutButtonTests;
-			sourceTree = "<group>";
-		};
-		3E0D4EBF199DB1E0004A83EF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3E0D4EC0199DB1E0004A83EF /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -132,24 +92,6 @@
 			productReference = 3E0D4EA9199DB1E0004A83EF /* CenteredAutoLayoutButton.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3E0D4EBA199DB1E0004A83EF /* CenteredAutoLayoutButtonTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3E0D4EC8199DB1E1004A83EF /* Build configuration list for PBXNativeTarget "CenteredAutoLayoutButtonTests" */;
-			buildPhases = (
-				3E0D4EB7199DB1E0004A83EF /* Sources */,
-				3E0D4EB8199DB1E0004A83EF /* Frameworks */,
-				3E0D4EB9199DB1E0004A83EF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3E0D4EBD199DB1E0004A83EF /* PBXTargetDependency */,
-			);
-			name = CenteredAutoLayoutButtonTests;
-			productName = CenteredAutoLayoutButtonTests;
-			productReference = 3E0D4EBB199DB1E0004A83EF /* CenteredAutoLayoutButtonTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -158,17 +100,12 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = h4labs;
 				TargetAttributes = {
 					3E0D4EA8199DB1E0004A83EF = {
 						CreatedOnToolsVersion = 6.0;
-						LastSwiftMigration = 0800;
-					};
-					3E0D4EBA199DB1E0004A83EF = {
-						CreatedOnToolsVersion = 6.0;
-						LastSwiftMigration = 0800;
-						TestTargetID = 3E0D4EA8199DB1E0004A83EF;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -186,7 +123,6 @@
 			projectRoot = "";
 			targets = (
 				3E0D4EA8199DB1E0004A83EF /* CenteredAutoLayoutButton */,
-				3E0D4EBA199DB1E0004A83EF /* CenteredAutoLayoutButtonTests */,
 			);
 		};
 /* End PBXProject section */
@@ -197,15 +133,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E0D4EB4199DB1E0004A83EF /* Main.storyboard in Resources */,
-				3E6811A01CF7F76400B1B4A8 /* README.org in Resources */,
+				3E6811A01CF7F76400B1B4A8 /* README.md in Resources */,
 				3E0D4EB6199DB1E0004A83EF /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3E0D4EB9199DB1E0004A83EF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,23 +150,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3E0D4EB7199DB1E0004A83EF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3E0D4EC2199DB1E0004A83EF /* CenteredAutoLayoutButtonTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3E0D4EBD199DB1E0004A83EF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3E0D4EA8199DB1E0004A83EF /* CenteredAutoLayoutButton */;
-			targetProxy = 3E0D4EBC199DB1E0004A83EF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3E0D4EB2199DB1E0004A83EF /* Main.storyboard */ = {
@@ -259,14 +172,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -306,14 +225,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -347,7 +272,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.h4labs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -362,46 +288,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.h4labs.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		3E0D4EC9199DB1E1004A83EF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CenteredAutoLayoutButtonTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.h4labs.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CenteredAutoLayoutButton.app/CenteredAutoLayoutButton";
-			};
-			name = Debug;
-		};
-		3E0D4ECA199DB1E1004A83EF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CenteredAutoLayoutButtonTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.h4labs.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CenteredAutoLayoutButton.app/CenteredAutoLayoutButton";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -422,15 +310,6 @@
 			buildConfigurations = (
 				3E0D4EC6199DB1E1004A83EF /* Debug */,
 				3E0D4EC7199DB1E1004A83EF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3E0D4EC8199DB1E1004A83EF /* Build configuration list for PBXNativeTarget "CenteredAutoLayoutButtonTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3E0D4EC9199DB1E1004A83EF /* Debug */,
-				3E0D4ECA199DB1E1004A83EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

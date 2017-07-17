@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         aBtn.addTarget(self, action: #selector(scaleIt(sender:)), for: .touchUpInside)
     }
     
-    func scaleIt(sender:UIButton) {
+    @objc func scaleIt(sender:UIButton) {
         //
         UIView.animate(withDuration: 1,
                        delay: 0,

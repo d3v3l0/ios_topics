@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         
     }
     
-    func handleSingleTap(_ recognizer:UITapGestureRecognizer) {
+    @objc func handleSingleTap(_ recognizer:UITapGestureRecognizer) {
         
         let aColor = view1.backgroundColor
         

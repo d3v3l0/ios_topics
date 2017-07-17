@@ -1,20 +1,19 @@
-#+STARTUP: showall
-#+TITLE: Example iOS Project without Storyboards
-#+AUTHOR: http://h4labs.com
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/resources/css/myorg.css" />
+Menu: [Home](../../README.md)
 
-Menu: [[http://www.h4labs.com/dev/ios/swift.html][h4labs Swift]] | [[file:../../README.org][Tutorial Home]]
+## Example iOS Project without Storyboards
 
-[[screenshot-small.png]]
+![Screenshot](screenshot-small.png)
 
-* Overview
+### Overview
 
+
+### Important Functions
 
 Example iOS Project without Storyboards.
 1. Create a Single View Application
 2. Remove Main.storyboard from the Target
 3. Add a few lines to the AppDelegate didFinishLaunchingWithOptions:
-#+BEGIN_SRC swift
+```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
     self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -28,21 +27,22 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     return true
 }
 
-#+END_SRC
+```
 
 4. Manage push and popping of ViewControllers.
-#+BEGIN_SRC swift
+```swift
 func nextController(_ sender:UIButton) {
     let secondViewController = SecondViewController()
 
     self.navigationController?.pushViewController(secondViewController, animated: true)
 }
-#+END_SRC
+```
 
-#+BEGIN_SRC swift
+```swift
 func previousController(_ sender:UIButton) {
 
     _ = self.navigationController?.popViewController(animated: true)
 }
-#+END_SRC
+```
+
 

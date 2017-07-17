@@ -15,7 +15,7 @@ class SecondViewController: UIViewController {
      
     Dismiss Modal: https://developer.apple.com/reference/uikit/uiviewcontroller/1621505-dismiss
     */
-    func previousController(_ sender:UIButton) {
+    @objc func previousController(_ sender:UIButton) {
 
         _ = self.navigationController?.popViewController(animated: true)
     }

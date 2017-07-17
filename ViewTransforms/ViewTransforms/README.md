@@ -1,17 +1,19 @@
-#+STARTUP: showall
-#+TITLE: View Transforms
-#+AUTHOR: http://h4labs.com
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/resources/css/myorg.css" />
+Menu: [Home](../../README.md)
 
-Menu: [[http://www.h4labs.com/dev/ios/swift.html][h4labs Swift]] | [[file:../../README.org][Tutorial Home]]
+## View Transforms
 
-[[screenshot-small.png]]
+![Screenshot](screenshot-small.png)
 
-* Overview
+### Overview
 
 
-** Scale
-#+BEGIN_SRC swift
+### Important Functions
+
+
+
+
+###$ Scale
+```swift
 func scaleIt(sender:UIButton) {
 //
     UIView.animate(withDuration: 1,
@@ -27,10 +29,10 @@ func scaleIt(sender:UIButton) {
             self.rotateIt()
         })
     }
-#+END_SRC
+```
 
-** Scale
-#+BEGIN_SRC swift
+#### Scale
+```swift
 func rotateIt() {
     UIView.animate(withDuration: 2,
         delay: 0,
@@ -47,10 +49,10 @@ func rotateIt() {
             self.fadeIt()
         })
     }
-#+END_SRC
+```
 
-** Fade
-#+BEGIN_SRC swift
+#### Fade
+```swift
     UIView.animate(withDuration: 2,
         delay: 0,
         options: .curveEaseInOut,
@@ -69,4 +71,5 @@ func rotateIt() {
             }, completion: {_ in
 
             })
-#+END_SRC
+```
+

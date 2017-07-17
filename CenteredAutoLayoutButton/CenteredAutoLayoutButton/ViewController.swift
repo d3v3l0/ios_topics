@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         
     }
     
-    func pressed(_ sender: UIButton!) {
+    @objc func pressed(_ sender: UIButton!) {
 
         let title = "Awesome"
         let message = "You did it"

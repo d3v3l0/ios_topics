@@ -18,7 +18,7 @@ class ViewController: UIViewController {
      
      For Modal presentation: https://developer.apple.com/reference/uikit/uiviewcontroller/1621380-present
      */
-    func nextController(_ sender:UIButton) {
+    @objc func nextController(_ sender:UIButton) {
         let secondViewController = SecondViewController()
 
         self.navigationController?.pushViewController(secondViewController, animated: true)

@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
  
     func toRadians(degrees:CGFloat) -> CGFloat {
-        return degrees * CGFloat(M_PI)/180
+        return degrees * CGFloat(Double.pi)/180
     }
 
     /*
