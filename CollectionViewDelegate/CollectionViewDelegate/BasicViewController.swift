@@ -29,20 +29,13 @@ class BasicCollectionViewController: UIViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(collectionView)
         
-        let viewDictionary:[String:AnyObject] = [
-            "collectionView": collectionView,
-            "topLayoutGuide": topLayoutGuide,
-            ]
-        let metrics:[String:AnyObject] = [:]
-
-        ["H:|-0-[collectionView]-0-|",
-         "V:|[topLayoutGuide]-[collectionView]-|"].forEach {
-            
-            let constraint = NSLayoutConstraint.constraints(withVisualFormat: $0, options: [], metrics: metrics, views: viewDictionary)
-            
-            NSLayoutConstraint.activate(constraint)
-    }
-    
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 5),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            collectionView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 5),
+            collectionView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -5),
+            ])
+        
         collectionView.backgroundColor = UIColor.gray
         // Register cell classes
         self.collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)

@@ -1,6 +1,6 @@
 Menu: [Home](../../README.md)
 
-## Basic UICollectionViewController
+## Basic UICollectionView Delegate
 
 ![Screenshot](screenshot-small.png)
 

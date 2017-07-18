@@ -60,7 +60,7 @@ class CustomView: UIView {
     }
     
     func toRadians(_ degrees:CGFloat) -> CGFloat {
-        return degrees * CGFloat(M_PI)/180
+        return degrees * CGFloat(Double.pi)/180
     }
     
     func addArc(_ radius:CGFloat, center:CGPoint){
@@ -84,7 +84,6 @@ class CustomView: UIView {
         
     }
     
-
     override func draw(_ rect: CGRect) {
         let width = self.frame.width
         let eyeRadius = width * 40/200
@@ -100,6 +99,5 @@ class CustomView: UIView {
         addArc(mouthRadius, center: mounthCenter)
         
     }
-    
 
 }

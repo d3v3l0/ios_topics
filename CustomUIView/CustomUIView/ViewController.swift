@@ -18,13 +18,15 @@ class ViewController: UIViewController {
         
         self.view.addSubview(customView)
         
-        customView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        customView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-
         let width:CGFloat = 300 // Change me
-        customView.widthAnchor.constraint(equalToConstant: width).isActive = true
-        customView.heightAnchor.constraint(equalToConstant: width).isActive = true
-        
+        NSLayoutConstraint.activate([
+            
+            customView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            customView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            
+            customView.widthAnchor.constraint(equalToConstant: width),
+            customView.heightAnchor.constraint(equalToConstant: width),
+            ])
 //        customView.backgroundColor = .purpleColor()
     }
 
@@ -33,12 +35,6 @@ class ViewController: UIViewController {
     
         addCustomView()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 

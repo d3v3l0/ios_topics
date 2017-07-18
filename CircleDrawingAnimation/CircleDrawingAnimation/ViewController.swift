@@ -53,17 +53,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 76/2550.0, green: 217.0/255.0, blue:100.0/255, alpha: 1.0) // Apple Messages
+        self.view.backgroundColor = UIColor(named: "Apple Messages")
 
         addAnimatedCircleWithArc()
 
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

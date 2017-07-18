@@ -13,10 +13,10 @@ a personal preference to not use Storyboards.
 
 ![Screenshot](https://github.com/melling/ios_topics/blob/master/ButtonCenteredWithAnchors/ButtonCenteredWithAnchors/screenshot-toc.png)
 ```swift 
-        NSLayoutConstraint.activate([
-            centeredButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            centeredButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0)
-            ])
+NSLayoutConstraint.activate([
+    centeredButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+    centeredButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0)
+    ])
 ```
 
 ## [AutoLayout Two Button in StackView](https://github.com/melling/ios_topics/blob/master/TwoButtonsInStackView/TwoButtonsInStackView)

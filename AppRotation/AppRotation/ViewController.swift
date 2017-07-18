@@ -14,9 +14,9 @@ class ViewController: UIViewController {
     let stackView = UIStackView()
     
     func buildView() {
-        [widthLabel, heightLabel, stackView].forEach({
-            $0.translatesAutoresizingMaskIntoConstraints = false
-        })
+        [widthLabel, heightLabel, stackView].forEach({$0.translatesAutoresizingMaskIntoConstraints = false})
+        
+//        [widthLabel,heightLabel].forEach(stackView.addArrangedSubview)
         stackView.addArrangedSubview(widthLabel)
         stackView.addArrangedSubview(heightLabel)
         
@@ -31,15 +31,9 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
         buildView()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
@@ -53,12 +47,6 @@ extension ViewController {
         let h = size.height
         
         print("\nToSize: \(w), \(h)\n")
-        if self.view.backgroundColor == UIColor.red {
-            self.view.backgroundColor = UIColor.green
-        } else {
-            self.view.backgroundColor = UIColor.red
-        }
-        
+        self.view.backgroundColor = self.view.backgroundColor == .red ? UIColor.green : UIColor.red
     }
-
 }

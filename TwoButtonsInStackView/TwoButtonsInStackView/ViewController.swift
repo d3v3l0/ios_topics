@@ -48,31 +48,25 @@ class ViewController: UIViewController {
         
         //: Button Layout
         // Simply change multiplier to make button wider
-        leftBtn.widthAnchor.constraint(equalTo: rightBtn.widthAnchor, multiplier: 1).isActive = true
-        leftBtn.heightAnchor.constraint(equalTo: rightBtn.heightAnchor, multiplier: 1).isActive = true
+        NSLayoutConstraint.activate([
+            leftBtn.widthAnchor.constraint(equalTo: rightBtn.widthAnchor, multiplier: 1),
+            leftBtn.heightAnchor.constraint(equalTo: rightBtn.heightAnchor, multiplier: 1),
+            ])
         
         //: Stackview Layout
         let margins = view.layoutMarginsGuide
-        buttonStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        // Move stack above the bottom anchor
-        buttonStackView.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -10).isActive = true
-       
+        NSLayoutConstraint.activate([
+            buttonStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            // Move stack above the bottom anchor
+            buttonStackView.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -10),
+            ])
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 1.0, green: 45.0/255.0, blue: 85.0/255, alpha: 1.0) // Apple News
-
-
+        self.view.backgroundColor = UIColor(named: "Apple News")!
+            
         buildView()
-
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

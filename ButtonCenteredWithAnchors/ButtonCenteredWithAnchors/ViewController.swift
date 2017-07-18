@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0) // Apple blue
+        self.view.backgroundColor = UIColor(named: "Apple Blue")
         addButton()
     }
     

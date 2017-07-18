@@ -12,38 +12,22 @@ class ViewController: UIViewController {
     var collectionViewController = BasicCollectionViewController()
     
     func addCollectionView() {
-        
-        let viewDictionary:[String:AnyObject] = [
-            "collectionView": collectionViewController.view,
-            "topLayoutGuide": topLayoutGuide,
-            ]
+      
         collectionViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(collectionViewController.view)
         
-        let metrics:[String:AnyObject] = [:]
-        
-        ["H:|-1-[collectionView]-1-|",
-         "V:[topLayoutGuide]-[collectionView]-|"].forEach {
-            
-            let constraint = NSLayoutConstraint.constraints(withVisualFormat: $0, options: [], metrics: metrics, views: viewDictionary)
-            
-            NSLayoutConstraint.activate(constraint)
-        }
+        self.view.addSubview(collectionViewController.view)
+        NSLayoutConstraint.activate([
+            collectionViewController.view.topAnchor.constraint(equalTo: view.topAnchor, constant: 5),
+            collectionViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            collectionViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 5),
+            collectionViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -5),
+            ])
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view.backgroundColor = UIColor.purple
-//        let flowLayout=UICollectionViewFlowLayout()
-//        flowLayout.itemSize = CGSizeMake(100, 100)
-//        flowLayout.minimumInteritemSpacing = 2
-//        flowLayout.minimumLineSpacing = 5
-//        flowLayout.scrollDirection = .Vertical
-//        
-//        // Must create with a FlowLayout if we create UICollectionViewController programatically
-//        
-//        collectionViewController = BasicCollectionViewController(collectionViewLayout: flowLayout)
         
         addCollectionView()
         

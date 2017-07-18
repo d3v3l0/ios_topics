@@ -12,32 +12,22 @@ class ViewController: UIViewController {
     var collectionViewController:BasicCollectionViewController!
     
     func addCollectionView() {
-        
-        let viewDictionary:[String:AnyObject] = [
-            "collectionView": collectionViewController.view,
-            "topLayoutGuide": topLayoutGuide,
-            
-            ]
+
         collectionViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(collectionViewController.view)
-        
-        let metrics:[String:AnyObject] = [:]
-        
-        let h0Constraint = "H:|-[collectionView]-|"
-        let v0Constraint = "V:[topLayoutGuide]-[collectionView]-|"
-        
-        [h0Constraint, v0Constraint].forEach {
-            
-            let constraint = NSLayoutConstraint.constraints(withVisualFormat: $0, options: [], metrics: metrics, views: viewDictionary)
-            
-            NSLayoutConstraint.activate(constraint)
-        }
+        NSLayoutConstraint.activate([
+            collectionViewController.view.topAnchor.constraint(equalTo: view.topAnchor, constant: 5),
+            collectionViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            collectionViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 5),
+            collectionViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -5),
+            ])
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor.lightGray
+        
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.itemSize = CGSize(width: 100, height: 100)
         flowLayout.minimumInteritemSpacing = 2
