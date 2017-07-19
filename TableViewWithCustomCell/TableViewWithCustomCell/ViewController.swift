@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.view.backgroundColor = .gray
         navigationController?.navigationBar.prefersLargeTitles = true
         self.title = "TableView/Custom Cell"
