@@ -16,18 +16,24 @@ class ViewController: UIViewController {
         collectionViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(collectionViewController.view)
+
+        let guide = view.safeAreaLayoutGuide
+
         NSLayoutConstraint.activate([
-            collectionViewController.view.topAnchor.constraint(equalTo: view.topAnchor, constant: 5),
-            collectionViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            collectionViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 5),
-            collectionViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -5),
+            collectionViewController.view.topAnchor.constraintEqualToSystemSpacingBelow(guide.topAnchor, multiplier: 1.0),
+            
+            collectionViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -2),
+            collectionViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 2),
+            collectionViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -2),
             ])
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.lightGray
-        
+        self.view.backgroundColor = .gray
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "CollectionView"
+
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.itemSize = CGSize(width: 100, height: 100)
         flowLayout.minimumInteritemSpacing = 2
