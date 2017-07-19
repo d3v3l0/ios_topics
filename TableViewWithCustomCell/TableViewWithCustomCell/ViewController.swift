@@ -13,39 +13,28 @@ class ViewController: UIViewController {
     let tableViewController = SimpleTableViewController()
     
     func addTableView() {
-        
-        let viewDictionary:[String:AnyObject] = [
-            "tableView": tableViewController.tableView,
-            
-            ]
+
         tableViewController.tableView.translatesAutoresizingMaskIntoConstraints = false
-        
         self.view.addSubview(tableViewController.tableView)
         
-        let metrics:[String:AnyObject] = [:]
+        let guide = view.safeAreaLayoutGuide
         
-        let h0Constraint = "H:|-[tableView]-|"
-        let v0Constraint = "V:|-50-[tableView]-|"
-        
-        [h0Constraint, v0Constraint].forEach {
-            
-            let constraint = NSLayoutConstraint.constraints(withVisualFormat: $0, options: [], metrics: metrics, views: viewDictionary)
-            
-            NSLayoutConstraint.activate(constraint)
-        }
-        
+        NSLayoutConstraint.activate([
+            tableViewController.tableView.topAnchor.constraintEqualToSystemSpacingBelow(guide.topAnchor, multiplier: 1.0),
+            tableViewController.tableView.bottomAnchor.constraintEqualToSystemSpacingBelow(view.bottomAnchor, multiplier: 1.0),
+
+            tableViewController.tableView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0),
+            tableViewController.tableView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0),
+            ])
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .gray
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "TableView/Custom Cell"
         addTableView()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
+
 }
 

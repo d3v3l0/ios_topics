@@ -10,7 +10,7 @@ import UIKit
 
 class  SimpleTableViewController: UITableViewController {
     
-    let rowData = ["one", "two", "three"]
+    let rowData = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
     let CellIdentifier = "Cell"
     
     override func viewDidLoad() {
