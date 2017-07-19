@@ -13,27 +13,21 @@ class ViewController: UIViewController {
     
     func addTableView() {
         
-        let viewDictionary:[String:AnyObject] = [
-            "tableView": tableViewController.tableView,
-//            "topLayoutGuide": topLayoutGuide,
-
-        ]
         tableViewController.tableView.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(tableViewController.tableView)
         
-        let metrics:[String:AnyObject] = [:]
+        let guide = view.safeAreaLayoutGuide
         
-        let h0Constraint = "H:|-[tableView]-|"
-        let v0Constraint = "V:|-50-[tableView]-|"
+        NSLayoutConstraint.activate([
+            
+            tableViewController.tableView.topAnchor.constraintEqualToSystemSpacingBelow(guide.topAnchor, multiplier: 1.0),
+            tableViewController.tableView.bottomAnchor.constraintEqualToSystemSpacingBelow(view.bottomAnchor, multiplier: 1.0),
+            tableViewController.tableView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0),
+            tableViewController.tableView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0),
+            
+            ])
 
-        [h0Constraint, v0Constraint].forEach {
-            
-            let constraint = NSLayoutConstraint.constraints(withVisualFormat: $0, options: [], metrics: metrics, views: viewDictionary)
-            
-            NSLayoutConstraint.activate(constraint)
-        }
-        
     }
     
     override func viewDidLoad() {
@@ -41,12 +35,10 @@ class ViewController: UIViewController {
         
         self.view.backgroundColor = UIColor(red: 90/255.0, green: 200.0/255.0, blue: 250.0/255, alpha: 1.0) // Apple Videos
 
-        addTableView()
-    }
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "Table Subclass"
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        addTableView()
     }
 
 
