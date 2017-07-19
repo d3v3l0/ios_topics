@@ -17,9 +17,10 @@ class ViewController: UIViewController {
         
         self.view.addSubview(collectionViewController.view)
         
-        self.view.addSubview(collectionViewController.view)
+        let guide = view.safeAreaLayoutGuide
+
         NSLayoutConstraint.activate([
-            collectionViewController.view.topAnchor.constraint(equalTo: view.topAnchor, constant: 5),
+        collectionViewController.view.topAnchor.constraintEqualToSystemSpacingBelow(guide.topAnchor, multiplier: 1.0),
             collectionViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             collectionViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 5),
             collectionViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -5),
@@ -28,7 +29,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = .gray
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "Collection Delegate"
+
         addCollectionView()
         
     }
