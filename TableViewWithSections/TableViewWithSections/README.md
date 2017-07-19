@@ -1,6 +1,6 @@
 Menu: [Home](../../README.md)
 
-## UITableViewController with Index
+## UITableViewController Subclass with Sections
 
 ![Screenshot](screenshot-small.png)
 
