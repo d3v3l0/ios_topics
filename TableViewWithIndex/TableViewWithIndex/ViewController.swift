@@ -31,10 +31,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .gray
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.hidesSearchBarWhenScrolling = false
+        
         self.title = "Table Subclass/Index"
-
+        self.view.backgroundColor = .gray
+        
         addTableView()
     }
 
