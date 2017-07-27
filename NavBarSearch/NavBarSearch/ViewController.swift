@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var wordViewController = WordViewController()
+    let wordViewController = WordViewController()
     
     // MARK: - Build View
     func buildView() {
@@ -27,6 +27,7 @@ class ViewController: UIViewController {
             wordViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0),
             ])
     }
+    
     func setupNavBar() {
         
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -47,7 +48,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+//        self.view.backgroundColor = .purple
         self.title = "NavBar Search"
         setupNavBar()
         buildView()
@@ -55,4 +57,3 @@ class ViewController: UIViewController {
     }
     
 }
-
