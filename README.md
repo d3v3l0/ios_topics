@@ -1,6 +1,6 @@
-# iOS Topics in Swift 3
+# iOS Topics in Swift 4
 
-Miscellaneous iOS Swift 3 programs that implement minimal examples for various random topics.
+Miscellaneous iOS 11 Swift 4 programs that implement minimal examples for various random topics.
 
 I will blog about each examples as time permits under this section of my website: http://www.h4labs.com/dev/ios/swift_cookbook.html
 For now, I'll place notes in README.org files with each project.
