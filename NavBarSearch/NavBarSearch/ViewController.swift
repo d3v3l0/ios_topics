@@ -29,12 +29,8 @@ class ViewController: UIViewController {
     }
     
     func setupNavBar() {
-        
         navigationController?.navigationBar.prefersLargeTitles = true
-        // Disable on secondary screen
-        //        navigationItem.largeTitleDisplayMode = .never
         
-        // Will only see when you pull down on table view
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = wordViewController
         searchController.searchBar.scopeButtonTitles = ["French", "English"]
@@ -43,7 +39,6 @@ class ViewController: UIViewController {
         navigationItem.searchController = searchController
         // Make searchbar persistent
         navigationItem.hidesSearchBarWhenScrolling = false
-        
     }
     
     override func viewDidLoad() {

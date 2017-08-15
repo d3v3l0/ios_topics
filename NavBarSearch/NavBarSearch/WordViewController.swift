@@ -130,6 +130,7 @@ extension WordViewController: UISearchBarDelegate {
         
         if let searchText = searchBar.text {
             print("Scoped changed: \(searchText)")
+            filteredWordList = wordList.filter({$0.contains(searchText)})
         }
     }
 }
