@@ -195,6 +195,10 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
+## [UIPickerView](https://github.com/melling/ios_topics/blob/master/PickerViewDemo/PickerViewDemo)
+
+![Screenshot](https://github.com/melling/ios_topics/blob/master/PickerViewDemo/PickerViewDemo/screenshot-toc.png)
+
 ## [Countdown Timer](https://github.com/melling/ios_topics/blob/master/CountDownTimer/CountDownTimer)
 
 ![Screenshot](https://github.com/melling/ios_topics/blob/master/CountDownTimer/CountDownTimer/screenshot-toc.png)
@@ -214,17 +218,15 @@ convert ./screenshot.png -resize 20% screenshot-toc.png; # Table of Contents scr
 
 #### Ideas and In-Progress
 
-|[[AppRotation://github.com/melling/ios_topics/blob/master/AppRotation/AppRotation/screenshot-toc.png)]|[Handle Device Rotation](https://github.com/melling/ios_topics/blob/master/AppRotation/AppRotation)|
-|[Pan Gesture](AppRotation://github.com/melling/ios_topics/blob/master/PanGesture/PanGesture/screenshot-toc.png)|https://github.com/melling/ios_topics/blob/master/PanGesture/PanGesture|
-||PDF Creation|
-||Save Image to Photos|
-||Dispatch Async|
-||Core Data|
-||sqlite|
-||Read plist|
-|||
-|||
-|||
+- [AppRotation] github.com/melling/ios_topics/blob/master/AppRotation/AppRotation/screenshot-toc.png)
+- [Handle Device Rotation](https://github.com/melling/ios_topics/blob/master/AppRotation/AppRotation)
+- [Pan Gesture](AppRotation://github.com/melling/ios_topics/blob/master/PanGesture/PanGesture/screenshot-toc.png)|https://github.com/melling/ios_topics/blob/master/PanGesture/PanGesture
+- PDF Creation
+- Save Image to Photos
+- Dispatch Async
+- Core Data
+- sqlite|
+- Read plist
 
 ### Old
 
