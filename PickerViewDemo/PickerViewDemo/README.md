@@ -12,10 +12,6 @@ Menu: [Home](../../README.md)
 ```swift
 ```
 
-### Important Functions
-
-```swift
-```
 
 ### Additional Functions
 ```swift
