@@ -38,10 +38,10 @@ class ViewController: UIViewController {
         timerLabel.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(timerLabel)
         
-        timerLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        timerLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        //timerLabel.layer.borderWidth = 2
-        //timerLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        NSLayoutConstraint.activate([
+            timerLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            timerLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            ])
         timerLabel.font = UIFont.systemFont(ofSize: 36)
         timerLabel.text = "\(secondsRemaining)"
         
