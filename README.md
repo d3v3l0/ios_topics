@@ -64,6 +64,9 @@ NSLayoutConstraint.activate([
 
 ![Screenshot](https://github.com/melling/ios_topics/blob/master/TableViewWithIndex/TableViewWithIndex/screenshot-toc.png)
 
+## [Custom UITableView Header](https://github.com/melling/ios_topics/blob/master/CustomTableViewHeaderCell/CustomTableViewHeaderCell)
+
+![Screenshot](https://github.com/melling/ios_topics/blob/master/CustomTableViewHeaderCell/CustomTableViewHeaderCell/screenshot-toc.png)
 
 ## [UICollectionViewController Subclass](https://github.com/melling/ios_topics/blob/master/CollectionViewBasic/CollectionViewBasic)
 

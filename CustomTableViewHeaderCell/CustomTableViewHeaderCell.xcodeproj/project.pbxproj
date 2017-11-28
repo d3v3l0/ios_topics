@@ -13,6 +13,8 @@
 		3EEE02171FCCD00D000E7EAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EEE02161FCCD00D000E7EAA /* Assets.xcassets */; };
 		3EEE021A1FCCD00D000E7EAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EEE02181FCCD00D000E7EAA /* LaunchScreen.storyboard */; };
 		3EEE02221FCCD045000E7EAA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3EEE02211FCCD045000E7EAA /* README.md */; };
+		3EEE02241FCCD14A000E7EAA /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE02231FCCD14A000E7EAA /* SimpleTableViewController.swift */; };
+		3EEE02261FCCD1D7000E7EAA /* CustomHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE02251FCCD1D7000E7EAA /* CustomHeaderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		3EEE02191FCCD00D000E7EAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3EEE021B1FCCD00D000E7EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EEE02211FCCD045000E7EAA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3EEE02231FCCD14A000E7EAA /* SimpleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
+		3EEE02251FCCD1D7000E7EAA /* CustomHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				3EEE02211FCCD045000E7EAA /* README.md */,
 				3EEE020F1FCCD00D000E7EAA /* AppDelegate.swift */,
 				3EEE02111FCCD00D000E7EAA /* ViewController.swift */,
+				3EEE02251FCCD1D7000E7EAA /* CustomHeaderCell.swift */,
+				3EEE02231FCCD14A000E7EAA /* SimpleTableViewController.swift */,
 				3EEE02131FCCD00D000E7EAA /* Main.storyboard */,
 				3EEE02161FCCD00D000E7EAA /* Assets.xcassets */,
 				3EEE02181FCCD00D000E7EAA /* LaunchScreen.storyboard */,
@@ -140,6 +146,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EEE02241FCCD14A000E7EAA /* SimpleTableViewController.swift in Sources */,
+				3EEE02261FCCD1D7000E7EAA /* CustomHeaderCell.swift in Sources */,
 				3EEE02121FCCD00D000E7EAA /* ViewController.swift in Sources */,
 				3EEE02101FCCD00D000E7EAA /* AppDelegate.swift in Sources */,
 			);
