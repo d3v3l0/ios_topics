@@ -8,9 +8,6 @@ Menu: [Home](../../README.md)
 ### Overview
 Subclass UIView
 
-### Important Functions
-
-A simple subclass of UITableViewController added to the main view using AutoLayout.
 
 ### Important Functions
 
