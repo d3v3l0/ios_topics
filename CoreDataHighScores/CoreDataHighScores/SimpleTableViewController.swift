@@ -46,8 +46,7 @@ extension SimpleTableViewController {
         let managedContext =
             appDelegate.persistentContainer.viewContext
         
-        let fetchRequest =
-            NSFetchRequest<NSManagedObject>(entityName: "HighScore")
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "HighScore")
         
         do {
             highScores = try managedContext.fetch(fetchRequest)
