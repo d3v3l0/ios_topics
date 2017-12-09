@@ -36,16 +36,82 @@ class ViewController: UIViewController {
         
     }
     
+    func addRandomGameScore() {
+        
+        let isDirectionEastSouth = arc4random_uniform(2) == 1 ? true : false // 0 or 1
+        let isDirectionWestNorth = arc4random_uniform(2) == 1 ? true : false // 0 or 1
+        let isDirectionDiagonal = arc4random_uniform(2) == 1 ? true : false // 0 or 1
+        let gameLanguage = 1
+        
+        save(numBoardRows: 8, numBoardCols: 8, numberWords: 10, actualNumberWords: 10, isDirectionEastSouth: isDirectionEastSouth, isDirectionWestNorth: isDirectionWestNorth, isDirectionDiagonal: isDirectionDiagonal, gameLanguage: gameLanguage, score: 10)
+        save(numBoardRows: 8, numBoardCols: 8, numberWords: 10, actualNumberWords: 10, isDirectionEastSouth: true, isDirectionWestNorth: isDirectionWestNorth, isDirectionDiagonal: isDirectionDiagonal, gameLanguage: gameLanguage, score: 100)
+        save(numBoardRows: 8, numBoardCols: 8, numberWords: 10, actualNumberWords: 10, isDirectionEastSouth: true, isDirectionWestNorth: isDirectionWestNorth, isDirectionDiagonal: isDirectionDiagonal, gameLanguage: gameLanguage, score: 20)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        save(numBoardRows: 8, numBoardCols: 8, numberWords: 10, actualNumberWords: 10, isDirectionEastSouth: true, isDirectionWestNorth: false, isDirectionDiagonal: false, score: 10)
-        save(numBoardRows: 8, numBoardCols: 8, numberWords: 10, actualNumberWords: 10, isDirectionEastSouth: true, isDirectionWestNorth: false, isDirectionDiagonal: false, score: 100)
-        save(numBoardRows: 8, numBoardCols: 8, numberWords: 10, actualNumberWords: 10, isDirectionEastSouth: true, isDirectionWestNorth: true, isDirectionDiagonal: false, score: 20)
+        addRandomGameScore()
 
         addTableView()
+        
+        let gameLanguage = 1
+        let numBoardRows = 8
+        let numBoardCols = 8
+        let numberWords = 10
+        let actualNumberWords = 10
+        let isDirectionEastSouth = true
+        let isDirectionWestNorth = true
+        let isDirectionDiagonal = true
+        
+        fetchHighScores(gameLanguage: gameLanguage, numBoardRows: numBoardRows, numBoardCols: numBoardCols, numberWords: numberWords, actualNumberWords: actualNumberWords, isDirectionEastSouth: isDirectionEastSouth, isDirectionWestNorth: isDirectionWestNorth, isDirectionDiagonal: isDirectionDiagonal)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+
+}
+
+extension ViewController {
+    
+    func fetchHighScores(gameLanguage:Int, numBoardRows:Int, numBoardCols:Int, numberWords:Int, actualNumberWords:Int, isDirectionEastSouth:Bool, isDirectionWestNorth:Bool, isDirectionDiagonal:Bool ) {
+        
+        let appDelegate =
+            UIApplication.shared.delegate as! AppDelegate
+        let context =
+            appDelegate.persistentContainer.viewContext
+        
+        let request =
+            NSFetchRequest<NSManagedObject>(entityName: "HighScore")
+        
+        
+        request.predicate = NSPredicate(format: "gameLanguage = \(gameLanguage) and numBoardRows = \(numBoardRows) and numBoardCols = \(numBoardCols)")
+        
+        do {
+            
+            let fetchedObjects = try context.fetch(request)
+            
+            let scores = fetchedObjects
+            print("HS #: \(scores.count)")
+            
+            for score in scores {
+                
+                print("HS: \(score)")
+            }
+            
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+        
+    }
+    
     private func loadData() {
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
@@ -67,9 +133,7 @@ class ViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
+    func loadAllScores() {
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
                 return
@@ -84,9 +148,9 @@ class ViewController: UIViewController {
         do {
             highScores = try managedContext.fetch(fetchRequest)
             print("count=\(highScores.count)")
-
+            
             for s in highScores {
-
+                
                 if let numBoardRows = s.value(forKey: "numBoardRows") as! Int?,
                     let numBoardCols = s.value(forKey: "numBoardCols"),
                     let numberWords = s.value(forKey: "numberWords"),
@@ -94,29 +158,23 @@ class ViewController: UIViewController {
                     let isDirectionEastSouth = s.value(forKey: "isDirectionEastSouth"),
                     let isDirectionWestNorth = s.value(forKey: "isDirectionWestNorth"),
                     let isDirectionDiagonal = s.value(forKey: "isDirectionDiagonal"),
+                    let gameLanguage = s.value(forKey: "gameLanguage"),
+                    
                     let score = s.value(forKey: "score"),
                     let gameTime = s.value(forKey: "gameTime") {
-                    print("Result:\(numBoardRows)x\(numBoardCols), \(numberWords), \(actualNumberWords), \(isDirectionEastSouth), \(isDirectionWestNorth),\(isDirectionDiagonal),  \(gameTime), \(score)")
+                    print("Result:L=\(gameLanguage), \(numBoardRows)x\(numBoardCols), \(numberWords), \(actualNumberWords), \(isDirectionEastSouth), \(isDirectionWestNorth),\(isDirectionDiagonal),  \(gameTime), \(score)")
                 }
             }
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
-
-}
-
-extension ViewController {
     /*
      Score is the time in seconds
      */
-    func save(numBoardRows:Int, numBoardCols:Int, numberWords:Int, actualNumberWords:Int, isDirectionEastSouth:Bool, isDirectionWestNorth:Bool, isDirectionDiagonal:Bool, score:Int) {
+    func save(numBoardRows:Int, numBoardCols:Int, numberWords:Int, actualNumberWords:Int, isDirectionEastSouth:Bool, isDirectionWestNorth:Bool, isDirectionDiagonal:Bool, gameLanguage: Int, score:Int) {
         
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
@@ -133,6 +191,8 @@ extension ViewController {
         let highScore = NSManagedObject(entity: entity,
                                      insertInto: managedContext)
         
+        highScore.setValue(gameLanguage, forKeyPath: "gameLanguage")
+
         highScore.setValue(numBoardRows, forKeyPath: "numBoardRows")
         highScore.setValue(numBoardCols, forKeyPath: "numBoardCols")
         highScore.setValue(numberWords, forKeyPath: "numberWords")
@@ -142,7 +202,7 @@ extension ViewController {
         highScore.setValue(isDirectionEastSouth, forKeyPath: "isDirectionEastSouth")
         highScore.setValue(isDirectionWestNorth, forKeyPath: "isDirectionWestNorth")
         highScore.setValue(isDirectionDiagonal, forKeyPath: "isDirectionDiagonal")
-
+        
         do {
             try managedContext.save()
             highScores.append(highScore)
