@@ -18,15 +18,19 @@ class HighScoreHeaderCell: UIView {
     public var isDirectionWestNorth = false
     public var isDirectionDiagonal = false
     
+    private var bestTimesLabel = UILabel()
+
     private var image1:UIImageView = UIImageView()
     private var image2:UIImageView = UIImageView()
     private var image3:UIImageView = UIImageView()
 
     private func _setup() {
-        let views = [languagelLabel, boardSizeLabel, numWordsLabel]
+        let views = [bestTimesLabel, languagelLabel, boardSizeLabel, numWordsLabel]
         
-        views.forEach {$0.translatesAutoresizingMaskIntoConstraints = false}
+        views.forEach {$0.translatesAutoresizingMaskIntoConstraints = false; $0.textAlignment = .center}
         views.forEach(self.addSubview)
+        
+        bestTimesLabel.text = "Best Times"
         
         let images = [image1, image2, image3]
         images.forEach {$0.translatesAutoresizingMaskIntoConstraints = false}
@@ -49,10 +53,13 @@ class HighScoreHeaderCell: UIView {
 //        image2.image = image2.image?.resizableImage(withCapInsets: myInsets)
 //        image3.image = image3.image?.resizableImage(withCapInsets: myInsets)
 
-//        image1.backgroundColor = .white
+        let centerYOffset:CGFloat = 10
         
         NSLayoutConstraint.activate([
-//            boardSizeLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
+            bestTimesLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
+            bestTimesLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0),
+            bestTimesLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0),
+
 //            numWordsLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
 //            image1.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
 
@@ -75,13 +82,13 @@ class HighScoreHeaderCell: UIView {
 //            boardSizeLabel.widthAnchor.constraint(equalToConstant: 50),
 //            languagelLabel.widthAnchor.constraint(equalToConstant: 50),
 
-            boardSizeLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            numWordsLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            languagelLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            boardSizeLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: centerYOffset),
+            numWordsLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: centerYOffset),
+            languagelLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: centerYOffset),
             
-            image1.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            image2.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            image3.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            image1.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: centerYOffset),
+            image2.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: centerYOffset),
+            image3.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: centerYOffset),
             
             image1.widthAnchor.constraint(equalToConstant: 50),
             image2.widthAnchor.constraint(equalToConstant: 50),
@@ -90,9 +97,9 @@ class HighScoreHeaderCell: UIView {
             languagelLabel.widthAnchor.constraint(equalTo: boardSizeLabel.widthAnchor, multiplier: 0.75),
 
             ])
-        boardSizeLabel.textAlignment = .center
-        numWordsLabel.textAlignment = .center
-        languagelLabel.textAlignment = .center
+//        boardSizeLabel.textAlignment = .center
+//        numWordsLabel.textAlignment = .center
+//        languagelLabel.textAlignment = .center
     }
     
     override init(frame: CGRect) {

@@ -150,7 +150,7 @@ extension SimpleTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 60.0
+        return 80.0
     }
 }
 
