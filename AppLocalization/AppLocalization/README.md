@@ -14,16 +14,22 @@ Editor -> Export
 ### In Code
 ```swift
 private func findAppLanguage() {
-let localeIdentifier = Locale.current.identifier
-print("Locale: \(localeIdentifier)")
+   let localeIdentifier = Locale.current.identifier
+   print("Locale: \(localeIdentifier)")
 
-let preferredLanguage = Bundle.main.preferredLocalizations.first!
-print("preferredLanguage: \(preferredLanguage)")
+   let preferredLanguage = Bundle.main.preferredLocalizations.first!
+   print("preferredLanguage: \(preferredLanguage)")
 }
 ```
 The preferredLanguage will contain the language only if it's one of your supported languages.  If you put the simulator or device in German, for example, and you don't support that language, preferredLanguage would default to English.
 
 The localeIdentifier will change to de, however.
+
+Note, for projects with multiple targets, you must select the Main.storyboard and localize it independently.
+
+```swift
+NSLocalizedString("Hello", comment: "a useful comment")
+```
 
 ### Localized Screenshots
 
