@@ -53,17 +53,10 @@ class ViewController: UIViewController {
         addRandomGameScore()
 
         addTableView()
+        let gt = GameType(gameLanguage:1, numBoardRows: 8, numBoardCols: 8, numberWords: 10, actualNumberWords: 10, isDirectionEastSouth: true, isDirectionWestNorth: true, isDirectionDiagonal: false)
+
+        tableViewController.config(gameType: gt)
         
-        let gameLanguage = 1
-        let numBoardRows = 8
-        let numBoardCols = 8
-        let numberWords = 10
-        let actualNumberWords = 10
-        let isDirectionEastSouth = true
-        let isDirectionWestNorth = true
-        let isDirectionDiagonal = true
-        
-        fetchHighScores(gameLanguage: gameLanguage, numBoardRows: numBoardRows, numBoardCols: numBoardCols, numberWords: numberWords, actualNumberWords: actualNumberWords, isDirectionEastSouth: isDirectionEastSouth, isDirectionWestNorth: isDirectionWestNorth, isDirectionDiagonal: isDirectionDiagonal)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -90,7 +83,6 @@ extension ViewController {
         
         let request =
             NSFetchRequest<NSManagedObject>(entityName: "HighScore")
-        
         
         request.predicate = NSPredicate(format: "gameLanguage = \(gameLanguage) and numBoardRows = \(numBoardRows) and numBoardCols = \(numBoardCols)")
         
@@ -192,7 +184,6 @@ extension ViewController {
                                      insertInto: managedContext)
         
         highScore.setValue(gameLanguage, forKeyPath: "gameLanguage")
-
         highScore.setValue(numBoardRows, forKeyPath: "numBoardRows")
         highScore.setValue(numBoardCols, forKeyPath: "numBoardCols")
         highScore.setValue(numberWords, forKeyPath: "numberWords")

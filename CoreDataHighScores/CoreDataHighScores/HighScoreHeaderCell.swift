@@ -14,10 +14,13 @@ class HighScoreHeaderCell: UIView {
     public var boardSizeLabel = UILabel()
     public var numWordsLabel = UILabel()
     public var languagelLabel = UILabel()
+    public var isDirectionEastSouth = true
+    public var isDirectionWestNorth = false
+    public var isDirectionDiagonal = false
     
-    var image1:UIImageView = UIImageView()
-    var image2:UIImageView = UIImageView()
-    var image3:UIImageView = UIImageView()
+    private var image1:UIImageView = UIImageView()
+    private var image2:UIImageView = UIImageView()
+    private var image3:UIImageView = UIImageView()
 
     private func _setup() {
         let views = [languagelLabel, boardSizeLabel, numWordsLabel]
@@ -34,13 +37,19 @@ class HighScoreHeaderCell: UIView {
         image2.image = UIImage(named:"dir_left_up_on")
         image3.image = UIImage(named:"dir_diag_on")
 
-        images.forEach {$0.layer.borderWidth = 1; $0.backgroundColor = .white; $0.layer.cornerRadius = 10}
+        images.forEach {$0.layer.borderWidth = 1; $0.layer.cornerRadius = 10}
+        
+        let highlightColor = UIColor(named:"ButtonHighlightColor")
+        image1.backgroundColor = isDirectionEastSouth ? highlightColor : .white
+        image2.backgroundColor = isDirectionWestNorth ? highlightColor : .white
+        image3.backgroundColor = isDirectionDiagonal ? highlightColor : .white
+        
         //        let myInsets : UIEdgeInsets = UIEdgeInsetsMake(40, 40, 40, 40)
 
 //        image2.image = image2.image?.resizableImage(withCapInsets: myInsets)
 //        image3.image = image3.image?.resizableImage(withCapInsets: myInsets)
 
-        image1.backgroundColor = .white
+//        image1.backgroundColor = .white
         
         NSLayoutConstraint.activate([
 //            boardSizeLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
