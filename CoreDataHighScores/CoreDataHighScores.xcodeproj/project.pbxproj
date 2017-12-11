@@ -16,7 +16,7 @@
 		3EB8A2F41FC9B98100F59A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A2F31FC9B98100F59A3F /* Assets.xcassets */; };
 		3EB8A2F71FC9B98100F59A3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A2F51FC9B98100F59A3F /* LaunchScreen.storyboard */; };
 		3EEE01FF1FCC8CCD000E7EAA /* HighScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE01FE1FCC8CCD000E7EAA /* HighScoreTableViewController.swift */; };
-		3EEE02011FCCC60C000E7EAA /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE02001FCCC60C000E7EAA /* CustomTableViewCell.swift */; };
+		3EEE02011FCCC60C000E7EAA /* HighScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE02001FCCC60C000E7EAA /* HighScoreTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		3EB8A2F61FC9B98100F59A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3EB8A2F81FC9B98100F59A3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EEE01FE1FCC8CCD000E7EAA /* HighScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreTableViewController.swift; sourceTree = "<group>"; };
-		3EEE02001FCCC60C000E7EAA /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		3EEE02001FCCC60C000E7EAA /* HighScoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,7 @@
 				3EEE01FE1FCC8CCD000E7EAA /* HighScoreTableViewController.swift */,
 				3EAA50A41FDEDF0D00103897 /* HighScoreDAO.swift */,
 				3E69ECBF1FD9EF3500F88EB3 /* HighScoreHeaderCell.swift */,
-				3EEE02001FCCC60C000E7EAA /* CustomTableViewCell.swift */,
+				3EEE02001FCCC60C000E7EAA /* HighScoreTableViewCell.swift */,
 				3EB8A2ED1FC9B98100F59A3F /* Main.storyboard */,
 				3EB8A2F31FC9B98100F59A3F /* Assets.xcassets */,
 				3EB8A2F51FC9B98100F59A3F /* LaunchScreen.storyboard */,
@@ -153,7 +153,7 @@
 			files = (
 				3EB8A2F21FC9B98100F59A3F /* CoreDataHighScores.xcdatamodeld in Sources */,
 				3E69ECC01FD9EF3500F88EB3 /* HighScoreHeaderCell.swift in Sources */,
-				3EEE02011FCCC60C000E7EAA /* CustomTableViewCell.swift in Sources */,
+				3EEE02011FCCC60C000E7EAA /* HighScoreTableViewCell.swift in Sources */,
 				3EAA50A51FDEDF0D00103897 /* HighScoreDAO.swift in Sources */,
 				3EB8A2EC1FC9B98100F59A3F /* ViewController.swift in Sources */,
 				3EB8A2EA1FC9B98100F59A3F /* AppDelegate.swift in Sources */,

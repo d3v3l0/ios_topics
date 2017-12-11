@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+class HighScoreTableViewCell: UITableViewCell {
     
     // A regular table cell already has an imageView so rename
 //    @IBOutlet weak var imageView1: UIImageView!

@@ -48,7 +48,7 @@ class  HighScoreTableViewController: UITableViewController {
         
         tableView.rowHeight = 55
         tableView.tableFooterView = UIView() // Remove "empty" table centers in footer
-        self.tableView.register(CustomTableViewCell.self, forCellReuseIdentifier:CellIdentifier)
+        self.tableView.register(HighScoreTableViewCell.self, forCellReuseIdentifier:CellIdentifier)
     }
     
 }
@@ -69,7 +69,7 @@ extension HighScoreTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell:CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as! CustomTableViewCell
+        let cell:HighScoreTableViewCell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as! HighScoreTableViewCell
         cell.backgroundColor = UIColor(red: 90/255.0, green: 120.0/255.0, blue: 250.0/255, alpha: 1.0)
         // Configure the cell...
         
