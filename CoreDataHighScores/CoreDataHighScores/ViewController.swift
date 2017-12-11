@@ -13,7 +13,7 @@ import CoreData
 class ViewController: UIViewController {
 
     private var highScores: [NSManagedObject] = []
-    private let tableViewController = SimpleTableViewController()
+    private let tableViewController = HighScoreTableViewController()
 
     func addTableView() {
         

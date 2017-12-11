@@ -18,7 +18,7 @@ struct GameType {
     let isDirectionDiagonal:Bool
 }
 
-class  SimpleTableViewController: UITableViewController {
+class  HighScoreTableViewController: UITableViewController {
     
     private let CellIdentifier = "Cell"
     private var highScores: [NSManagedObject] = []
@@ -54,7 +54,7 @@ class  SimpleTableViewController: UITableViewController {
 }
 
 // Data source delegate
-extension SimpleTableViewController {
+extension HighScoreTableViewController {
     
     // We can skip overriding this function and it will default to 1
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -115,7 +115,7 @@ extension SimpleTableViewController {
 }
 
 // Header Cell
-extension SimpleTableViewController {
+extension HighScoreTableViewController {
     //: Optional Header title
     //    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     //        let title:String
@@ -156,7 +156,7 @@ extension SimpleTableViewController {
 
 // MARK: - Core Data
 
-extension SimpleTableViewController {
+extension HighScoreTableViewController {
     
 }
 
