@@ -9,11 +9,7 @@
 import UIKit
 import CoreData
 
-//struct HighScore {
-//    var name = ""
-//    var time = 0
-//
-//}
+
 class ViewController: UIViewController {
 
     private var highScores: [NSManagedObject] = []
@@ -33,7 +29,6 @@ class ViewController: UIViewController {
             tableViewController.tableView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0),
             tableViewController.tableView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0),
             ])
-        
     }
     
     func addRandomGameScore() {
@@ -43,9 +38,11 @@ class ViewController: UIViewController {
         let isDirectionDiagonal = arc4random_uniform(2) == 1 ? true : false // 0 or 1
         let gameLanguage = 1
         
-        save(numBoardRows: 8, numBoardCols: 8, numberWords: 10, actualNumberWords: 10, isDirectionEastSouth: isDirectionEastSouth, isDirectionWestNorth: isDirectionWestNorth, isDirectionDiagonal: isDirectionDiagonal, gameLanguage: gameLanguage, score: 10)
-        save(numBoardRows: 8, numBoardCols: 8, numberWords: 10, actualNumberWords: 10, isDirectionEastSouth: true, isDirectionWestNorth: isDirectionWestNorth, isDirectionDiagonal: isDirectionDiagonal, gameLanguage: gameLanguage, score: 100)
-        save(numBoardRows: 8, numBoardCols: 8, numberWords: 10, actualNumberWords: 10, isDirectionEastSouth: true, isDirectionWestNorth: isDirectionWestNorth, isDirectionDiagonal: isDirectionDiagonal, gameLanguage: gameLanguage, score: 20)
+        let highScoreDAO = HighScoreDAO()
+        
+        highScoreDAO.save(numBoardRows: 8, numBoardCols: 8, numberWords: 10, actualNumberWords: 10, isDirectionEastSouth: isDirectionEastSouth, isDirectionWestNorth: isDirectionWestNorth, isDirectionDiagonal: isDirectionDiagonal, gameLanguage: gameLanguage, score: 10)
+        highScoreDAO.save(numBoardRows: 8, numBoardCols: 8, numberWords: 10, actualNumberWords: 10, isDirectionEastSouth: true, isDirectionWestNorth: isDirectionWestNorth, isDirectionDiagonal: isDirectionDiagonal, gameLanguage: gameLanguage, score: 100)
+        highScoreDAO.save(numBoardRows: 8, numBoardCols: 8, numberWords: 10, actualNumberWords: 10, isDirectionEastSouth: true, isDirectionWestNorth: isDirectionWestNorth, isDirectionDiagonal: isDirectionDiagonal, gameLanguage: gameLanguage, score: 20)
     }
     
     override func viewDidLoad() {
@@ -56,6 +53,14 @@ class ViewController: UIViewController {
         let gt = GameType(gameLanguage:1, numBoardRows: 8, numBoardCols: 8, numberWords: 10, actualNumberWords: 10, isDirectionEastSouth: true, isDirectionWestNorth: true, isDirectionDiagonal: false)
 
         tableViewController.config(gameType: gt)
+        
+        let highScoreDAO = HighScoreDAO()
+
+        let bestScore = highScoreDAO.fetchBestScore(gameType: gt)
+        if let score = bestScore?.value(forKey: "score") as! Int? {
+
+            print("bestScore: \(score)")
+        }
         
     }
 
@@ -74,132 +79,94 @@ class ViewController: UIViewController {
 
 extension ViewController {
     
-    func fetchHighScores(gameLanguage:Int, numBoardRows:Int, numBoardCols:Int, numberWords:Int, actualNumberWords:Int, isDirectionEastSouth:Bool, isDirectionWestNorth:Bool, isDirectionDiagonal:Bool ) {
-        
-        let appDelegate =
-            UIApplication.shared.delegate as! AppDelegate
-        let context =
-            appDelegate.persistentContainer.viewContext
-        
-        let request =
-            NSFetchRequest<NSManagedObject>(entityName: "HighScore")
-        
-        request.predicate = NSPredicate(format: "gameLanguage = \(gameLanguage) and numBoardRows = \(numBoardRows) and numBoardCols = \(numBoardCols)")
-        
-        do {
-            
-            let fetchedObjects = try context.fetch(request)
-            
-            let scores = fetchedObjects
-            print("HS #: \(scores.count)")
-            
-            for score in scores {
-                
-                print("HS: \(score)")
-            }
-            
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
-        }
-        
-    }
+//    func fetchHighScores(gameLanguage:Int, numBoardRows:Int, numBoardCols:Int, numberWords:Int, actualNumberWords:Int, isDirectionEastSouth:Bool, isDirectionWestNorth:Bool, isDirectionDiagonal:Bool ) {
+//
+//        let appDelegate =
+//            UIApplication.shared.delegate as! AppDelegate
+//        let context =
+//            appDelegate.persistentContainer.viewContext
+//
+//        let request =
+//            NSFetchRequest<NSManagedObject>(entityName: "HighScore")
+//
+//        request.predicate = NSPredicate(format: "gameLanguage = \(gameLanguage) and numBoardRows = \(numBoardRows) and numBoardCols = \(numBoardCols)")
+//
+//        do {
+//
+//            let fetchedObjects = try context.fetch(request)
+//
+//            let scores = fetchedObjects
+//            print("HS #: \(scores.count)")
+//
+//            for score in scores {
+//
+//                print("HS: \(score)")
+//            }
+//
+//        } catch let error as NSError {
+//            print("Could not fetch \(error), \(error.userInfo)")
+//        }
+//
+//    }
     
-    private func loadData() {
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-                return
-        }
-        
-        let managedContext =
-            appDelegate.persistentContainer.viewContext
-        
-        let fetchRequest =
-            NSFetchRequest<NSManagedObject>(entityName: "HighScore")
-        
-        do {
-            highScores = try managedContext.fetch(fetchRequest)
-            print("count=\(highScores.count)")
-            
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-        }
-    }
+//    private func loadData() {
+//        guard let appDelegate =
+//            UIApplication.shared.delegate as? AppDelegate else {
+//                return
+//        }
+//
+//        let managedContext =
+//            appDelegate.persistentContainer.viewContext
+//
+//        let fetchRequest =
+//            NSFetchRequest<NSManagedObject>(entityName: "HighScore")
+//
+//        do {
+//            highScores = try managedContext.fetch(fetchRequest)
+//            print("count=\(highScores.count)")
+//
+//        } catch let error as NSError {
+//            print("Could not fetch. \(error), \(error.userInfo)")
+//        }
+//    }
     
-    func loadAllScores() {
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-                return
-        }
-        
-        let managedContext =
-            appDelegate.persistentContainer.viewContext
-        
-        let fetchRequest =
-            NSFetchRequest<NSManagedObject>(entityName: "HighScore")
-        
-        do {
-            highScores = try managedContext.fetch(fetchRequest)
-            print("count=\(highScores.count)")
-            
-            for s in highScores {
-                
-                if let numBoardRows = s.value(forKey: "numBoardRows") as! Int?,
-                    let numBoardCols = s.value(forKey: "numBoardCols"),
-                    let numberWords = s.value(forKey: "numberWords"),
-                    let actualNumberWords = s.value(forKey: "actualNumberWords"),
-                    let isDirectionEastSouth = s.value(forKey: "isDirectionEastSouth"),
-                    let isDirectionWestNorth = s.value(forKey: "isDirectionWestNorth"),
-                    let isDirectionDiagonal = s.value(forKey: "isDirectionDiagonal"),
-                    let gameLanguage = s.value(forKey: "gameLanguage"),
-                    
-                    let score = s.value(forKey: "score"),
-                    let gameTime = s.value(forKey: "gameTime") {
-                    print("Result:L=\(gameLanguage), \(numBoardRows)x\(numBoardCols), \(numberWords), \(actualNumberWords), \(isDirectionEastSouth), \(isDirectionWestNorth),\(isDirectionDiagonal),  \(gameTime), \(score)")
-                }
-            }
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-        }
-        
-    }
+//    func loadAllScores() {
+//        guard let appDelegate =
+//            UIApplication.shared.delegate as? AppDelegate else {
+//                return
+//        }
+//
+//        let managedContext =
+//            appDelegate.persistentContainer.viewContext
+//
+//        let fetchRequest =
+//            NSFetchRequest<NSManagedObject>(entityName: "HighScore")
+//
+//        do {
+//            highScores = try managedContext.fetch(fetchRequest)
+//            print("count=\(highScores.count)")
+//
+//            for s in highScores {
+//
+//                if let numBoardRows = s.value(forKey: "numBoardRows") as! Int?,
+//                    let numBoardCols = s.value(forKey: "numBoardCols"),
+//                    let numberWords = s.value(forKey: "numberWords"),
+//                    let actualNumberWords = s.value(forKey: "actualNumberWords"),
+//                    let isDirectionEastSouth = s.value(forKey: "isDirectionEastSouth"),
+//                    let isDirectionWestNorth = s.value(forKey: "isDirectionWestNorth"),
+//                    let isDirectionDiagonal = s.value(forKey: "isDirectionDiagonal"),
+//                    let gameLanguage = s.value(forKey: "gameLanguage"),
+//
+//                    let score = s.value(forKey: "score"),
+//                    let gameTime = s.value(forKey: "gameTime") {
+//                    print("Result:L=\(gameLanguage), \(numBoardRows)x\(numBoardCols), \(numberWords), \(actualNumberWords), \(isDirectionEastSouth), \(isDirectionWestNorth),\(isDirectionDiagonal),  \(gameTime), \(score)")
+//                }
+//            }
+//        } catch let error as NSError {
+//            print("Could not fetch. \(error), \(error.userInfo)")
+//        }
+//
+//    }
 
-    /*
-     Score is the time in seconds
-     */
-    func save(numBoardRows:Int, numBoardCols:Int, numberWords:Int, actualNumberWords:Int, isDirectionEastSouth:Bool, isDirectionWestNorth:Bool, isDirectionDiagonal:Bool, gameLanguage: Int, score:Int) {
-        
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-                return
-        }
-        
-        let managedContext =
-            appDelegate.persistentContainer.viewContext
-        
-        let entity =
-            NSEntityDescription.entity(forEntityName: "HighScore",
-                                       in: managedContext)!
-        
-        let highScore = NSManagedObject(entity: entity,
-                                     insertInto: managedContext)
-        
-        highScore.setValue(gameLanguage, forKeyPath: "gameLanguage")
-        highScore.setValue(numBoardRows, forKeyPath: "numBoardRows")
-        highScore.setValue(numBoardCols, forKeyPath: "numBoardCols")
-        highScore.setValue(numberWords, forKeyPath: "numberWords")
-        highScore.setValue(actualNumberWords, forKeyPath: "actualNumberWords")
-        highScore.setValue(score, forKeyPath: "score")
-        highScore.setValue(Date(), forKeyPath: "gameTime")
-        highScore.setValue(isDirectionEastSouth, forKeyPath: "isDirectionEastSouth")
-        highScore.setValue(isDirectionWestNorth, forKeyPath: "isDirectionWestNorth")
-        highScore.setValue(isDirectionDiagonal, forKeyPath: "isDirectionDiagonal")
-        
-        do {
-            try managedContext.save()
-            highScores.append(highScore)
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        }
-    }
 
 }

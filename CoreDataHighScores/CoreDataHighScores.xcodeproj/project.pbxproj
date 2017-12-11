@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E69ECC01FD9EF3500F88EB3 /* HighScoreHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E69ECBF1FD9EF3500F88EB3 /* HighScoreHeaderCell.swift */; };
+		3EAA50A51FDEDF0D00103897 /* HighScoreDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAA50A41FDEDF0D00103897 /* HighScoreDAO.swift */; };
 		3EB8A2EA1FC9B98100F59A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB8A2E91FC9B98100F59A3F /* AppDelegate.swift */; };
 		3EB8A2EC1FC9B98100F59A3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB8A2EB1FC9B98100F59A3F /* ViewController.swift */; };
 		3EB8A2EF1FC9B98100F59A3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EB8A2ED1FC9B98100F59A3F /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		3E69ECBF1FD9EF3500F88EB3 /* HighScoreHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreHeaderCell.swift; sourceTree = "<group>"; };
+		3EAA50A41FDEDF0D00103897 /* HighScoreDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreDAO.swift; sourceTree = "<group>"; };
 		3EB8A2E61FC9B98100F59A3F /* CoreDataHighScores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataHighScores.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EB8A2E91FC9B98100F59A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EB8A2EB1FC9B98100F59A3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				3EB8A2E91FC9B98100F59A3F /* AppDelegate.swift */,
 				3EB8A2EB1FC9B98100F59A3F /* ViewController.swift */,
 				3EEE01FE1FCC8CCD000E7EAA /* SimpleTableViewController.swift */,
+				3EAA50A41FDEDF0D00103897 /* HighScoreDAO.swift */,
 				3E69ECBF1FD9EF3500F88EB3 /* HighScoreHeaderCell.swift */,
 				3EEE02001FCCC60C000E7EAA /* CustomTableViewCell.swift */,
 				3EB8A2ED1FC9B98100F59A3F /* Main.storyboard */,
@@ -151,6 +154,7 @@
 				3EB8A2F21FC9B98100F59A3F /* CoreDataHighScores.xcdatamodeld in Sources */,
 				3E69ECC01FD9EF3500F88EB3 /* HighScoreHeaderCell.swift in Sources */,
 				3EEE02011FCCC60C000E7EAA /* CustomTableViewCell.swift in Sources */,
+				3EAA50A51FDEDF0D00103897 /* HighScoreDAO.swift in Sources */,
 				3EB8A2EC1FC9B98100F59A3F /* ViewController.swift in Sources */,
 				3EB8A2EA1FC9B98100F59A3F /* AppDelegate.swift in Sources */,
 				3EEE01FF1FCC8CCD000E7EAA /* SimpleTableViewController.swift in Sources */,

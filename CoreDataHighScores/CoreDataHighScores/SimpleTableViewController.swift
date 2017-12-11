@@ -43,8 +43,8 @@ class  SimpleTableViewController: UITableViewController {
 //        let isDirectionEastSouth = true
 //        let isDirectionWestNorth = true
 //        let isDirectionDiagonal = true
-        
-        highScores = fetchHighScores(gameType: gt)
+        let highScoreDAO = HighScoreDAO()
+        highScores = highScoreDAO.fetchHighScores(gameType: gt)
         
         tableView.rowHeight = 55
         tableView.tableFooterView = UIView() // Remove "empty" table centers in footer
@@ -158,68 +158,5 @@ extension SimpleTableViewController {
 
 extension SimpleTableViewController {
     
-    func fetchHighScores(gameType gt:GameType) -> [NSManagedObject] {
-        
-//        gameLanguage:Int, numBoardRows:Int, numBoardCols:Int, numberWords:Int, actualNumberWords:Int, isDirectionEastSouth:Bool, isDirectionWestNorth:Bool, isDirectionDiagonal:Bool ) -> [NSManagedObject]{
-        
-        let appDelegate =
-            UIApplication.shared.delegate as! AppDelegate
-        let context =
-            appDelegate.persistentContainer.viewContext
-        
-        let request =
-            NSFetchRequest<NSManagedObject>(entityName: "HighScore")
-        
-        request.predicate = NSPredicate(format: "gameLanguage = \(gt.gameLanguage) and numBoardRows = \(gt.numBoardRows) and numberWords = \(gt.numberWords) and isDirectionEastSouth = \(gt.isDirectionEastSouth) and isDirectionWestNorth = \(gt.isDirectionWestNorth) and isDirectionDiagonal = \(gt.isDirectionDiagonal)")
-        
-        // Sort by lowest time (seconds)
-        let sortDescriptor = NSSortDescriptor(key: "score", ascending: true)
-        let sortDescriptors = [sortDescriptor]
-        request.sortDescriptors = sortDescriptors
-        //
-        request.fetchLimit = 5
-        
-        let fetchedObjects:[NSManagedObject]
-        
-        do {
-            
-            fetchedObjects = try context.fetch(request)
-            
-            let scores = fetchedObjects
-            print("HS #: \(scores.count)")
-            
-//            for score in scores {
-//
-//                print("HS: \(score)")
-//            }
-            
-            highScores = fetchedObjects
-            
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
-            fetchedObjects = []
-        }
-        return fetchedObjects
-    }
-    
-    private func loadData() {
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-                return
-        }
-        
-        let managedContext =
-            appDelegate.persistentContainer.viewContext
-        
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "HighScore")
-        
-        do {
-            highScores = try managedContext.fetch(fetchRequest)
-            print("count=\(highScores.count)")
-            
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-        }
-    }
 }
 
