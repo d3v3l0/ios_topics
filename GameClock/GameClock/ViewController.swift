@@ -10,14 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let timerLabel = UILabel()
-    let stopButton = UIButton()
-    var isRunning = true
+    private let timerLabel = UILabel()
+    private let stopButton = UIButton()
+    private var isRunning = true
     
 //    var gameTime = 0
-    var gameClock = GameClock()
+    private var gameClock = GameClock()
     
-    func buildView() {
+    private func buildView() {
         
         let views = [timerLabel,stopButton]
         views.forEach{$0.translatesAutoresizingMaskIntoConstraints = false}
