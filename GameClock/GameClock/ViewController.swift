@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     private let stopButton = UIButton()
     private var isRunning = true
     
-//    var gameTime = 0
     private var gameClock = GameClock()
     
     private func buildView() {
@@ -62,12 +61,6 @@ class ViewController: UIViewController {
         gameClock.setLabel(label: timerLabel)
         gameClock.startClock()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
