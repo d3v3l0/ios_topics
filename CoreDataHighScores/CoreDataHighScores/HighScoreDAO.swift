@@ -12,17 +12,17 @@ import CoreData
 
 class HighScoreDAO {
     
-    public func fetchBestScore(gameType gt:GameType) -> NSManagedObject? {
+    public func fetchBestScore(gameType gt:GameType) -> HighScore? {
         let recs = fetchScores(gameType: gt, numRecords: 1).first
         return recs
     }
 
-    public func fetchHighScores(gameType gt:GameType) -> [NSManagedObject] {
+    public func fetchHighScores(gameType gt:GameType) -> [HighScore] {
         let recs = fetchScores(gameType: gt, numRecords: 5)
         return recs
     }
     
-    private func fetchScores(gameType gt:GameType, numRecords:Int) -> [NSManagedObject] {
+    private func fetchScores(gameType gt:GameType, numRecords:Int) -> [HighScore] {
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -38,11 +38,11 @@ class HighScoreDAO {
         request.sortDescriptors = sortDescriptors
         request.fetchLimit = numRecords
         
-        let fetchedObjects:[NSManagedObject]
+        let fetchedObjects:[HighScore]
         
         do {
             
-            fetchedObjects = try context.fetch(request)
+            fetchedObjects = try context.fetch(request) as! [HighScore]
             
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
@@ -51,20 +51,17 @@ class HighScoreDAO {
         return fetchedObjects
     }
     
-    private func loadData() -> [NSManagedObject] {
-        var highScores: [NSManagedObject] = []
+    private func loadData() -> [HighScore] {
+        var highScores: [HighScore] = []
 
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-                return highScores
-        }
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return highScores}
         
         let managedContext = appDelegate.persistentContainer.viewContext
         
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "HighScore")
         
         do {
-            highScores = try managedContext.fetch(fetchRequest)
+            highScores = try managedContext.fetch(fetchRequest) as! [HighScore]
             print("count=\(highScores.count)")
             
         } catch let error as NSError {
