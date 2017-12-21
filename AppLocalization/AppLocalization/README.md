@@ -31,6 +31,12 @@ Note, for projects with multiple targets, you must select the Main.storyboard an
 NSLocalizedString("Hello", comment: "a useful comment")
 ```
 
+### Verify Localiztion Files
+
+```sh
+ /usr/bin/plutil -lint ../../en.lproj/zh-Hans.lproj/Localizable.strings
+ ```
+ 
 ### Localized Screenshots
 
 ### References
