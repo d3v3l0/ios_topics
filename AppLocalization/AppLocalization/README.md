@@ -37,6 +37,18 @@ NSLocalizedString("Hello", comment: "a useful comment")
  /usr/bin/plutil -lint ../../en.lproj/zh-Hans.lproj/Localizable.strings
  ```
  
+ ### InfoPlist.strings
+ mb2:en.lproj melling$ mr es.lproj/InfoPlist.strings
+ ```
+ /* Localized versions of Info.plist keys */
+ 
+ /*
+ http://stackoverflow.com/questions/18052468/xcode-cannot-locate-localized-info-plist
+ */
+ 
+ "CFBundleDisplayName" = "Francés Lite";
+ "CFBundleName" = "Francés Lite";
+ ```
 ### Localized Screenshots
 
 ### References
@@ -44,3 +56,4 @@ NSLocalizedString("Hello", comment: "a useful comment")
 - [iOS Localization QuickStart tutorial](https://www.youtube.com/watch?v=YpNU6HbkMjQ)
 - [What’s new in localization in Xcode 9 and iOS 11](http://www.ibabbleon.com/copywriter-translator/2017/06/whats-new-in-localization-in-xcode-9-ios-11/)
 - [About Internationalization and Localization](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/Introduction/Introduction.html)
+- [Apple Internationalization Page](https://developer.apple.com/internationalization/)
