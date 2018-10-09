@@ -40,7 +40,7 @@ class ViewController: UIViewController {
 
         leftBtn.layer.cornerRadius = 15
         // Add some extra padding
-        rightBtn.contentEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5)
+        rightBtn.contentEdgeInsets = UIEdgeInsets.init(top: 5, left: 5, bottom: 5, right: 5)
         
         buttonStackView.addArrangedSubview(leftBtn)
         buttonStackView.addArrangedSubview(rightBtn)

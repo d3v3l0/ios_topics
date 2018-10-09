@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     func addButton() {
         view.addSubview(button1)
         button1.translatesAutoresizingMaskIntoConstraints = false
-        button1.setTitle("Alert", for: UIControlState())
+        button1.setTitle("Alert", for: UIControl.State())
         button1.addTarget(self, action: #selector(ViewController.showGameOverAlert(_:)), for: .touchUpInside)
         
         button1.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true

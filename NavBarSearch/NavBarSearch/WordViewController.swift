@@ -33,7 +33,7 @@ class WordViewController: UIViewController {
         let guide = view.safeAreaLayoutGuide
         
         NSLayoutConstraint.activate([
-            tableViewController.view.topAnchor.constraintEqualToSystemSpacingBelow(guide.topAnchor, multiplier: 1.0),
+            tableViewController.view.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 1.0),
             tableViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             tableViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0),
             tableViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0),

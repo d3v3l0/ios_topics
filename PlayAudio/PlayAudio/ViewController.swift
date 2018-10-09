@@ -18,8 +18,8 @@ class ViewController: UIViewController {
         centeredButton.translatesAutoresizingMaskIntoConstraints = false
         centeredButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
 
-        centeredButton.setTitle("Play", for: UIControlState())
-        centeredButton.setTitleColor(UIColor.black, for: UIControlState())
+        centeredButton.setTitle("Play", for: UIControl.State())
+        centeredButton.setTitleColor(UIColor.black, for: UIControl.State())
         centeredButton.addTarget(self, action: #selector(ViewController.playAudio(_:)), for: .touchUpInside)
         
         self.view.addSubview(centeredButton)
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         let audioUrl = URL(fileURLWithPath: Bundle.main.path(forResource: fileName, ofType: "mp3")!)
         
         
-        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: [])
+        try! AVAudioSession.sharedInstance().setCategory(convertFromAVAudioSessionCategory(AVAudioSession.Category.playback), with: [])
         try! AVAudioSession.sharedInstance().setActive(true)
         
         do {
@@ -70,3 +70,8 @@ class ViewController: UIViewController {
     
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
+}

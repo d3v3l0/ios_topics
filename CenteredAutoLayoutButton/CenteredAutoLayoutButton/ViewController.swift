@@ -15,17 +15,17 @@ class ViewController: UIViewController {
         
         centeredButton.translatesAutoresizingMaskIntoConstraints = false
 
-        centeredButton.setTitle("Am I centered?", for: UIControlState())
-        centeredButton.setTitleColor(UIColor.white, for: UIControlState())
+        centeredButton.setTitle("Am I centered?", for: UIControl.State())
+        centeredButton.setTitleColor(UIColor.white, for: UIControl.State())
         centeredButton.addTarget(self, action: #selector(ViewController.pressed(_:)), for: .touchUpInside)
         
         self.view.addSubview(centeredButton)
         
         let viewDictionary:[String:AnyObject] = ["centeredButton": centeredButton]
         
-        let horizontal:[NSLayoutConstraint]! = NSLayoutConstraint.constraints(withVisualFormat: "H:|-50-[centeredButton]-50-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: viewDictionary)
+        let horizontal:[NSLayoutConstraint]! = NSLayoutConstraint.constraints(withVisualFormat: "H:|-50-[centeredButton]-50-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary)
         
-        let vertical:[NSLayoutConstraint]! = NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[centeredButton]-100-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: viewDictionary)
+        let vertical:[NSLayoutConstraint]! = NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[centeredButton]-100-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary)
         self.view.addConstraints(horizontal)
         self.view.addConstraints(vertical)
         

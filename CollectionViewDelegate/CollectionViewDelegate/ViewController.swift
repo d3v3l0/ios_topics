@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         let guide = view.safeAreaLayoutGuide
 
         NSLayoutConstraint.activate([
-        collectionViewController.view.topAnchor.constraintEqualToSystemSpacingBelow(guide.topAnchor, multiplier: 1.0),
+        collectionViewController.view.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 1.0),
             collectionViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             collectionViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 5),
             collectionViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -5),

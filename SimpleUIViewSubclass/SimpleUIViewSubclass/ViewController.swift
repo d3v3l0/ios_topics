@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         let margins = view.layoutMarginsGuide
 
         NSLayoutConstraint.activate([
-            simpleView.topAnchor.constraintEqualToSystemSpacingBelow(guide.topAnchor, multiplier: 1.0),
+            simpleView.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 1.0),
             simpleView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
             simpleView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 10),
             simpleView.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -10),

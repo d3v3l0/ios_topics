@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         
     }
     
-    func switchValueDidChange(_ sender:UISwitch) {
+    @objc func switchValueDidChange(_ sender:UISwitch) {
         let value = aSwitch.isOn
         label.text = "\(value)"
     }

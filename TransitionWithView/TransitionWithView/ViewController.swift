@@ -24,10 +24,10 @@ class ViewController: UIViewController {
     
     func centerViewXY(_ parent: UIView, child: UIView) {
         
-        let constX = NSLayoutConstraint(item: child, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: parent, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0)
+        let constX = NSLayoutConstraint(item: child, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: parent, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
         parent.addConstraint(constX)
         
-        let constY = NSLayoutConstraint(item: child, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: parent, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0)
+        let constY = NSLayoutConstraint(item: child, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: parent, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 0)
         parent.addConstraint(constY)
         
     }
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     }
     
     @objc func curlUp() {
-        let transitionOptions = UIViewAnimationOptions.transitionCurlUp
+        let transitionOptions = UIView.AnimationOptions.transitionCurlUp
         
         UIView.transition(from: cardFront,
             to: cardBack,
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
             options: transitionOptions,
             completion: { _ in
                 
-                let transitionOptions = UIViewAnimationOptions.transitionCurlDown
+                let transitionOptions = UIView.AnimationOptions.transitionCurlDown
 
                 UIView.transition(from: self.cardBack,
                     to: self.cardFront,

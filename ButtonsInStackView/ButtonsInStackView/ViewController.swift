@@ -25,16 +25,16 @@ class ViewController: UIViewController {
     func customizeButtons() {
         
         // Button 1
-        button1.setTitle("cornerRadius = 10", for: UIControlState())
+        button1.setTitle("cornerRadius = 10", for: UIControl.State())
         button1.titleLabel?.font = UIFont.systemFont(ofSize: 24)
         button1.backgroundColor = UIColor.blue
         button1.layer.cornerRadius = 10
         
-        button1.setTitleColor(UIColor.white, for: UIControlState())
+        button1.setTitleColor(UIColor.white, for: UIControl.State())
         button1.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         
         // Button 2
-        button2.setTitle("Border", for: UIControlState())
+        button2.setTitle("Border", for: UIControl.State())
         button2.backgroundColor = UIColor.gray
         button2.layer.borderWidth = 3
         button2.layer.borderColor = UIColor.black.cgColor
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         
         
         button3.backgroundColor = UIColor.gray
-        button3.setTitle("Custom Font", for: UIControlState())
+        button3.setTitle("Custom Font", for: UIControl.State())
         button3.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         let fontSize:CGFloat = 20
         let aFontName = "American Typewriter"
@@ -57,11 +57,11 @@ class ViewController: UIViewController {
 
         // Button 4
         button4.backgroundColor = UIColor.gray
-        button4.setTitle("Image", for: UIControlState())
+        button4.setTitle("Image", for: UIControl.State())
         button4.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         let imageName = "star"
         if let image = UIImage(named: imageName) {
-            button4.setImage(image, for: UIControlState())
+            button4.setImage(image, for: UIControl.State())
         }
     }
     

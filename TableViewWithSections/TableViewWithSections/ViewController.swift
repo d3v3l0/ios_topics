@@ -20,8 +20,8 @@ class ViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             
-            tableViewController.tableView.topAnchor.constraintEqualToSystemSpacingBelow(guide.topAnchor, multiplier: 1.0),
-            tableViewController.tableView.bottomAnchor.constraintEqualToSystemSpacingBelow(view.bottomAnchor, multiplier: 1.0),
+            tableViewController.tableView.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 1.0),
+            tableViewController.tableView.bottomAnchor.constraint(equalToSystemSpacingBelow: view.bottomAnchor, multiplier: 1.0),
             tableViewController.tableView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0),
             tableViewController.tableView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0),
             

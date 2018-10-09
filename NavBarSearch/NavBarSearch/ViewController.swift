@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         let guide = view.safeAreaLayoutGuide
         
         NSLayoutConstraint.activate([
-            wordViewController.view.topAnchor.constraintEqualToSystemSpacingBelow(guide.topAnchor, multiplier: 1.0),
+            wordViewController.view.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 1.0),
             wordViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             wordViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0),
             wordViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0),

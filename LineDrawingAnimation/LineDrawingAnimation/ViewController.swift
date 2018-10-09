@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         
         drawAnimation.duration = 3.0
         
-        drawAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        drawAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         
         layer.add(drawAnimation, forKey: "drawLineAnimation")
         

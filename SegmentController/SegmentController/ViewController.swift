@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         segmentedControl.addTarget(self, action: #selector(segmentValueDidChange(_:)), for: .valueChanged)
     }
 
-    func segmentValueDidChange(_ sender:UISegmentedControl) {
+    @objc func segmentValueDidChange(_ sender:UISegmentedControl) {
         let value = sender.selectedSegmentIndex
         let language = sender.titleForSegment(at: value)!
         label.text = "\(value), \(language)"

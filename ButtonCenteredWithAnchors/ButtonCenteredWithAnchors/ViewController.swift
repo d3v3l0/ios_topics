@@ -16,8 +16,8 @@ class ViewController: UIViewController {
         centeredButton.translatesAutoresizingMaskIntoConstraints = false
         centeredButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
         
-        centeredButton.setTitle("Am I centered?", for: UIControlState())
-        centeredButton.setTitleColor(UIColor.black, for: UIControlState())
+        centeredButton.setTitle("Am I centered?", for: UIControl.State())
+        centeredButton.setTitleColor(UIColor.black, for: UIControl.State())
         centeredButton.addTarget(self, action: #selector(pressed(_:)), for: .touchUpInside)
         
         self.view.addSubview(centeredButton)
