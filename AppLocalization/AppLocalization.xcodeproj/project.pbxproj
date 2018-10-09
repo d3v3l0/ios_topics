@@ -69,9 +69,9 @@
 		3E72C6A61FD1B2E1005BF674 /* AppLocalization */ = {
 			isa = PBXGroup;
 			children = (
+				3E72C6B91FD1B840005BF674 /* README.md */,
 				3E72C6C51FD1E5FF005BF674 /* Localizable.strings */,
 				3E72C6C01FD1E5FE005BF674 /* InfoPlist.strings */,
-				3E72C6B91FD1B840005BF674 /* README.md */,
 				3E72C6A71FD1B2E1005BF674 /* AppDelegate.swift */,
 				3E72C6A91FD1B2E1005BF674 /* ViewController.swift */,
 				3E72C6AB1FD1B2E1005BF674 /* Main.storyboard */,
