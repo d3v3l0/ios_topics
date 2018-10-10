@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         let audioUrl = URL(fileURLWithPath: Bundle.main.path(forResource: fileName, ofType: "mp3")!)
         
         
-        try! AVAudioSession.sharedInstance().setCategory(convertFromAVAudioSessionCategory(AVAudioSession.Category.playback), with: [])
+//        try! AVAudioSession.sharedInstance().setCategory(convertFromAVAudioSessionCategory(AVAudioSession.Category.playback), with: [])
         try! AVAudioSession.sharedInstance().setActive(true)
         
         do {
