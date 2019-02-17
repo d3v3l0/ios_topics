@@ -10,7 +10,7 @@ import UIKit
 class  SimpleTableViewController: UITableViewController {
     
     private let rowData = ["one", "two", "three"]
-    private let CellIdentifier = "Cell"
+    private let cellIdentifier = "Cell"
     
     // MARK: - View Management
 
@@ -21,7 +21,7 @@ class  SimpleTableViewController: UITableViewController {
         
         tableView.rowHeight = 80
         tableView.tableFooterView = UIView() // Remove "empty" table centers in footer
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier:CellIdentifier)
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier:cellIdentifier)
     }
     
 }
@@ -43,7 +43,7 @@ extension SimpleTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         cell.backgroundColor = UIColor(red: 90/255.0, green: 120.0/255.0, blue: 250.0/255, alpha: 1.0)
         // Configure the cell...
         cell.textLabel?.text = rowData[indexPath.row]
