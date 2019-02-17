@@ -12,7 +12,7 @@
 		3E6811911CF7F38800B1B4A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E68118F1CF7F38800B1B4A8 /* Main.storyboard */; };
 		3E6811931CF7F38800B1B4A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E6811921CF7F38800B1B4A8 /* Assets.xcassets */; };
 		3E6811961CF7F38800B1B4A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6811941CF7F38800B1B4A8 /* LaunchScreen.storyboard */; };
-		3E68119E1CF7F4BB00B1B4A8 /* README.org in Resources */ = {isa = PBXBuildFile; fileRef = 3E68119D1CF7F4BB00B1B4A8 /* README.org */; };
+		3E68119E1CF7F4BB00B1B4A8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3E68119D1CF7F4BB00B1B4A8 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		3E6811921CF7F38800B1B4A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E6811951CF7F38800B1B4A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E6811971CF7F38800B1B4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3E68119D1CF7F4BB00B1B4A8 /* README.org */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.org; sourceTree = "<group>"; };
+		3E68119D1CF7F4BB00B1B4A8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 		3E68118A1CF7F38800B1B4A8 /* CircleDrawingAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				3E68119D1CF7F4BB00B1B4A8 /* README.org */,
+				3E68119D1CF7F4BB00B1B4A8 /* README.md */,
 				3E68118B1CF7F38800B1B4A8 /* AppDelegate.swift */,
 				3E68118D1CF7F38800B1B4A8 /* ViewController.swift */,
 				3E68118F1CF7F38800B1B4A8 /* Main.storyboard */,
@@ -129,7 +129,7 @@
 			files = (
 				3E6811961CF7F38800B1B4A8 /* LaunchScreen.storyboard in Resources */,
 				3E6811931CF7F38800B1B4A8 /* Assets.xcassets in Resources */,
-				3E68119E1CF7F4BB00B1B4A8 /* README.org in Resources */,
+				3E68119E1CF7F4BB00B1B4A8 /* README.md in Resources */,
 				3E6811911CF7F38800B1B4A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
