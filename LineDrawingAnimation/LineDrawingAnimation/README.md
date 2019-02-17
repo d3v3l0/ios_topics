@@ -1,6 +1,8 @@
 ## Line Drawing Animation
 
-[[screenshot-small.png]]
+Menu: [Tutorial Home](../../README.md)
+
+![Screenshot](screenshot-small.png)
 
 ### Overview
 
