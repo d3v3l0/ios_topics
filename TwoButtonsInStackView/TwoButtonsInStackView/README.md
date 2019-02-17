@@ -22,14 +22,14 @@ Menu: [Home](../../README.md)
 ```swift
 private func buildView() {...}
 
-
 ```
 
 
 ### Additional Functions
 ```swift
+// Add some extra button padding
+rightBtn.contentEdgeInsets = UIEdgeInsets.init(top: 5, left: 5, bottom: 5, right: 5)
 
-//
 ```
 
 
