@@ -49,19 +49,7 @@ override func viewDidLoad() {
 Also, note that we use the Visual Formatting Language.  The table view is placed against the  topLayoutGuide.
 
 ```swift
-let viewDictionary:[String:AnyObject] = [
-   "tableView": tableViewController.tableView,
-   "topLayoutGuide": topLayoutGuide,
 
-]
-tableViewController.tableView.translatesAutoresizingMaskIntoConstraints = false
-
-self.view.addSubview(tableViewController.tableView)
-
-let metrics:[String:AnyObject] = [:]
-
-let h0Constraint = "H:|-[tableView]-|"
-let v0Constraint = "V:[topLayoutGuide]-[tableView]-|"
 ```
 
 This function tell how many sections are in the table.  In our case, it's only 1.
