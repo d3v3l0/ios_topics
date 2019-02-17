@@ -9,27 +9,28 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var centeredButton = UIButton()
+    private let button = UIButton()
     
-    func addButton() {
+    private func addButton() {
         
-        centeredButton.translatesAutoresizingMaskIntoConstraints = false
-        centeredButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 36)
         
-        centeredButton.setTitle("Am I centered?", for: UIControl.State())
-        centeredButton.setTitleColor(UIColor.black, for: UIControl.State())
-        centeredButton.addTarget(self, action: #selector(pressed(_:)), for: .touchUpInside)
+        button.setTitle("Am I centered?", for: .normal)
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.addTarget(self, action: #selector(pressed(_:)), for: .touchUpInside)
         
-        self.view.addSubview(centeredButton)
+        view.addSubview(button)
         
         NSLayoutConstraint.activate([
-            centeredButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            centeredButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0)
+            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0)
             ])
 
     }
     
-    @objc func pressed(_ sender: UIButton!) {
+    
+    @objc private func pressed(_ sender: UIButton!) {
         
         let title = "Awesome"
         let message = "You did it"
@@ -48,7 +49,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(named: "Apple Blue")
+        view.backgroundColor = UIColor(named: "Apple Blue")
         addButton()
     }
     

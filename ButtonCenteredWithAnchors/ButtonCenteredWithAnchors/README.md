@@ -10,25 +10,25 @@ Menu: [Home](../../README.md)
 ### Important Functions
 
 ```swift
-    var centeredButton = UIButton()
-    
-    func addButton() {
-        
-        centeredButton.translatesAutoresizingMaskIntoConstraints = false
-        centeredButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
-        
-        centeredButton.setTitle("Am I centered?", for: UIControlState())
-        centeredButton.setTitleColor(UIColor.black, for: UIControlState())
-        centeredButton.addTarget(self, action: #selector(ViewController.pressed(_:)), for: .touchUpInside)
-        
-        self.view.addSubview(centeredButton)
-        
-        NSLayoutConstraint.activate([
-           centeredButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-           centeredButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0),
-        ])
+private let button = UIButton()
 
-    }
+private func addButton() {
+
+    button.translatesAutoresizingMaskIntoConstraints = false
+    button.titleLabel?.font = UIFont.systemFont(ofSize: 36)
+
+    button.setTitle("Am I centered?", for: .normal)
+    button.setTitleColor(UIColor.black, for: .normal)
+    button.addTarget(self, action: #selector(pressed(_:)), for: .touchUpInside)
+
+    view.addSubview(button)
+
+    NSLayoutConstraint.activate([
+        button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        button.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0)
+    ])
+
+}
 ```
 
 ### Additional Functions
