@@ -10,14 +10,16 @@ import UIKit
 
 class  SimpleTableViewController: UITableViewController {
     
-    let rowData = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
-    let CellIdentifier = "Cell"
+    private let rowData = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
+    private let cellIdentifier = "Cell"
     
+    // MARK: - View Management
+
     override func viewDidLoad() {
 
         self.tableView.rowHeight = 80
         
-        self.tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: CellIdentifier)
+        self.tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
 
     }
     
@@ -40,7 +42,7 @@ extension SimpleTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell:CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath) as! CustomTableViewCell
+        let cell:CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CustomTableViewCell
         
         // Configure the cell...
         cell.label1?.text = rowData[indexPath.row]
