@@ -9,32 +9,44 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let segmentedControl = UISegmentedControl()
-    let label = UILabel()
+    private let segmentedControl = UISegmentedControl()
+    private let label = UILabel()
     
+    // MARK: - Actions
+    
+    @objc private func segmentValueDidChange(_ sender:UISegmentedControl) {
+        let value = sender.selectedSegmentIndex
+        let language = sender.titleForSegment(at: value)!
+        label.text = "\(value), \(language)"
+    }
+    
+
+    // MARK: - Build View
+
     func buildView() {
-        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(segmentedControl)
+        [segmentedControl, label].forEach {$0.translatesAutoresizingMaskIntoConstraints = false}
+        [segmentedControl, label].forEach(view.addSubview)
+
+        let guide = view.safeAreaLayoutGuide
         
-        
-        segmentedControl.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        segmentedControl.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: -100).isActive = true
-//        segmentedControl.widthAnchor.constraint(equalToConstant: 150)
-        
-        //
-        let margins = self.view.layoutMarginsGuide
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(label)
-        label.topAnchor.constraint(equalTo: margins.topAnchor, constant: 100).isActive = true
-        label.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        
+        NSLayoutConstraint.activate([
+            
+            segmentedControl.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
+            segmentedControl.centerYAnchor.constraint(equalTo: guide.centerYAnchor, constant: -100),
+            //        segmentedControl.widthAnchor.constraint(equalToConstant: 150)
+            
+            label.topAnchor.constraint(equalTo: guide.topAnchor, constant: 100),
+            label.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
+            
+            ])        
     }
 
-    
+    // MARK: - View Management
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .lightGray
+        
+        view.backgroundColor = .lightGray
         buildView()
         
         segmentedControl.tintColor = .blue
@@ -45,12 +57,6 @@ class ViewController: UIViewController {
         segmentedControl.selectedSegmentIndex = 0 // Default selection
 
         segmentedControl.addTarget(self, action: #selector(segmentValueDidChange(_:)), for: .valueChanged)
-    }
-
-    @objc func segmentValueDidChange(_ sender:UISegmentedControl) {
-        let value = sender.selectedSegmentIndex
-        let language = sender.titleForSegment(at: value)!
-        label.text = "\(value), \(language)"
     }
 
 }
