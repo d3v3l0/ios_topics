@@ -9,9 +9,11 @@ import UIKit
 
 class  SimpleTableViewController: UITableViewController {
     
-    let rowData = ["one", "two", "three"]
-    let CellIdentifier = "Cell"
+    private let rowData = ["one", "two", "three"]
+    private let CellIdentifier = "Cell"
     
+    // MARK: - View Management
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,7 +26,7 @@ class  SimpleTableViewController: UITableViewController {
     
 }
 
-// Data source delegate
+// MARK: - Data source delegate
 
 extension SimpleTableViewController {
 
@@ -51,7 +53,7 @@ extension SimpleTableViewController {
     }
 }
 
-// Header Cell
+// MARK: - Header Cell
 
 extension SimpleTableViewController {
     //: Optional Header title
