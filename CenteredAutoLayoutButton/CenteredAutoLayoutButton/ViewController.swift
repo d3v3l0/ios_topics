@@ -9,29 +9,30 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var centeredButton: UIButton = UIButton()
+    private let button = UIButton()
 
-    func addButton() {
+    private func addButton() {
         
-        centeredButton.translatesAutoresizingMaskIntoConstraints = false
-
-        centeredButton.setTitle("Am I centered?", for: UIControl.State())
-        centeredButton.setTitleColor(UIColor.white, for: UIControl.State())
-        centeredButton.addTarget(self, action: #selector(ViewController.pressed(_:)), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.borderWidth = 1
+        button.layer.cornerRadius = 10
+        button.setTitle("Am I centered?", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(pressed(_:)), for: .touchUpInside)
         
-        self.view.addSubview(centeredButton)
+        view.addSubview(button)
         
-        let viewDictionary:[String:AnyObject] = ["centeredButton": centeredButton]
-        
-        let horizontal:[NSLayoutConstraint]! = NSLayoutConstraint.constraints(withVisualFormat: "H:|-50-[centeredButton]-50-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary)
-        
-        let vertical:[NSLayoutConstraint]! = NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[centeredButton]-100-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary)
-        self.view.addConstraints(horizontal)
-        self.view.addConstraints(vertical)
+        NSLayoutConstraint.activate([
+            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            
+            button.widthAnchor.constraint(equalToConstant: 130),
+        ])
         
     }
     
-    @objc func pressed(_ sender: UIButton!) {
+    
+    @objc private func pressed(_ sender: UIButton!) {
 
         let title = "Awesome"
         let message = "You did it"
@@ -48,18 +49,19 @@ class ViewController: UIViewController {
 
     }
     
+    // MARK: - View Management
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0) // Apple blue
+        view.backgroundColor = UIColor(named: "AppleBlue")
         addButton()
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
