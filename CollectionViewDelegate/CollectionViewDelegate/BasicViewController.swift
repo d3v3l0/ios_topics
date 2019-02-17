@@ -13,9 +13,12 @@ class BasicCollectionViewController: UIViewController {
 
     fileprivate let reuseIdentifier = "Cell"
 
+    // MARK: - View Management
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.gray
+        
+        view.backgroundColor = UIColor.gray
 
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.minimumInteritemSpacing = 2
@@ -27,7 +30,7 @@ class BasicCollectionViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(collectionView)
+        view.addSubview(collectionView)
         
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 5),
@@ -54,7 +57,7 @@ extension BasicCollectionViewController: UICollectionViewDataSource {
     }
     
     
-     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return 150
     }

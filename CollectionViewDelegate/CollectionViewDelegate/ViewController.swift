@@ -9,32 +9,36 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var collectionViewController = BasicCollectionViewController()
+    private var collectionViewController = BasicCollectionViewController()
     
-    func addCollectionView() {
+    // MARK: - Build View
+
+    private func addCollectionView() {
       
         collectionViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
-        self.view.addSubview(collectionViewController.view)
+        view.addSubview(collectionViewController.view)
         
         let guide = view.safeAreaLayoutGuide
 
         NSLayoutConstraint.activate([
-        collectionViewController.view.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 1.0),
-            collectionViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            collectionViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 5),
-            collectionViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -5),
+            collectionViewController.view.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 1.0),
+            collectionViewController.view.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
+            collectionViewController.view.leftAnchor.constraint(equalTo: guide.leftAnchor, constant: 5),
+            collectionViewController.view.rightAnchor.constraint(equalTo: guide.rightAnchor, constant: -5),
             ])
     }
     
+    // MARK: - View Management
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .purple
+        
+        view.backgroundColor = .purple
         navigationController?.navigationBar.prefersLargeTitles = true
         self.title = "Collection Delegate"
 
         addCollectionView()
-        
     }
 }
 
