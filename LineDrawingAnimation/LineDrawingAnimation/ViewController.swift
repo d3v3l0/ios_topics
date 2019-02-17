@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor(named: "AppleBluw")
+        view.backgroundColor = UIColor(named: "AppleBlue")
 
         addLine(x0: 20, y0: 20, x1: 250, y1: 500)
 
