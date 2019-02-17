@@ -20,6 +20,7 @@ Menu: [Home](../../README.md)
 ### Important Functions
 
 ```swift
+private func buildView() {...}
 
 
 ```

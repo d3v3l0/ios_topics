@@ -15,11 +15,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let leftBtn = UIButton()
-    let rightBtn = UIButton()
-    let buttonStackView = UIStackView()
+    private let leftBtn = UIButton()
+    private let rightBtn = UIButton()
+    private let buttonStackView = UIStackView()
     
-    func buildView() {
+    // MARK: - Build View
+    
+    private func buildView() {
         [buttonStackView, leftBtn, rightBtn].forEach {$0.translatesAutoresizingMaskIntoConstraints = false}
 
         //: StackView
@@ -39,12 +41,12 @@ class ViewController: UIViewController {
         rightBtn.layer.borderWidth = 1
 
         leftBtn.layer.cornerRadius = 15
-        // Add some extra padding
+        // Add some extra button padding
         rightBtn.contentEdgeInsets = UIEdgeInsets.init(top: 5, left: 5, bottom: 5, right: 5)
         
-        buttonStackView.addArrangedSubview(leftBtn)
-        buttonStackView.addArrangedSubview(rightBtn)
-        self.view.addSubview(buttonStackView)
+        [leftBtn, rightBtn].forEach(buttonStackView.addArrangedSubview)
+
+        view.addSubview(buttonStackView)
         
         //: Button Layout
         // Simply change multiplier to make button wider
@@ -54,18 +56,22 @@ class ViewController: UIViewController {
             ])
         
         //: Stackview Layout
-        let margins = view.layoutMarginsGuide
+        let guide = view.safeAreaLayoutGuide
+
         NSLayoutConstraint.activate([
-            buttonStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            buttonStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             // Move stack above the bottom anchor
-            buttonStackView.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -10),
+            buttonStackView.bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -10),
+
             ])
     }
     
+    // MARK: - View Management
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(named: "Apple News")!
-            
+
+        view.backgroundColor = UIColor(named: "Apple News")!
         buildView()
     }
 }
