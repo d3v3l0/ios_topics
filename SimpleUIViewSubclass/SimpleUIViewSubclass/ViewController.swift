@@ -9,28 +9,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let simpleView = SimpleView()
+    private let simpleView = SimpleView()
     
-    func buildView() {
+    // MARK: - Build View
+
+    private func buildView() {
         simpleView.translatesAutoresizingMaskIntoConstraints = false
         
-        self.view.addSubview(simpleView)
+        view.addSubview(simpleView)
         
         let guide = view.safeAreaLayoutGuide
-        let margins = view.layoutMarginsGuide
 
         NSLayoutConstraint.activate([
             simpleView.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 1.0),
-            simpleView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
-            simpleView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 10),
-            simpleView.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -10),
+            simpleView.bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: -20),
+            simpleView.leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: 10),
+            simpleView.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: -10),
             ])
 
     }
     
+    // MARK: - View Management
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .orange
+        
+        view.backgroundColor = .orange
         navigationController?.navigationBar.prefersLargeTitles = true
         self.title = "UIView Subclass"
 
