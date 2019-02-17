@@ -9,9 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var collectionViewController:BasicCollectionViewController!
+    private var collectionViewController:BasicCollectionViewController!
     
-    func addCollectionView() {
+    // MARK: - Build View
+
+    private func addCollectionView() {
         
         collectionViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
@@ -28,8 +30,11 @@ class ViewController: UIViewController {
 
     }
     
+    // MARK: - View Management
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.view.backgroundColor = UIColor.purple
         navigationController?.navigationBar.prefersLargeTitles = true
         self.title = "UICollectionViewCell"

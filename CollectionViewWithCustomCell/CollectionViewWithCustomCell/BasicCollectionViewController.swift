@@ -12,6 +12,8 @@ class BasicCollectionViewController: UICollectionViewController {
 
     private let reuseIdentifier = "Cell"
 
+    // MARK: - View Management
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,7 +29,11 @@ class BasicCollectionViewController: UICollectionViewController {
         
     }
 
-    // MARK: - UICollectionViewDataSource
+}
+
+// MARK: - UICollectionViewDataSource
+
+extension BasicCollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
 

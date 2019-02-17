@@ -11,7 +11,6 @@ class CustomCollectionViewCell: UICollectionViewCell {
 
     
     @IBOutlet weak var imageView: UIImageView!
-//    @IBOutlet var imageView:UIImageView!
     @IBOutlet weak var wordLabel:UILabel!
     
     override func awakeFromNib() {
