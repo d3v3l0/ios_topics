@@ -18,7 +18,7 @@ private func addButton() {
     button.titleLabel?.font = UIFont.systemFont(ofSize: 36)
 
     button.setTitle("Am I centered?", for: .normal)
-    button.setTitleColor(UIColor.black, for: .normal)
+    button.setTitleColor(.black, for: .normal)
     button.addTarget(self, action: #selector(pressed(_:)), for: .touchUpInside)
 
     view.addSubview(button)
