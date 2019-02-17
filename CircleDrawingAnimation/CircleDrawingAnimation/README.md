@@ -1,5 +1,5 @@
 ## Circle Drawing Animation
-Menu: [Tutorial Home](file:../../README.md)
+Menu: [Tutorial Home](../../README.md)
 
 ![Screenshot](screenshot-small.png)
 
