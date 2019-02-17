@@ -33,12 +33,12 @@ import UIKit
 
 class  SimpleTableViewController: UITableViewController {
     
-    var sectionIndex:[String] = []
-    var indexDictionary:[String:[String]] = [:]
+    private var sectionIndex:[String] = []
+    private var indexDictionary:[String:[String]] = [:]
     
-    let CellIdentifier = "Cell"
+    private let cellIdentifier = "Cell"
     // don't presort test data
-    let words = ["maple", "apple", "ace", "ant",
+    private let words = ["maple", "apple", "ace", "ant",
                  "banana", "bird",
                  "cat", "corn", "cow",
                  "deer", "dog", "duck",
@@ -47,7 +47,7 @@ class  SimpleTableViewController: UITableViewController {
                  "goat",
                  "milk"]
     
-    func generateIndex(_ wordList:[String]) -> ([String], [String:[String]]) {
+    private func generateIndex(_ wordList:[String]) -> ([String], [String:[String]]) {
         
         var indexDictionary:[String:[String]] = [:]
         
@@ -78,22 +78,25 @@ class  SimpleTableViewController: UITableViewController {
         return (keyArray, indexDictionary)
     }
 
+    // MARK: - View Management
+
     override func viewDidLoad() {
         
         (sectionIndex, indexDictionary) = generateIndex(words)
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier:CellIdentifier)
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier:cellIdentifier)
     }
     
     
 }
 
-// Data source delegate
+// MARK: - Data source delegate
 
 extension SimpleTableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sectionIndex.count
     }
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let letter = sectionIndex[section]
@@ -106,7 +109,7 @@ extension SimpleTableViewController {
         
         let text:String
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         
         let letter = sectionIndex[indexPath.section]
         if let anArray = indexDictionary[letter] {
@@ -121,6 +124,7 @@ extension SimpleTableViewController {
         return cell
     }
 
+    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sectionIndex[section].uppercased()
     }
