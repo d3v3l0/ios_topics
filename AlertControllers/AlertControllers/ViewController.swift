@@ -9,31 +9,40 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let button1 = UIButton()
-    let label1 = UILabel()
+    private let button1 = UIButton()
+    private let label1 = UILabel()
     
-    func addLabel() {
+    // MARK: - Build View
+
+    private func addLabel() {
         view.addSubview(label1)
         label1.translatesAutoresizingMaskIntoConstraints = false
         label1.text = "Click the Alert button"
-        label1.textColor = UIColor.gray
-        label1.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        label1.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 40).isActive = true
+        label1.textColor = .gray
+        
+        NSLayoutConstraint.activate([
+            label1.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            label1.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 40),
+            ])
 
     }
     
-    func addButton() {
+    
+    private func addButton() {
         view.addSubview(button1)
         button1.translatesAutoresizingMaskIntoConstraints = false
         button1.setTitle("Alert", for: UIControl.State())
         button1.addTarget(self, action: #selector(ViewController.showGameOverAlert(_:)), for: .touchUpInside)
         
-        button1.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        button1.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -40).isActive = true
-        
+        NSLayoutConstraint.activate([
+            button1.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button1.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -40),
+            ])
+
     }
     
-    @objc func showGameOverAlert(_ button: UIButton) {
+    
+    @objc private func showGameOverAlert(_ button: UIButton) {
 
         let alertController = UIAlertController(title: "Game Over", message: "Play again?", preferredStyle: .alert)
         
@@ -45,29 +54,31 @@ class ViewController: UIViewController {
         // Calling function handler
         let action2 = UIAlertAction(title: "No", style: .default, handler: noHandler(_:))
         
-        alertController.addAction(action1)
-        alertController.addAction(action2)
+        [action1, action2].forEach(alertController.addAction)
         
         self.present(alertController, animated: true, completion: nil)
     }
     
-    func noHandler(_ action: UIAlertAction) {
+    
+    private func noHandler(_ action: UIAlertAction) {
         label1.text = "That's all folks!"
-
     }
+    
+    // MARK: - View Management
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.purple
+        view.backgroundColor = .purple
         addButton()
         addLabel()
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
