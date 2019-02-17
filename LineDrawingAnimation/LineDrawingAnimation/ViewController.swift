@@ -9,7 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    func addLine(x0: CGFloat, y0: CGFloat, x1: CGFloat, y1: CGFloat) {
+    // MARK: -
+
+    private func addLine(x0: CGFloat, y0: CGFloat, x1: CGFloat, y1: CGFloat) {
         
         let layer = CAShapeLayer()
         
@@ -40,9 +42,12 @@ class ViewController: UIViewController {
         
     }
 
+    // MARK: - View Management
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0) // Apple Safari
+
+        view.backgroundColor = UIColor(named: "AppleBluw")
 
         addLine(x0: 20, y0: 20, x1: 250, y1: 500)
 
