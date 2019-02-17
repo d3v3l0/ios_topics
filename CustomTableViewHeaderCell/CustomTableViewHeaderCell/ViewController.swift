@@ -9,31 +9,35 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let tableViewController = SimpleTableViewController()
+    private let tableViewController = SimpleTableViewController()
     
-    func addTableView() {
+    // MARK: - Build View
+
+    private func addTableView() {
         
         tableViewController.tableView.translatesAutoresizingMaskIntoConstraints = false
         
-        self.view.addSubview(tableViewController.tableView)
+        view.addSubview(tableViewController.tableView)
         
         let guide = view.safeAreaLayoutGuide
         
         NSLayoutConstraint.activate([
             
             tableViewController.tableView.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 1.0),
-            tableViewController.tableView.bottomAnchor.constraint(equalToSystemSpacingBelow: view.bottomAnchor, multiplier: 1.0),
-            tableViewController.tableView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0),
-            tableViewController.tableView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0),
+            tableViewController.tableView.bottomAnchor.constraint(equalToSystemSpacingBelow: guide.bottomAnchor, multiplier: 1.0),
+            tableViewController.tableView.leftAnchor.constraint(equalTo: guide.leftAnchor, constant: 0),
+            tableViewController.tableView.rightAnchor.constraint(equalTo: guide.rightAnchor, constant: 0),
             
             ])
         
     }
     
+    // MARK: - View Management
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .white
+        view.backgroundColor = .white
         
         navigationController?.navigationBar.prefersLargeTitles = true
         self.title = "Table Subclass"
