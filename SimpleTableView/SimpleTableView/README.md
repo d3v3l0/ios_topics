@@ -25,13 +25,13 @@ func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexP
 ```swift
 func numberOfSectionsInTableView(tableView: UITableView) -> Int
 func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
-#+END_SRC
+```
 
 ### Additional Functions
 ```swift
 // Register the UITableViewCell class to be used by our UITableView
 self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier:CellIdentifier)
-#+END_SRC
+```
 
 
 #### The Details
