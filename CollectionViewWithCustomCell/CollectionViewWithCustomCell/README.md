@@ -12,8 +12,7 @@ Menu: [Home](../../README.md)
 
 ### Register Nib
 ```swift
-self.collectionView!.register(UINib(nibName:"CustomCollectionViewCell",
-bundle:Bundle.main), forCellWithReuseIdentifier:reuseIdentifier)
+self.collectionView!.register(UINib(nibName:"CustomCollectionViewCell", bundle:Bundle.main), forCellWithReuseIdentifier:reuseIdentifier)
 ```
 
 
