@@ -9,39 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let aSwitch = UISwitch()
-    let label = UILabel()
+    private let aSwitch = UISwitch()
+    private let label = UILabel()
     
-    func buildView() {
-        
-        addSwitch()
-        
-        // Add Label
-        let margins = self.view.layoutMarginsGuide
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(label)
-        label.topAnchor.constraint(equalTo: margins.topAnchor, constant: 100).isActive = true
-        label.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // MARK: - Build View
 
-        self.view.backgroundColor = .lightGray
-        buildView()
-    }
-    
-    func addSwitch() {
+    private func addSwitch() {
         
         aSwitch.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(aSwitch)
+        view.addSubview(aSwitch)
         
-        aSwitch.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        aSwitch.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        aSwitch.widthAnchor.constraint(equalToConstant: 150)
-
+        let guide = view.safeAreaLayoutGuide
+        
+        NSLayoutConstraint.activate([
+            aSwitch.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
+            aSwitch.centerYAnchor.constraint(equalTo: guide.centerYAnchor),
+            aSwitch.widthAnchor.constraint(equalToConstant: 150),
+            ])
+        
         aSwitch.tintColor = .blue
         aSwitch.isOn = true
         label.text = "\(aSwitch.isOn)"
@@ -49,11 +34,39 @@ class ViewController: UIViewController {
         
     }
     
-    @objc func switchValueDidChange(_ sender:UISwitch) {
+    
+    @objc private func switchValueDidChange(_ sender:UISwitch) {
         let value = aSwitch.isOn
         label.text = "\(value)"
     }
+    
+    
+    private func buildView() {
+        
+        addSwitch()
+        
+        // Add Label        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(label)
+        
+        let guide = view.safeAreaLayoutGuide
+        
+        NSLayoutConstraint.activate([
+            label.topAnchor.constraint(equalTo: guide.topAnchor, constant: 100),
+            label.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
+        ])
+        
+    }
+    
+    // MARK: - View Management
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        view.backgroundColor = .lightGray
+        buildView()
+    }
+    
 
 }
 
