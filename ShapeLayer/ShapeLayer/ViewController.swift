@@ -9,14 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
  
-    func toRadians(degrees:CGFloat) -> CGFloat {
+    private func toRadians(degrees:CGFloat) -> CGFloat {
         return degrees * CGFloat(Double.pi)/180
     }
 
     /*
      
      */
-    func addLine(x0: CGFloat, y0: CGFloat, x1: CGFloat, y1: CGFloat) {
+    private func addLine(x0: CGFloat, y0: CGFloat, x1: CGFloat, y1: CGFloat) {
         
         let layer = CAShapeLayer()
         
@@ -37,7 +37,8 @@ class ViewController: UIViewController {
     /*
       Set cornerRadius=1 to make normal rectangle
      */
-    func addRect(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
+    private func addRect(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
+        
         let layer = CAShapeLayer()
         layer.path = UIBezierPath(roundedRect: CGRect(x: 164, y: 164, width: 160, height: 160), cornerRadius: 1).cgPath
         layer.fillColor = UIColor.blue.cgColor
@@ -51,7 +52,8 @@ class ViewController: UIViewController {
     /*
      
      */
-    func addRoundedRect(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
+    private func addRoundedRect(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
+        
         let layer = CAShapeLayer()
         
         let cornerRadius:CGFloat = 10
@@ -64,7 +66,7 @@ class ViewController: UIViewController {
     /*
      We draw it this way if we need to animate drawing the circle
      */
-    func addCircleWithArc(){
+    private func addCircleWithArc(){
         
         let layer = CAShapeLayer()
         
@@ -91,7 +93,7 @@ class ViewController: UIViewController {
     /*
 
      */
-    func addArc() {
+    private func addArc() {
         
         let layer = CAShapeLayer()
         
@@ -119,7 +121,7 @@ class ViewController: UIViewController {
     /*
      
      */
-    func addCircle(x: CGFloat, y: CGFloat, radius: CGFloat){
+    private func addCircle(x: CGFloat, y: CGFloat, radius: CGFloat){
         
         let layer = CAShapeLayer()
         
@@ -131,7 +133,8 @@ class ViewController: UIViewController {
         view.layer.addSublayer(layer)
     }
 
-    func addEllipse(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
+    
+    private func addEllipse(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
         
         let layer = CAShapeLayer()
         
@@ -145,7 +148,7 @@ class ViewController: UIViewController {
     /*
      
      */
-    func addTriangle(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat){
+    private func addTriangle(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat){
         
         let center = CGPoint(x: width/2 + x, y: y)
         let bottomLeft = CGPoint(x: x, y: height + y)
@@ -162,12 +165,13 @@ class ViewController: UIViewController {
         view.layer.addSublayer(layer)
     }
     
-    /*
-     
-     */
+   
+    // MARK: - View Management
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0) // Apple blue
+        
+        view.backgroundColor = UIColor(named: "AppleBlue")
 
         addLine(x0: 20, y0: 20, x1: 25, y1: 500)
         addRect(x: 164, y: 164, width: 160, height: 160)
