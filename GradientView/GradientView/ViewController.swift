@@ -9,11 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    func buildView() {
-        let v = GradientView(frame: self.view.bounds)
-        self.view.addSubview(v)
+    // MARK: - Build View
 
+    private func buildView() {
+        let v = GradientView(frame: view.bounds)
+        view.addSubview(v)
     }
+    
+    // MARK: - View Management
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

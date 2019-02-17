@@ -8,6 +8,7 @@
 import UIKit
 
 class GradientView: UIView {
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         //self.backgroundColor = UIColor.purple // Also, set solid color in init()
