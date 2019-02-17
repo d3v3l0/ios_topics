@@ -12,6 +12,8 @@ class BasicCollectionViewController: UICollectionViewController {
     
     private let reuseIdentifier = "Cell"
 
+    // MARK: - View Management
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,10 +26,12 @@ class BasicCollectionViewController: UICollectionViewController {
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
     }
+}
 
+// MARK: - UICollectionViewDataSource
 
-    // MARK: - UICollectionViewDataSource
-
+extension BasicCollectionViewController {
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
 
         return 1
@@ -39,6 +43,7 @@ class BasicCollectionViewController: UICollectionViewController {
         return 20
     }
 
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)

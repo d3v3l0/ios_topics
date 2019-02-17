@@ -26,7 +26,7 @@ collectionViewController = BasicCollectionViewController(collectionViewLayout: f
 ### Important Functions
 
 ```swift
-//
+self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 ```
 ### Additional Functions
 ```swift
