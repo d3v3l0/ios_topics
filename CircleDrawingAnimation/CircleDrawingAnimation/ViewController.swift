@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         
         drawAnimation.duration = 5.0
         
-        drawAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        drawAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         
         layer.add(drawAnimation, forKey: "drawCircleAnimation")
     }

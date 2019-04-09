@@ -93,10 +93,14 @@ class ViewController: UIViewController {
         //        mainStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         //        mainStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         let margins = self.view.layoutMarginsGuide
-        mainStackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
-        mainStackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
-        mainStackView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
-        mainStackView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
+        
+        NSLayoutConstraint.activate([
+            
+            mainStackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
+            mainStackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
+            mainStackView.topAnchor.constraint(equalTo: margins.topAnchor),
+            mainStackView.bottomAnchor.constraint(equalTo: margins.bottomAnchor)
+        ])
 
     }
     
