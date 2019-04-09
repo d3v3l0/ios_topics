@@ -1,9 +1,9 @@
-# iOS Topics in Swift 4
+# iOS Topics in Swift 5
 
-Miscellaneous iOS 12 Swift 4.2 programs that implement minimal examples for various random topics.
+Miscellaneous iOS 12 Swift 5.0 programs that implement minimal examples for various random topics.
 
 I will blog about each examples as time permits under this section of my website: http://www.h4labs.com/dev/ios/swift_cookbook.html
-For now, I'll place notes in README.org files with each project.
+For now, I'll place notes in README.md files with each project.
 
 Please note that I'm creating most of these application as "Single View Applications" then adding views (e.g. UITableView) in code. It's
 a personal preference to not use Storyboards.
@@ -28,6 +28,11 @@ NSLayoutConstraint.activate([
 + StackView 10 points above bottom anchor
 + Add some extra padding to button width and height
 
+```swift
+// Add some extra button padding
+rightBtn.contentEdgeInsets = UIEdgeInsets.init(top: 5, left: 5, bottom: 5, right: 5)
+
+```
 ## [Various UIButtons in a UIStackView](https://github.com/melling/ios_topics/blob/master/ButtonsInStackView/ButtonsInStackView)
 
 ![Screenshot](https://github.com/melling/ios_topics/blob/master/ButtonsInStackView/ButtonsInStackView/screenshot-toc.png)
@@ -206,8 +211,17 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 ![Screenshot](https://github.com/melling/ios_topics/blob/master/CountDownTimer/CountDownTimer/screenshot-toc.png)
 
-+ timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+```swift
+ timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+```
 
+## [Core Data](https://github.com/melling/ios_topics/blob/master/CoreDataHighScores/CoreDataHighScores)
+
+## [Game Clock](https://github.com/melling/ios_topics/blob/master/GameClock/GameClock)
+
+## [WebView](https://github.com/melling/ios_topics/blob/master/WebView/WebView)
+
+## [AppRotation](https://github.com/melling/ios_topics/blob/master/AppRotation/AppRotation/)
 
 * Misc Notes
 
@@ -221,7 +235,6 @@ convert ./screenshot.png -resize 20% screenshot-toc.png; # Table of Contents scr
 
 #### Ideas and In-Progress
 
-- [AppRotation] github.com/melling/ios_topics/blob/master/AppRotation/AppRotation/screenshot-toc.png)
 - [Handle Device Rotation](https://github.com/melling/ios_topics/blob/master/AppRotation/AppRotation)
 - [Pan Gesture](AppRotation://github.com/melling/ios_topics/blob/master/PanGesture/PanGesture/screenshot-toc.png)|https://github.com/melling/ios_topics/blob/master/PanGesture/PanGesture
 - PDF Creation
