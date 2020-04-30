@@ -11,8 +11,8 @@ Menu: [Home](../../README.md)
 
 
 
+### Scale
 
-###$ Scale
 ```swift
 func scaleIt(sender:UIButton) {
 //
@@ -31,7 +31,8 @@ func scaleIt(sender:UIButton) {
     }
 ```
 
-#### Scale
+#### Rotate
+
 ```swift
 func rotateIt() {
     UIView.animate(withDuration: 2,
@@ -52,6 +53,7 @@ func rotateIt() {
 ```
 
 #### Fade
+
 ```swift
     UIView.animate(withDuration: 2,
         delay: 0,
